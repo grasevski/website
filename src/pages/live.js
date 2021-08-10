@@ -143,8 +143,12 @@ const LivePage = () => {
         isLoading={isLoading}
         text={['Connecting to satellite', 'Connecting to drones', 'Drones sending data']}
       />
-      <GMap apiKey={apiKey} currentVessel={currentVessel} droneData={orderedDrones} />
-
+      <GMap
+        apiKey={apiKey}
+        currentVessel={currentVessel}
+        setCurrentVessel={setCurrentVessel}
+        droneData={orderedDrones}
+      />
       <WindRose
         windDirection={parseFloat(orderedDrones[currentVessel]?.Props?.Wind_direction)}
         windSpeed={parseFloat(orderedDrones[currentVessel]?.Props?.Wind_speed)}

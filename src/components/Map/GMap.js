@@ -26,7 +26,7 @@ const options = {
   gestureHandling: 'greedy',
 };
 
-const GMap = ({ apiKey, currentVessel, droneData }) => {
+const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
   // Load the Google maps scripts
   const { isLoaded } = useLoadScript({
     // Get Google Maps API key from props
@@ -36,7 +36,6 @@ const GMap = ({ apiKey, currentVessel, droneData }) => {
   // The things we need to track in state
   const [mapRef, setMapRef] = useState(null);
   const [center, setCenter] = useState({ lat: -33.90594, lng: 151.23461 });
-  const [selectedBoat, setSelectedBoat] = useState(currentVessel);
   const [markerMap, setMarkerMap] = useState({});
   const [zoom, setZoom] = useState(12);
   const [areBoundsSet, setBounds] = useState(false);
@@ -131,7 +130,7 @@ const GMap = ({ apiKey, currentVessel, droneData }) => {
     // Only if map is loaded
     if (isLoaded) {
       // Remember which boat was clicked
-      setSelectedBoat(boat.Id);
+      setCurrentVessel(boat.Id);
 
       // Don't open the info window on mobile if vessel was chosen in dropdown
       if (!(!event && windowSize.innerWidth <= 1056)) {
@@ -156,7 +155,7 @@ const GMap = ({ apiKey, currentVessel, droneData }) => {
     }
   };
 
-  // When user selects vessel in dropdown, update selectedBoat state accordingly
+  // When user selects vessel in dropdown, update currentVessel state accordingly
   useEffect(() => {
     markerClickHandler(null, droneData[currentVessel]);
   }, [currentVessel]);
@@ -214,9 +213,9 @@ const GMap = ({ apiKey, currentVessel, droneData }) => {
                   onClick={(event) => markerClickHandler(event, boat)}
                   clusterer={clusterer}
                 >
-                  {infoOpen && boat.Id === selectedBoat && (
+                  {infoOpen && boat.Id === currentVessel && (
                     <InfoWindow
-                      anchor={markerMap[selectedBoat]}
+                      anchor={markerMap[currentVessel]}
                       onCloseClick={() => {
                         setInfoOpen(false);
                       }}
@@ -269,10 +268,12 @@ const GMap = ({ apiKey, currentVessel, droneData }) => {
 GMap.propTypes = {
   apiKey: PropTypes.string.isRequired,
   currentVessel: PropTypes.number,
+  setCurrentVessel: PropTypes.func,
 };
 
 GMap.defaultProps = {
   currentVessel: 0,
+  setCurrentVessel: () => {},
 };
 
 export default GMap;
