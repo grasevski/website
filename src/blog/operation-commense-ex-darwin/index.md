@@ -42,3 +42,7 @@ Separately, we’d like to give a huge thank you to the Royal Sydney Yacht Squad
 Finally, we hope you enjoy this short video of new our 22’ Bluebottle BLUEY sailing off Botany Bay with a new folding prop and new radar mount.
 
 https://www.youtube.com/watch?v=py3V7Vrxk24
+
+For all our news, please see our website and I look forward to updating you again soon. Please feel free to ring me anytime.
+
+Robert Dane, CEO. 0413 580 953
