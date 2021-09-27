@@ -1,5 +1,5 @@
 ---
-title: "Sept 2021 Update"
+title: "September Update: Darwin Operations Commence"
 date: "2021-09-22"
 author: "Robert Dane"
 featuredImage: ./BEACON-Testing.png
