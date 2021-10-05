@@ -142,10 +142,19 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
         setInfoOpen(true);
       }
 
-      // Zoom in a little on marker click
-      if (zoom < 15) {
-        setZoom(15);
-      }
+      // Get the max zoom level
+      const latLng = new window.google.maps.LatLng(
+        parseFloat(boat.Props.Location.Coordinates.Lat),
+        parseFloat(boat.Props.Location.Coordinates.Lon)
+      );
+      const maxZoomService = new window.google.maps.MaxZoomService();
+      maxZoomService.getMaxZoomAtLatLng(latLng).then((result) => {
+        // Zoom in a little on marker click
+        const maxZoom = result.zoom > 15 ? 15 : result.zoom;
+        if (zoom < maxZoom) {
+          setZoom(maxZoom);
+        }
+      });
 
       // Center the selected marker
       setCenter({
