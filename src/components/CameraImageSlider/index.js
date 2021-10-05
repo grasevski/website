@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import styled from 'styled-components';
@@ -69,8 +69,26 @@ const NotAvailble = styled.div`
 `;
 
 const CameraSlider = ({ images, title, settings, customSettings }) => {
+  const [errored, setErrored] = useState(false);
   // Check if we received valid data
   const renderPaginator = (direction) => <PaginatorButton direction={direction} />;
+
+  /**
+   * Error handler, something went wrong, for example,
+   * broken image or network issues. Set `errored` state
+   * to true.
+   */
+  const onErrorHandler = () => {
+    setErrored(true);
+  };
+
+  /**
+   * Load handler, when image loaded successfully, set
+   * `errored` state to false.
+   */
+  const onLoadHandler = () => {
+    setErrored(false);
+  };
 
   return (
     <Carousel className="CameraSlider">
@@ -82,15 +100,23 @@ const CameraSlider = ({ images, title, settings, customSettings }) => {
           prevArrow={renderPaginator('Left')}
           nextArrow={renderPaginator('Right')}
         >
-          {images.map((image, index) => (
-            <img
-              key={uid(image, index)}
-              src={image}
-              alt="Live camera view"
-              className="webcam-img"
-              style={{ width: '100%' }}
-            />
-          ))}
+          {images.map((image, index) =>
+            errored ? (
+              <NotAvailble key={uid(image, index)}>
+                <p>There was an error loading this video feed</p>
+              </NotAvailble>
+            ) : (
+              <img
+                key={uid(image, index)}
+                src={image}
+                alt="Live camera view"
+                className="webcam-img"
+                style={{ width: '100%' }}
+                onError={onErrorHandler}
+                onLoad={onLoadHandler}
+              />
+            )
+          )}
         </Slider>
       ) : (
         <NotAvailble>
