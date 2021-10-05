@@ -83,7 +83,13 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
 
   const trailCoordinates = makeTrailCoordinates(trailData);
 
-  // Iterate fetched data to size, center, and zoom map to contain all markers
+  /**
+   * Iterate fetched data to size, center, and zoom map to contain all markers
+   *
+   * @param {Object} map React ref of the map
+   * @param {Array} data An array with API data
+   * @returns Bounds to contain all markers on the map
+   */
   const fitBoatsOnMap = (map, data = []) => {
     const newBounds = new window.google.maps.LatLngBounds();
 
@@ -122,7 +128,12 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
     }
   };
 
-  // We have to create a mapping of our boats to actual Marker objects
+  /**
+   * We have to create a mapping of our boats to actual Marker objects
+   * @param {Object} marker Link to the marker object
+   * @param {Number} index Marker Id
+   * @returns
+   */
   const markerLoadHandler = (marker, index) =>
     setMarkerMap((prevState) => ({ ...prevState, [index]: marker }));
 
