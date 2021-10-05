@@ -94,7 +94,13 @@ export const inlineSvgIcon = (icon) => {
   const svgString = renderToStaticMarkup(icon);
   const encodedSvg = svgToDataURL(svgString);
 
-  return { url: encodedSvg, scaledSize: { width: 38, height: 38 }, labelOrigin: { x: 16, y: -10 } };
+  return {
+    url: encodedSvg,
+    scaledSize: { width: 38, height: 38 },
+    size: { width: 47, height: 47 },
+    anchor: new window.google.maps.Point(18, 18),
+    labelOrigin: { x: 16, y: -10 },
+  };
 };
 
 inlineSvgIcon.propTypes = {
