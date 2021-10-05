@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import {
   GoogleMap,
@@ -13,6 +13,7 @@ import { Boat, inlineSvgIcon, getColorVariation } from './BoatIcon';
 import CameraSlider from '../CameraImageSlider';
 import configuration from '../../common/api/configuration';
 import { useWindowSize } from '../../common/hooks';
+import NavContext from '../../common/context/NavContext';
 import MapScale from './MapScale';
 
 // Reference for options:
@@ -41,6 +42,7 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
   const [previousZoom, setPreviousZoom] = useState(zoom);
   const [areBoundsSet, setBounds] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
+  const { sideNavIsOpen } = useContext(NavContext);
 
   // Get window size
   const windowSize = useWindowSize();
@@ -209,8 +211,11 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
       // Do stuff on map initial load
       onLoad={loadHandler}
       onClick={() => {
-        setInfoOpen(false);
-        setZoom(previousZoom);
+        // Only if sidenav is not open
+        if (!sideNavIsOpen && infoOpen) {
+          setInfoOpen(false);
+          setZoom(previousZoom);
+        }
       }}
     >
       {droneData.length > 0 && (
