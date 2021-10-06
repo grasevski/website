@@ -103,7 +103,7 @@ const CameraSlider = ({ images, title, settings, customSettings }) => {
           {images.map((image, index) =>
             errored ? (
               <NotAvailble key={uid(image, index)}>
-                <p>There was an error loading this video feed</p>
+                <p>This camera is not being displayed right now — please try another boat</p>
               </NotAvailble>
             ) : (
               <img
