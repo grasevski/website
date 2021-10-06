@@ -137,7 +137,7 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
   const markerLoadHandler = (marker, index) =>
     setMarkerMap((prevState) => ({ ...prevState, [index]: marker }));
 
-  const markerClickHandler = (event, boat) => {
+  const markerSwitchHandler = (event, boat) => {
     // Only if map is loaded
     if (isLoaded) {
       // Remember which boat was clicked
@@ -153,6 +153,20 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
         setInfoOpen(true);
       }
 
+      // Get the max zoom level
+      const latLng = new window.google.maps.LatLng(
+        parseFloat(boat.Props.Location.Coordinates.Lat),
+        parseFloat(boat.Props.Location.Coordinates.Lon)
+      );
+      const maxZoomService = new window.google.maps.MaxZoomService();
+      maxZoomService.getMaxZoomAtLatLng(latLng).then((result) => {
+        const maxZoom = result.zoom;
+        if (zoom > maxZoom) {
+          // Adjust zoom level if current zoom is too big
+          setZoom(maxZoom);
+        }
+      });
+
       // Center the selected marker
       setCenter({
         lat: parseFloat(boat.Props.Location.Coordinates.Lat),
@@ -163,7 +177,7 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
 
   // When user selects vessel in dropdown, update currentVessel state accordingly
   useEffect(() => {
-    markerClickHandler(null, droneData[currentVessel]);
+    markerSwitchHandler(null, droneData[currentVessel]);
   }, [currentVessel]);
 
   let mapContainerStyle;
@@ -216,7 +230,7 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
                     fontWeight: 'bold',
                   }}
                   onLoad={(marker) => markerLoadHandler(marker, boat.Id)}
-                  onClick={(event) => markerClickHandler(event, boat)}
+                  onClick={(event) => markerSwitchHandler(event, boat)}
                   clusterer={clusterer}
                 >
                   {infoOpen && boat.Id === currentVessel && (
