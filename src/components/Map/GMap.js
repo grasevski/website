@@ -38,7 +38,6 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
   const [center, setCenter] = useState({ lat: -33.90594, lng: 151.23461 });
   const [markerMap, setMarkerMap] = useState({});
   const [zoom, setZoom] = useState(12);
-  const [previousZoom, setPreviousZoom] = useState(zoom);
   const [areBoundsSet, setBounds] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
 
@@ -149,26 +148,10 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
         // Required so clicking a 2nd marker works as expected
         if (infoOpen) {
           setInfoOpen(false);
-          setZoom(previousZoom);
         }
 
         setInfoOpen(true);
       }
-
-      // Get the max zoom level
-      const latLng = new window.google.maps.LatLng(
-        parseFloat(boat.Props.Location.Coordinates.Lat),
-        parseFloat(boat.Props.Location.Coordinates.Lon)
-      );
-      const maxZoomService = new window.google.maps.MaxZoomService();
-      maxZoomService.getMaxZoomAtLatLng(latLng).then((result) => {
-        // Zoom in a little on marker click
-        const maxZoom = result.zoom > 15 ? 15 : result.zoom;
-        if (zoom < maxZoom) {
-          setPreviousZoom(zoom);
-          setZoom(maxZoom);
-        }
-      });
 
       // Center the selected marker
       setCenter({
@@ -210,10 +193,6 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
       onLoad={loadHandler}
       onClick={() => {
         setInfoOpen(false);
-        // Only if info window is not open
-        if (windowSize.innerWidth >= 768 && infoOpen) {
-          setZoom(previousZoom);
-        }
       }}
     >
       {droneData.length > 0 && (
@@ -245,7 +224,6 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
                       anchor={markerMap[currentVessel]}
                       onCloseClick={() => {
                         setInfoOpen(false);
-                        setZoom(previousZoom);
                       }}
                     >
                       <CameraSlider
