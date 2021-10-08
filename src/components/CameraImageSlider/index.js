@@ -120,7 +120,7 @@ const CameraSlider = ({ images, title, settings, customSettings }) => {
         </Slider>
       ) : (
         <NotAvailble>
-          <p>Video feed not available</p>
+          <p>This camera is not being displayed right now — please try another boat</p>
         </NotAvailble>
       )}
     </Carousel>
