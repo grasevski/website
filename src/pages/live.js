@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import React, { useState, useRef, useContext, useEffect } from 'react';
+import styled from 'styled-components';
 import EmptyLayout from '../layouts/EmptyLayout';
 import SEO from '../components/SEO';
 import TextSkeleton from '../components/TextSkeleton';
@@ -17,8 +18,23 @@ import NavContext from '../common/context/NavContext';
 import { useWindowSize } from '../common/hooks';
 import useOnClickOutside from '../common/hooks/useOnClickOutside';
 import { FormWrapper, FormItem } from '../components/common';
+import mq from '../common/mq';
 import SplashScreen from '../components/SplashScreen';
+import Notification from '../components/Notification';
 import WindRose from '../components/WindRose';
+
+const MapNotification = styled(Notification)`
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: ${mq.max[768]}) {
+    bottom: 82px;
+    left: 10px;
+    transform: none;
+  }
+`;
 
 /** Google Maps key */
 const apiKey = process.env.GATSBY_GOOGLE_MAPS_API_KEY;
@@ -155,6 +171,7 @@ const LivePage = () => {
         currentDirection={parseFloat(orderedDrones[currentVessel]?.Props?.Current_direction)}
         currentSpeed={parseFloat(orderedDrones[currentVessel]?.Props?.Current_speed)}
       />
+      <MapNotification role="alert" title="Notification" subtitle="Trail is last 24 hours." />
     </EmptyLayout>
   );
 };
