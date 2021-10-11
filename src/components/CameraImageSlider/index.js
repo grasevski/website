@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import ImageZoom from 'react-medium-image-zoom';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import { uid } from 'react-uid';
+
+// Import medium zoom styles
+import '../../css/imagezoom.css';
 
 import PaginatorButton from './PaginatorButton';
 
@@ -106,15 +110,16 @@ const CameraSlider = ({ images, title, settings, customSettings }) => {
                 <p>This camera is not being displayed right now — please try another boat</p>
               </NotAvailble>
             ) : (
-              <img
-                key={uid(image, index)}
-                src={image}
-                alt="Live camera view"
-                className="webcam-img"
-                style={{ width: '100%' }}
-                onError={onErrorHandler}
-                onLoad={onLoadHandler}
-              />
+              <ImageZoom key={uid(image, index)}>
+                <img
+                  src={image}
+                  alt="Live camera view"
+                  className="webcam-img"
+                  style={{ width: '100%' }}
+                  onError={onErrorHandler}
+                  onLoad={onLoadHandler}
+                />
+              </ImageZoom>
             )
           )}
         </Slider>
