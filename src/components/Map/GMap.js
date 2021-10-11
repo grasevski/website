@@ -221,7 +221,12 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
                     lng: parseFloat(boat.Props.Location.Coordinates.Lon),
                   }}
                   icon={inlineSvgIcon(
-                    <Boat index={boat.Id} rotation={parseFloat(boat.Props.Heading)} />
+                    <Boat
+                      index={boat.Id}
+                      rotation={parseFloat(boat.Props.Heading)}
+                      color={boat.BoatColor}
+                      trailColor={boat.SailColor}
+                    />
                   )}
                   label={{
                     text: boat.Name,
