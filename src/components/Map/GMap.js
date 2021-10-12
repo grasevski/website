@@ -245,10 +245,7 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
                         setInfoOpen(false);
                       }}
                     >
-                      <CameraSlider
-                        images={boat.Props.Cameras}
-                        title={`Live View from ${boat.Name}`}
-                      />
+                      <CameraSlider images={boat.Props.Cameras} />
                     </InfoWindow>
                   )}
                 </Marker>
