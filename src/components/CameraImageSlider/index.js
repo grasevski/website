@@ -94,6 +94,15 @@ const CameraSlider = ({ images, settings, customSettings }) => {
     setErrored(false);
   };
 
+  const errorMessage = (
+    <>
+      <h3>Live View</h3>
+      <NotAvailble>
+        <p>This camera is not being displayed right now — please try another boat</p>
+      </NotAvailble>
+    </>
+  );
+
   return (
     <Carousel className="CameraSlider">
       {images && images.length > 0 ? (
@@ -120,9 +129,7 @@ const CameraSlider = ({ images, settings, customSettings }) => {
                 />
               </ImageZoom>
             ) : (
-              <NotAvailble>
-                <p>This camera is not being displayed right now — please try another boat</p>
-              </NotAvailble>
+              errorMessage
             );
 
             return (
@@ -134,12 +141,7 @@ const CameraSlider = ({ images, settings, customSettings }) => {
           })}
         </Slider>
       ) : (
-        <>
-          <h3>Live View</h3>
-          <NotAvailble>
-            <p>This camera is not being displayed right now — please try another boat</p>
-          </NotAvailble>
-        </>
+        errorMessage
       )}
     </Carousel>
   );
