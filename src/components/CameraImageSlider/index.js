@@ -72,7 +72,7 @@ const NotAvailble = styled.div`
   }
 `;
 
-const CameraSlider = ({ images, title, settings, customSettings }) => {
+const CameraSlider = ({ images, settings, customSettings }) => {
   const [errored, setErrored] = useState(false);
   // Check if we received valid data
   const renderPaginator = (direction) => <PaginatorButton direction={direction} />;
@@ -96,7 +96,6 @@ const CameraSlider = ({ images, title, settings, customSettings }) => {
 
   return (
     <Carousel className="CameraSlider">
-      {title && <h3>{title}</h3>}
       {images && images.length > 0 ? (
         <Slider
           {...settings}
@@ -104,37 +103,50 @@ const CameraSlider = ({ images, title, settings, customSettings }) => {
           prevArrow={renderPaginator('Left')}
           nextArrow={renderPaginator('Right')}
         >
-          {images.map((image, index) =>
-            errored ? (
-              <NotAvailble key={uid(image, index)}>
-                <p>This camera is not being displayed right now — please try another boat</p>
-              </NotAvailble>
-            ) : (
-              <ImageZoom key={uid(image, index)}>
+          {images.map((image, index) => {
+            const title = Object.keys(image)[0];
+            const url = image[title];
+
+            // Make sure image is loaded correctly, otherwise show an error
+            const content = !errored ? (
+              <ImageZoom>
                 <img
-                  src={image}
-                  alt="Live camera view"
+                  src={url}
+                  alt={title}
                   className="webcam-img"
                   style={{ width: '100%' }}
                   onError={onErrorHandler}
                   onLoad={onLoadHandler}
                 />
               </ImageZoom>
-            )
-          )}
+            ) : (
+              <NotAvailble>
+                <p>This camera is not being displayed right now — please try another boat</p>
+              </NotAvailble>
+            );
+
+            return (
+              <React.Fragment key={uid(image, index)}>
+                {title && <h3>{title} Live</h3>}
+                {content}
+              </React.Fragment>
+            );
+          })}
         </Slider>
       ) : (
-        <NotAvailble>
-          <p>This camera is not being displayed right now — please try another boat</p>
-        </NotAvailble>
+        <>
+          <h3>Live View</h3>
+          <NotAvailble>
+            <p>This camera is not being displayed right now — please try another boat</p>
+          </NotAvailble>
+        </>
       )}
     </Carousel>
   );
 };
 
 CameraSlider.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.object),
   settings: PropTypes.objectOf(
     PropTypes.oneOfType([
       PropTypes.string,
@@ -157,7 +169,6 @@ CameraSlider.propTypes = {
 
 CameraSlider.defaultProps = {
   images: [],
-  title: '',
   // React Slick settings
   settings: {
     accessibility: true,
