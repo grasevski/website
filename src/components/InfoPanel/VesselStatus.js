@@ -70,9 +70,11 @@ const StatusNames = {
   Wp_dist: 'WP Dist',
   Next_wp: 'Next WP',
   Air_temp: 'Air Temp',
+  AirPressure: 'Air Pressure',
   Water_temp: 'Water Temp',
   Water_depth: 'Water Depth',
   Boat_speed: 'Boat Speed',
+  Sog: 'SoG',
   Throttle: 'Throttle',
   // Num_Sats: 'Num Sats'
   // Hdop: 'HDOP'
@@ -137,6 +139,12 @@ const formatVesselStatusData = (data) => {
    * @param {String} direction Direction string to be formatted
    */
   const formatDirection = (direction) => `${parseFloat(direction).toFixed(1)}\xB0`;
+
+  /**
+   * Add pressure units to the end - atm
+   * @param {String} pressure Pressure string to be formatted
+   */
+  const formatPressure = (pressure) => `${parseFloat(pressure).toFixed(1)} atm`;
 
   /**
    * Add depth units to the end, Rounds to 2 decimal places
@@ -207,9 +215,11 @@ const formatVesselStatusData = (data) => {
           statuses[StatusNames[key]] = formatTemperature(value);
         } else if (key === 'Air_temp') {
           statuses[StatusNames[key]] = formatTemperature(value);
+        } else if (key === 'AirPressure') {
+          statuses[StatusNames[key]] = formatPressure(value);
         } else if (key === 'Water_depth') {
           statuses[StatusNames[key]] = formatDepth(value);
-        } else if (key === 'Boat_speed') {
+        } else if (key === 'Boat_speed' || key === 'Sog') {
           statuses[StatusNames[key]] = formatSpeed(value);
         } else if (key === 'Heading') {
           statuses[StatusNames[key]] = formatDirection(value);
