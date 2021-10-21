@@ -140,6 +140,12 @@ const formatVesselStatusData = (data) => {
   const formatSpeed = (speed) => `${parseFloat(speed).toFixed(2)} knots`;
 
   /**
+   * Take speed in m/s as input, then convert to knots.
+   * @param {Number} speed Speed number to be converted
+   */
+  const convertMsToKnots = (speed) => parseFloat(speed) * 1.94384;
+
+  /**
    * Add degree to the end - 10°
    * @param {String} direction Direction string to be formatted
    */
@@ -217,7 +223,7 @@ const formatVesselStatusData = (data) => {
         } else if (key === 'Water_depth') {
           statuses[StatusNames[key]] = formatDepth(value);
         } else if (key === 'Boat_speed') {
-          statuses[StatusNames[key]] = formatSpeed(value);
+          statuses[StatusNames[key]] = formatSpeed(convertMsToKnots(value));
         } else if (key === 'Heading') {
           statuses[StatusNames[key]] = formatDirection(value);
         } else if (key === 'Lat') {
