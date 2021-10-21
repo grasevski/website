@@ -225,13 +225,13 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
                       index={boat.Id}
                       rotation={parseFloat(boat.Props.Heading)}
                       color={boat.BoatColor}
-                      trailColor={boat.SailColor}
+                      insideColor={boat.SailColor}
                     />
                   )}
                   label={{
                     text: boat.Name,
                     className: 'uppercase',
-                    color: boat.BoatColor ? boat.BoatColor : '#ffff00',
+                    color: boat.SailColor ? boat.SailColor : '#ffff00',
                     fontSize: '14px',
                     fontWeight: 'bold',
                   }}
@@ -255,7 +255,7 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
           </MarkerClusterer>
           {droneData.map((boat) => {
             // Generate unique color for this vessel
-            const lineColor = getColorVariation(boat.Id)[0];
+            const lineColor = boat.SailColor ? boat.SailColor : getColorVariation(boat.Id)[0];
 
             return (
               <Polyline
