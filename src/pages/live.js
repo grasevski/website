@@ -171,7 +171,11 @@ const LivePage = () => {
         currentDirection={parseFloat(orderedDrones[currentVessel]?.Props?.Current_direction)}
         currentSpeed={parseFloat(orderedDrones[currentVessel]?.Props?.Current_speed)}
       />
-      <MapNotification role="alert" title="Notification" subtitle="Trail is last 24 hours." />
+      <MapNotification
+        role="alert"
+        title="Notification"
+        subtitle="Trail is last 24 hours. Click on boats to see camera and radar views."
+      />
     </EmptyLayout>
   );
 };
