@@ -63,7 +63,7 @@ const WindRose = ({ windDirection, windSpeed, currentDirection, currentSpeed }) 
    * Add knots to the end - 2.5knots.
    * @param {String} speed Speed string to be formatted
    */
-  const formatSpeed = (speed) => `${parseFloat(speed).toFixed(2)} knt`;
+  const formatSpeed = (speed) => `${parseFloat(speed).toFixed(1)} knt`;
 
   // Make proper formatting of speed
   const formattedWindSpeed = formatSpeed(convertMsToKnots(windSpeed));
@@ -79,7 +79,8 @@ const WindRose = ({ windDirection, windSpeed, currentDirection, currentSpeed }) 
           style={{
             height: '100%',
             width: '100%',
-            transform: `rotate(-${windDirection}deg)`,
+            // Rotated 180 degrees -> raw data is bearing blowing from.
+            transform: `rotate(${windDirection - 90}deg)`,
             position: 'absolute',
             top: 0,
             left: 0,
@@ -93,7 +94,7 @@ const WindRose = ({ windDirection, windSpeed, currentDirection, currentSpeed }) 
           style={{
             height: '100%',
             width: '100%',
-            transform: `rotate(-${formatCentidegrees(currentDirection)}deg)`,
+            transform: `rotate(${formatCentidegrees(currentDirection) + 90}deg)`,
             position: 'absolute',
             top: 0,
             left: 0,

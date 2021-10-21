@@ -38,24 +38,17 @@ const StatusTag = styled.span`
   border-radius: 1.5rem;
 
   ${(props) =>
-    props.type === 'success' &&
+    props.type === 'active' &&
     css`
       background-color: #9deeb2;
       color: #049e51;
     `}
 
   ${(props) =>
-    props.type === 'danger' &&
+    props.type === 'inactive' &&
     css`
-      background-color: #e23f33;
-      color: #ffffff;
-    `}
-    
-  ${(props) =>
-    props.type === 'warning' &&
-    css`
-      background-color: #fff3cd;
-      color: #856404;
+      background-color: #e9e9e9;
+      color: #8f8f8f;
     `}
 `;
 
@@ -76,10 +69,12 @@ const StatusNames = {
   Sail_mode: 'Sail Mode',
   Wp_dist: 'WP Dist',
   Next_wp: 'Next WP',
-  Air_temp: 'Air Temperature',
-  Water_depth: 'Water Depth',
+  Air_temp: 'Air Temp',
+  AirPressure: 'Air Pressure',
   Water_temp: 'Water Temp',
+  Water_depth: 'Water Depth',
   Boat_speed: 'Boat Speed',
+  Sog: 'SoG',
   Throttle: 'Throttle',
   // Num_Sats: 'Num Sats'
   // Hdop: 'HDOP'
@@ -152,6 +147,12 @@ const formatVesselStatusData = (data) => {
   const formatDirection = (direction) => `${parseFloat(direction).toFixed(1)}\xB0`;
 
   /**
+   * Add pressure units to the end - atm
+   * @param {String} pressure Pressure string to be formatted
+   */
+  const formatPressure = (pressure) => `${parseFloat(pressure).toFixed(1)} atm`;
+
+  /**
    * Add depth units to the end, Rounds to 2 decimal places
    * If the depth is outside of the range 0<=depth<=60
    * returns '> 60m'
@@ -220,9 +221,11 @@ const formatVesselStatusData = (data) => {
           statuses[StatusNames[key]] = formatTemperature(value);
         } else if (key === 'Air_temp') {
           statuses[StatusNames[key]] = formatTemperature(value);
+        } else if (key === 'AirPressure') {
+          statuses[StatusNames[key]] = formatPressure(value);
         } else if (key === 'Water_depth') {
           statuses[StatusNames[key]] = formatDepth(value);
-        } else if (key === 'Boat_speed') {
+        } else if (key === 'Boat_speed' || key === 'Sog') {
           statuses[StatusNames[key]] = formatSpeed(convertMsToKnots(value));
         } else if (key === 'Heading') {
           statuses[StatusNames[key]] = formatDirection(value);
@@ -231,34 +234,12 @@ const formatVesselStatusData = (data) => {
         } else if (key === 'Lon') {
           statuses[StatusNames[key]] = formatLongitude(value);
         } else if (key === 'Status') {
-          // Used default MAVLink status codes
           switch (value) {
-            case 'MAV_STATE_ACTIVE':
-              statuses[StatusNames[key]] = <StatusTag type="success">Active</StatusTag>;
+            case 'Active':
+              statuses[StatusNames[key]] = <StatusTag type="active">Active</StatusTag>;
               break;
-            case 'MAV_STATE_CRITICAL':
-              statuses[StatusNames[key]] = <StatusTag type="danger">Critical</StatusTag>;
-              break;
-            case 'MAV_STATE_EMERGENCY':
-              statuses[StatusNames[key]] = <StatusTag type="danger">Emergency</StatusTag>;
-              break;
-            case 'MAV_STATE_POWEROFF':
-              statuses[StatusNames[key]] = <StatusTag type="danger">Poweroff</StatusTag>;
-              break;
-            case 'MAV_STATE_FLIGHT_TERMINATION':
-              statuses[StatusNames[key]] = <StatusTag type="danger">Termination</StatusTag>;
-              break;
-            case 'MAV_STATE_BOOT':
-              statuses[StatusNames[key]] = <StatusTag type="warning">Boot</StatusTag>;
-              break;
-            case 'MAV_STATE_STANDBY':
-              statuses[StatusNames[key]] = <StatusTag type="warning">Standby</StatusTag>;
-              break;
-            case 'MAV_STATE_CALIBRATING':
-              statuses[StatusNames[key]] = <StatusTag type="warning">Calibrating</StatusTag>;
-              break;
-            case 'MAV_STATE_UNINIT':
-              statuses[StatusNames[key]] = <StatusTag type="warning">Uninitialized</StatusTag>;
+            case 'Inactive':
+              statuses[StatusNames[key]] = <StatusTag type="inactive">Inactive</StatusTag>;
               break;
             default:
               statuses[StatusNames[key]] = value;
