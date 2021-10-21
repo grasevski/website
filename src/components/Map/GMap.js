@@ -230,8 +230,9 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
                   )}
                   label={{
                     text: boat.Name,
-                    color: '#ffff00',
-                    fontSize: '16px',
+                    className: 'uppercase',
+                    color: boat.BoatColor ? boat.BoatColor : '#ffff00',
+                    fontSize: '14px',
                     fontWeight: 'bold',
                   }}
                   onLoad={(marker) => markerLoadHandler(marker, boat.Id)}
