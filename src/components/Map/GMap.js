@@ -183,7 +183,7 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
   let mapContainerStyle;
   if (windowSize.innerWidth <= 767) {
     mapContainerStyle = {
-      height: `calc(100vh - 6rem)`,
+      height: `calc(100vh - 60px)`,
       width: `100%`,
       paddingTop: '5rem',
     };
