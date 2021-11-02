@@ -180,9 +180,19 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
     markerSwitchHandler(null, droneData[currentVessel]);
   }, [currentVessel]);
 
+  let mapContainerStyle = {
+    height: `100vh`
+  };
+  if (windowSize.innerWidth <= 767) {
+    mapContainerStyle = {
+      height: `calc(${windowSize.innerHeight} - 60px)`,
+    };
+  }
+
   const renderMap = () => (
     <GoogleMap
       id="google-map"
+      mapContainerStyle={mapContainerStyle}
       zoom={zoom}
       onZoomChanged={onZoomChange}
       center={center}
