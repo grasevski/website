@@ -180,12 +180,10 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
     markerSwitchHandler(null, droneData[currentVessel]);
   }, [currentVessel]);
 
-  let mapContainerStyle = {
-    height: `100vh`
-  };
+  let mapContainerStyle = {};
   if (windowSize.innerWidth <= 767) {
     mapContainerStyle = {
-      height: `calc(${windowSize.innerHeight} - 60px)`,
+      height: `calc(${windowSize.innerHeight}px - 60px)`,
     };
   }
 
