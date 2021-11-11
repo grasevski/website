@@ -185,6 +185,10 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
     mapContainerStyle = {
       height: `calc(${windowSize.innerHeight}px - 60px)`,
     };
+  } else {
+    mapContainerStyle = {
+      height: `${windowSize.innerHeight}px`,
+    };
   }
 
   const renderMap = () => (
