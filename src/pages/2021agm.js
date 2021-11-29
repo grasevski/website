@@ -20,15 +20,15 @@ const AGMPage = () => (
           </Heading>
         </Col>
       </Row>
-
       <Heading level={2} size="medium" weight="thick">
         Dear Shareholders,
       </Heading>
-
       <Heading level={3} size="small" as="p" style={{ lineHeight: 1.6 }}>
         Our virtual AGM will be held at <strong>4.30pm Tuesday 30 November</strong>, via Microsoft
         Teams.
-        <br />
+      </Heading>
+
+      <Heading level={3} size="small" as="p" style={{ lineHeight: 1.6 }}>
         To join the meeting, Click{' '}
         <strong>
           <a href={meetingLink}>here</a>
@@ -36,6 +36,13 @@ const AGMPage = () => (
         .
       </Heading>
 
+      <Heading level={3} size="small" as="p" style={{ lineHeight: 1.6 }}>
+        Please ring us on{' '}
+        <a itemProp="telephone" href="tel:+614875457266">
+          04875 457 266
+        </a>{' '}
+        if there are any issues joining the meeting.
+      </Heading>
       <Spacing $value="100px" />
     </Grid>
   </Layout>
