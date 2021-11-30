@@ -38,8 +38,8 @@ const AGMPage = () => (
 
       <Heading level={3} size="small" as="p" style={{ lineHeight: 1.6 }}>
         Please ring us on{' '}
-        <a itemProp="telephone" href="tel:+614875457266">
-          04875 457 266
+        <a itemProp="telephone" href="tel:+61487457266">
+          0487 457 266
         </a>{' '}
         if there are any issues joining the meeting.
       </Heading>
