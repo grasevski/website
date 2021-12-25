@@ -36,7 +36,7 @@ const CareersPage = ({ data }) => (
           <Col xs={12} md={12} lg={12}>
             <Spacing $value="80px" />
             <Heading level={1} size="huge" weight="thick" underline="left">
-              Careers
+              Wanted 2022
             </Heading>
           </Col>
         </Row>
@@ -67,323 +67,130 @@ const CareersPage = ({ data }) => (
           </Row>
         </Segmented>
 
-        <Row>
-          <Col xs={12} md={7} lg={7}>
-            <Segmented multiplier={2} borderBottom>
+        <Segmented>
+          <Row>
+            <Col xs={12} md={8} lg={8}>
               <Heading level={3} size="medium" weight="thick">
-                Junior Software
+                Lead Mechatronics/Software Engineer/Computer Scientist
                 <br />
-                and Systems Engineers
+                Mechatronics Engineer
+                <br />
+                Software Engineer
+              </Heading>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Overview: Hard and Soft Robotics - Project ‘TENTACLE’.
               </Heading>
 
               <p>
-                <Accent>Contact:</Accent>
-                <br />
-                lloyd@Ocius.com.au
+                UNSW is collaborating with Ocius on a project to build a new and revolutionary hard
+                and soft robotic device related to Ocius’s work with autonomous maritime systems.
+                Details of the project will be released publicly as approved by Defence, but for the
+                purposes of this advertisement the project is called internally at Ocius the
+                Tentacle Project.
               </p>
 
               <p>
-                <Accent>Compensation:</Accent>
-                <br />
-                Commensurate to experience
+                Work will be carried out at UNSW and the Ocius facility at the UNSW Randwick Campus
+                with some fieldwork.
               </p>
 
               <p>
-                <Accent>Description:</Accent>
-                <br />
-                Are you a talented C++ Embedded Software Engineer with experience developing
-                autonomous vehicle solutions? You will be involved in a wide variety of
-                software/hardware product development activities for Ocius’ Uncrewed Surface
-                Vehicles. You will contribute to product requirements and designs. You will be
-                hands-on in the development, assembly,and testing of prototype vehicles.
+                We are recruiting three engineers who will be seconded to work with Ocius to
+                develop, operate, and maintain a new robotics product and report to and will be
+                tasked directly by the Ocius CEO.
               </p>
 
-              <p>
-                <Accent>
-                  To be successful in obtaining this role, you will possess the following:
-                </Accent>
-              </p>
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Responsibilities
+              </Heading>
+
+              <p>Specific responsibilities for the three roles include:</p>
+
               <ul style={{ marginTop: 0 }}>
-                <li>Extensive experience with Autonomous Vehicles.</li>
-                <li>Ability to develop on Windows, Linux and embedded systems.</li>
-                <li>C/C++/C#/JavaScript/Python development experience.</li>
+                <li>
+                  Assist in the design and implementation of the on-board electrical, mechanical and
+                  computer systems for Tentacle Project;
+                </li>
+                <li>
+                  Prepare technical documentation and procedures needed to support the development
+                  and operation of Tentacle Project;
+                </li>
+                <li>Support troubleshooting and maintenance of the Tentacle Project;</li>
+                <li>
+                  Assist with the planning, organisation of and conducting of field trials of the
+                  Tentacle Project;
+                </li>
+                <li>
+                  Collect and interpret results of field trials and prepare technical reports for
+                  use by others;
+                </li>
+                <li>
+                  Support work health safety activities in compliance with relevant workplace
+                  policies including risk assessments, implementation of safe work procedures,
+                  development and maintenance of relevant WHS records and registers, provision of
+                  WHS training and inductions to staff, students and contractors;
+                </li>
+                <li>
+                  Cooperate with all health and safety policies and procedures of the organisation
+                  and take all reasonable care to ensure that your actions or omissions do not
+                  impact on the health and safety of yourself or others.
+                </li>
+              </ul>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Duties and Responsibilities
+              </Heading>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>
+                  Software and hardware design, development, integration and validation for
+                  autonomous vehicle control, device management, navigation, communications, and
+                  related applications.
+                </li>
+                <li>
+                  Interact with product management to obtain and understand requirements and
+                  deliverables and develop test plans.
+                </li>
+                <li>Interface with vehicle operations and engineering team members.</li>
+              </ul>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Requirements
+              </Heading>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>C++/JavaScript/Python development experience.</li>
+                <li>Bachelor’s degree in Mechatronics Engineering.</li>
+                <li>Ability to develop on Linux, Windows and embedded systems.</li>
+                <li>
+                  Ability to work in a fast-paced dynamic environment where initiative is required
+                  for success.
+                </li>
+                <li>
+                  Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline
+                  including Australian Passport
+                </li>
+              </ul>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Desirable
+              </Heading>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>Experience with autonomous vehicles.</li>
+                <li>Experience with Ardupilot and supporting tools.</li>
+                <li>Full stack development.</li>
                 <li>Strong mechanical aptitude.</li>
-                <li>Strong communication skills.</li>
-                <li>Self-Starter / Highly Motivated.</li>
-                <li>Commercial product development experience.</li>
-                <li>Sailing experience.</li>
-                <li>Experience with Ardupilot and supporting tools is highly desirable.</li>
+                <li>Maritime industry or defence experience relevant to the position</li>
               </ul>
-            </Segmented>
-
-            <Segmented multiplier={2} borderBottom>
-              <Heading level={3} size="medium" weight="thick">
-                Electrical Technician
-              </Heading>
-
-              <p>
-                <Accent>Contact:</Accent>
-                <br />
-                lloyd@Ocius.com.au
-              </p>
-
-              <p>
-                <Accent>Compensation:</Accent>
-                <br />
-                Commensurate to experience
-              </p>
-
-              <p>
-                <Accent>Background:</Accent>
-                <br />
-                Ocius is an Australian company that builds autonomous Uncrewed Surface Vessels
-                (USVs). These USVs use the energy of the weather - sun, wind and waves - to act as
-                persistent monitoring and communications platforms. We are embarking on an ambitious
-                program of building and deploying multiple USVs for operations around the Australia.
-              </p>
-              <p>
-                This program has created the need for an Electrical Technician responsible for
-                creation, maintenance and repair of all USV electronic components and equipment used
-                in our vessels.
-              </p>
-
-              <p>
-                <Accent>Duties and Responsibilities:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>Electrical design (Power and Communications).</li>
-                <li>Installation of electrical components.</li>
-                <li>Conduct electrical maintenance on USVs.</li>
-                <li>Fault finding in mechanical and electrical systems.</li>
-                <li>Research &amp; Development support on new USV technology.</li>
-                <li>Accompanying USV offshore on support boat during testing.</li>
-                <li>On occasion particpate in remote watchkeeping of the USVs when at sea.</li>
-                <li>On occasion, conducting general mechanical maintenance of USVs.</li>
-                <li>
-                  Implementing, maintaining, managing and updating all standard operating procedures
-                  and processes appropriate to the role.
-                </li>
-              </ul>
-
-              <p>
-                <Accent>Requirements:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>Fully Qualified Electrician.</li>
-                <li>Experience in Industrial/Control system wiring.</li>
-                <li>Current drivers licence.</li>
-                <li>Mechanical aptitude.</li>
-                <li>Strong computer literacy skills.</li>
-                <li>Ability to adhere to strict health and safety guidelines.</li>
-                <li>
-                  Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
-                </li>
-                <li>
-                  Enthusiastic, positive and proactive nature with a keen attention to detail.
-                </li>
-              </ul>
-
-              <p>
-                <Accent>Desirable:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>
-                  Maritime maintenance experience - industry/defence/hobby would be acceptable.
-                </li>
-                <li>Sailing experience.</li>
-                <li>Keen interest in autonomous systems.</li>
-              </ul>
-            </Segmented>
-
-            <Segmented>
-              <Heading level={3} size="medium" weight="thick">
-                Operation Supervisor
-              </Heading>
-
-              <p>
-                <Accent>Contact:</Accent>
-                <br />
-                lloyd@Ocius.com.au
-              </p>
-
-              <p>
-                <Accent>Compensation:</Accent>
-                <br />
-                Commensurate to experience
-              </p>
-
-              <p>
-                <Accent>Background:</Accent>
-                <br />
-                Ocius is an Australian company that builds autonomous Uncrewed Surface Vessels
-                (USVs). These USVs use the energy of the weather – sun wind and waves – to act as
-                persistent monitoring and communications platforms. We are embarking on an ambitious
-                program of building and deploying multiple USVs for operations.
-              </p>
-              <p>
-                A key part of this program is to deploy and operate the USVs for extended periods of
-                time around Australia.
-              </p>
-
-              <p>
-                <Accent>Duties and Responsibilities:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>
-                  Planning, vessel preparation, deployment, coodination and supervision of
-                  operations.
-                </li>
-                <li>Working with the Engineering team to coordinate maintenance requirements.</li>
-                <li>Accompanying USV offshore on support boat during sea trials.</li>
-                <li>
-                  Provide local, on the ground, assessment of conditions and circumstances to aid
-                  project decisions.
-                </li>
-                <li>Coordinate and particpate in remote watchkeeping of the USVs when at sea.</li>
-                <li>
-                  Capturing and reporting lessons learnt during USV operations to assist the design
-                  and constuction of USVs.
-                </li>
-                <li>
-                  Implementing, maintaining, managing and updating all standard operating procedures
-                  and processes appropriate to the role.
-                </li>
-                <li>Maintenance of USVs</li>
-                <li>
-                  Being responsible for training other team members to the required standards,
-                  including coaching and mentoring of others.
-                </li>
-                <li>Plan mobilisation for new projects and engage with local stakeholders.</li>
-                <li>On occasion, assist with the assembly and testing of USVs.</li>
-              </ul>
-
-              <p>
-                <Accent>Requirements:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>Maritime industry or defence experience relevant to the position.</li>
-                <li>Current drivers licence.</li>
-                <li>Mechanical and/or electrical aptitude.</li>
-                <li>Strong computer literacy skills.</li>
-                <li>Ability to adhere to strict health and safety guidelines.</li>
-                <li>
-                  Excellent organisational skills and the ability to interact confidently with
-                  others.
-                </li>
-                <li>
-                  Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
-                </li>
-                <li>
-                  Enthusiastic, positive and proactive nature with a keen attention to detail.
-                </li>
-              </ul>
-
-              <p>
-                <Accent>Desirable:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>Relevant Certificate of Competency as issued by AMSA.</li>
-                <li>Sailing experience.</li>
-                <li>Experience in maritime surveillance operations.</li>
-                <li>Keen interest in autonomous systems.</li>
-              </ul>
-            </Segmented>
-
-            <Segmented>
-              <Heading level={3} size="medium" weight="thick">
-                Ground Control Operator
-              </Heading>
-
-              <p>
-                <Accent>Contact:</Accent>
-                <br />
-                lloyd@Ocius.com.au
-              </p>
-
-              <p>
-                <Accent>Compensation:</Accent>
-                <br />
-                Commensurate to experience
-              </p>
-
-              <p>
-                <Accent>Background:</Accent>
-                <br />
-                Ocius is an Australian company that builds autonomous Uncrewed Surface Vessels
-                (USVs). These USVs use the energy of the weather – sun wind and waves – to act as
-                persistent monitoring and communications platforms. We are embarking on an ambitious
-                program of building and deploying multiple USVs for operations.
-              </p>
-              <p>
-                A key part of this program is to deploy and operate the USVs for extended periods of
-                time around Australia. Though autonomous there is a requirement for someone on a
-                shore based ground control station to monitor the state of the vessels.
-              </p>
-
-              <p>
-                <Accent>Duties and Responsibilities:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>Safe navigation of the USV in compliance with COLREGS.</li>
-                <li>
-                  Interpretation of weather data before and during missions to ensure the safe
-                  operation of the USV.
-                </li>
-                <li>
-                  Keeping watch on cameras for other marine traffic in the area including buoys,
-                  fishing gear and any other potential hazards to the USV.
-                </li>
-                <li>Keeping watch, using external services such as marine traffic.</li>
-                <li>Maintaining mission logs including vessel systems.</li>
-                <li>Piloting of USVs from on a 24-hour shift operation schedule.</li>
-              </ul>
-
-              <p>
-                <Accent>On occasion this role may involve:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>
-                  Assisting with mobilisation of USV’s for projects including road transport to
-                  project locations. Preparation and launch of USVs at project location and on water
-                  escorting of USV to harbour limits. Demobilisation of USV post mission.
-                </li>
-                <li>Assisting with testing of USVs including launching and operating USV/RHIB.</li>
-                <li>
-                  Assiting with implementing, maintaining, managing and updating all standard
-                  operating procedures and processes appropriate to the role.
-                </li>
-              </ul>
-
-              <p>
-                <Accent>Requirements:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>
-                  Assiting with implementing, maintaining, managing and updating all standard
-                  operating procedures and processes appropriate to the role.
-                </li>
-                <li>Current drivers licence.</li>
-                <li>Ability to adhere to strict health and safety guidelines.</li>
-                <li>
-                  Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
-                </li>
-                <li>
-                  Enthusiastic, positive and proactive nature with a keen attention to detail.
-                </li>
-              </ul>
-
-              <p>
-                <Accent>Desirable:</Accent>
-              </p>
-              <ul style={{ marginTop: 0 }}>
-                <li>Maritime industry or defence experience relevant to the position.</li>
-                <li>Relevant Certificate of Competency as issued by AMSA.</li>
-                <li>Sailing experience.</li>
-                <li>Keen interest in autonomous systems.</li>
-              </ul>
-            </Segmented>
-          </Col>
-        </Row>
+            </Col>
+          </Row>
+          <Heading className="centered" level={3} size="small" weight="thick" color="#4ab4e6">
+            For further details please contact{' '}
+            <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
+          </Heading>
+        </Segmented>
       </Grid>
 
       <Segmented>
