@@ -67,7 +67,7 @@ const CareersPage = ({ data }) => (
           </Row>
         </Segmented>
 
-        <Segmented>
+        <Segmented borderBottom>
           <Row>
             <Col xs={12} md={8} lg={8}>
               <Heading level={3} size="medium" weight="thick">
@@ -183,6 +183,190 @@ const CareersPage = ({ data }) => (
                 <li>Full stack development.</li>
                 <li>Strong mechanical aptitude.</li>
                 <li>Maritime industry or defence experience relevant to the position</li>
+              </ul>
+            </Col>
+          </Row>
+          <Heading className="centered" level={3} size="small" weight="thick" color="#4ab4e6">
+            For further details please contact{' '}
+            <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
+          </Heading>
+        </Segmented>
+
+        <Segmented borderBottom>
+          <Row>
+            <Col xs={12} md={8} lg={8}>
+              <Heading level={3} size="medium" weight="thick">
+                Unmanned Surface Vessel – <br />
+                Casual Marine Support Crew
+              </Heading>
+
+              <p>Position: Unmanned Surface Vessel (USV) Casual Marine Support Crew (MSC) </p>
+              <p>Reporting to: Operations Supervisor </p>
+              <p>Location: Broome, WA </p>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Background
+              </Heading>
+
+              <p>
+                Ocius is an Australian company that builds autonomous Unmanned Surface Vessels
+                (USVs). These USVs use the energy of the weather – sun wind and waves – to act as
+                persistent monitoring and communications platforms. We are embarking on an ambitious
+                program of operating the fleet of USVs offshore 24/7.
+              </p>
+
+              <p>
+                A key part of this program is to deploy and operate the USVs in Broome during 2022
+                and we are therefore looking for interested people to join our operations team in
+                Broome to help with Launch and Recover as well as maintenance on the fleet on a
+                flexible and casual contract.
+              </p>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Duties and Responsibilities
+              </Heading>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>Launch and recovery of USVs.</li>
+                <li>
+                  Inspection, cleaning and maintanence of USVs, workshop and trailers where
+                  required.
+                </li>
+                <li>
+                  Following instructions from engineers to assist in upgrading/repairing electronic
+                  or mechanical systems.
+                </li>
+                <li>
+                  Opportunities to be involved in piloting the boats remotley during operation.
+                </li>
+              </ul>
+
+              <p>On occasion this role may involve:</p>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>
+                  Assiting with implementing, maintaining, managing and updating all standard
+                  operating procedures and processes appropriate to the role.
+                </li>
+              </ul>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Requirements
+              </Heading>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>Ability to adhere to operating proceudures.</li>
+                <li>
+                  Enthusiastic, positive and proactive nature with a keen attention to detail.
+                </li>
+                <li>Willingness to work outside normal hours ocasionally.</li>
+                <li>Ability to learn about complex electronic and mechanical systems.</li>
+              </ul>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Desirable
+              </Heading>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>Boat Licence/Relevant Certificate of Competency as issued by AMSA.</li>
+                <li>Sailing/Maritime experience.</li>
+                <li>Keen interest in autonomous systems.</li>
+                <li>
+                  Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
+                </li>
+              </ul>
+            </Col>
+          </Row>
+          <Heading className="centered" level={3} size="small" weight="thick" color="#4ab4e6">
+            For further details please contact{' '}
+            <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
+          </Heading>
+        </Segmented>
+
+        <Segmented borderBottom>
+          <Row>
+            <Col xs={12} md={8} lg={8}>
+              <Heading level={3} size="medium" weight="thick">
+                Unmanned Surface Vessel – <br />
+                Part Time Ground Control Operator
+              </Heading>
+
+              <p>Position: Part Time Ground Control Operator </p>
+              <p>Reporting to: Operations Supervisor </p>
+              <p>Location: Randwick, Sydney </p>
+              <p>Hours: 30+ per week</p>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Background
+              </Heading>
+
+              <p>
+                Ocius is an Australian company that builds and operates autonomous Unmanned Surface
+                Vessels (USVs). These USVs use the energy of the weather – sun wind and waves – to
+                act as persistent monitoring and communications platforms.
+              </p>
+              <p>
+                We are embarking on an ambitious program to operate our fleet of USVs offshore 24/7
+                in varying locations around Australia. There is a requirement for someone on a
+                shore-based ground control station to always monitor and navigate the vessels.
+              </p>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Duties and Responsibilities
+              </Heading>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>Piloting of USVs on a shift based 24-hour operation schedule. </li>
+                <li>Safe navigation of the USV fleet in compliance with COLREGS. </li>
+                <li>
+                  Keeping watch on cameras, radar and other sensors for potential hazards to the
+                  USV.
+                </li>
+                <li>
+                  Monitoring the vessel health and behaviour and occasionally working with
+                  developers to improve the platforms.
+                </li>
+                <li>
+                  Interpretation of weather data before and during missions to ensure the safe
+                  operation of the USV.
+                </li>
+                <li>Communicating with stakeholders about the operation when on shift. </li>
+                <li>Maintaining mission logs including vessel systems. </li>
+              </ul>
+              <p>On occasion this role may involve:</p>
+              <ul style={{ marginTop: 0 }}>
+                <li>
+                  Assiting with implementing, maintaining, managing and updating all standard
+                  operating procedures and processes appropriate to the role.
+                </li>
+              </ul>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Requirements
+              </Heading>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>Strong computer literacy skills.</li>
+                <li>Reliable broadband internet.</li>
+                <li>Ability to adhere to operating proceudures.</li>
+                <li>
+                  Enthusiastic, positive and proactive nature with a keen attention to detail.
+                </li>
+                <li>Ability to work outside normal business hours when required. </li>
+              </ul>
+
+              <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                Desirable
+              </Heading>
+
+              <ul style={{ marginTop: 0 }}>
+                <li>Maritime industry or defence experience relevant to the position.</li>
+                <li>Relevant Certificate of Competency as issued by AMSA.</li>
+                <li>Sailing experience.</li>
+                <li>
+                  Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
+                </li>
+                <li>Keen interest/experience in autonomous systems.</li>
               </ul>
             </Col>
           </Row>
