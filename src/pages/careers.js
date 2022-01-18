@@ -1,8 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-styled-flexboxgrid/src';
-import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 import SEO from '../components/SEO';
 import Segmented from '../components/Segmented';
 import Layout from '../layouts/Layout';
@@ -22,7 +20,7 @@ const CenteredCol = styled(Col)`
   justify-content: center;
 `;
 
-const CareersPage = ({ data }) => (
+const CareersPage = () => (
   <Layout>
     <SEO
       title="Careers"
@@ -44,7 +42,7 @@ const CareersPage = ({ data }) => (
 
         <Segmented multiplier={2} borderBottom>
           <Row>
-            <CenteredCol xs={12} md={6} lg={5}>
+            <CenteredCol xs={12} md={8} lg={8}>
               <Heading level={2} size="medium" weight="thick">
                 Working with Ocius <Accent>“Oceans is us”</Accent>
               </Heading>
@@ -58,12 +56,6 @@ const CareersPage = ({ data }) => (
                 our exciting future.
               </p>
             </CenteredCol>
-            <Col xs={12} md={6} lg={6} lgOffset={1}>
-              <Img
-                fluid={data.OciusTeam ? data.OciusTeam.childImageSharp.fluid : ''}
-                alt="Ocius team"
-              />
-            </Col>
           </Row>
         </Segmented>
 
@@ -386,17 +378,5 @@ const CareersPage = ({ data }) => (
     </section>
   </Layout>
 );
-
-export const query = graphql`
-  query {
-    OciusTeam: file(relativePath: { eq: "images/ocius_team.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 962) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`;
 
 export default CareersPage;
