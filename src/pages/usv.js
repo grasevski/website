@@ -14,6 +14,7 @@ import ResponsiveIframe from '../components/ResponsiveIframe';
 import OciusGlobeAlt from '../components/Icons/OciusGlobeAlt';
 import ArticlePreviewBlock from '../components/ArticlePreviewBlock';
 import NewsletterForm from '../components/NewsletterForm';
+import VideoSlider from '../components/VideoSlider';
 import CoreTechnologiesBlock from '../components/CoreTechnologiesBlock';
 import ContactUs from '../components/ContactUs';
 import {
@@ -70,11 +71,18 @@ const USVPage = ({ data }) => (
           </SecondColumnMobile>
           <FirstColumnMobile className="centered" xs={12} md={12} lg={7}>
             <Spacing $value="180px" />
-            <ResponsiveIframe
-              src="https://www.youtube.com/embed/7vhvKcc-UPk?rel=0"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-            />
+            <VideoSlider>
+              <ResponsiveIframe
+                src="https://www.youtube.com/embed/7vhvKcc-UPk?rel=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+              />
+              <ResponsiveIframe
+                src="https://www.youtube.com/embed/py3V7Vrxk24?rel=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+              />
+            </VideoSlider>
             <Heading level={2} size="medium">
               Watch video
             </Heading>
