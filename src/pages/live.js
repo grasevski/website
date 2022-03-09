@@ -174,7 +174,7 @@ const LivePage = () => {
       <MapNotification
         role="alert"
         title="Notification"
-        subtitle="Trail is 24 hours. Click on boats to see camera views. Feed may be delayed for a variable period or turned off for security reasons."
+        subtitle="Live Feed is delayed and some boats are not shown for security reasons"
       />
     </EmptyLayout>
   );
