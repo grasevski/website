@@ -73,6 +73,11 @@ const USVPage = ({ data }) => (
             <Spacing $value="180px" />
             <VideoSlider>
               <ResponsiveIframe
+                src="https://www.youtube.com/embed/SaFYbzoSV7g?rel=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+              />
+              <ResponsiveIframe
                 src="https://www.youtube.com/embed/7vhvKcc-UPk?rel=0"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
