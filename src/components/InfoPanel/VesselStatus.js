@@ -141,16 +141,22 @@ const formatVesselStatusData = (data) => {
   const convertMsToKnots = (speed) => parseFloat(speed) * 1.94384;
 
   /**
+   * Take Pressure in atm as input, then convert to millibars.
+   * @param {String} pressure Speed number to be converted
+   */
+  const convertAtmToMbar = (pressure) => parseFloat(pressure) * 1013.25;
+
+  /**
    * Add degree to the end - 10°
    * @param {String} direction Direction string to be formatted
    */
   const formatDirection = (direction) => `${parseFloat(direction).toFixed(1)}\xB0`;
 
   /**
-   * Add pressure units to the end - atm
+   * Add pressure units to the end - mbar
    * @param {String} pressure Pressure string to be formatted
    */
-  const formatPressure = (pressure) => `${parseFloat(pressure).toFixed(1)} atm`;
+  const formatPressure = (pressure) => `${parseFloat(pressure).toFixed(0)} mbar`;
 
   /**
    * Add depth units to the end, Rounds to 2 decimal places
@@ -222,7 +228,7 @@ const formatVesselStatusData = (data) => {
         } else if (key === 'Air_temp') {
           statuses[StatusNames[key]] = formatTemperature(value);
         } else if (key === 'AirPressure') {
-          statuses[StatusNames[key]] = formatPressure(value);
+          statuses[StatusNames[key]] = formatPressure(convertAtmToMbar(value));
         } else if (key === 'Water_depth') {
           statuses[StatusNames[key]] = formatDepth(value);
         } else if (key === 'Boat_speed' || key === 'Sog') {
