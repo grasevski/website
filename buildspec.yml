@@ -2,14 +2,11 @@ version: 0.1
 phases:
   pre_build:
     commands:
-      - nvm install lts/*
-      - nvm use lts/*
+      - apt update
+      - node -v
       - npm ci
   build:
     commands:
-      - nvm install lts/*
-      - nvm use lts/*
-      - node -v
       - npm run build
   post_build:
     commands:
