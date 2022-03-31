@@ -105,7 +105,7 @@ const StyledLink = styled(Link)`
     NavTab is just React-Router's <Link> with some styling + an onClick handler to block clicks on the active tab.
 */
 
-const NavTab = ({
+function NavTab({
   index,
   to,
   selected,
@@ -117,7 +117,7 @@ const NavTab = ({
   handleTabKeyDown,
   handleTabAnchorFocus,
   ...other
-}) => {
+}) {
   const setTabFocus = (evt) => {
     const leftKey = 37;
     const rightKey = 39;
@@ -149,7 +149,7 @@ const NavTab = ({
       </StyledLink>
     </NavItem>
   );
-};
+}
 
 NavTab.propTypes = {
   /**

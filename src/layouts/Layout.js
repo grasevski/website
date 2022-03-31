@@ -22,11 +22,13 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <Navbar />
-    {children}
-    <Footer />
-  </ThemeProvider>
-);
+export default function Layout({ children }) {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Navbar />
+      {children}
+      <Footer />
+    </ThemeProvider>
+  );
+}

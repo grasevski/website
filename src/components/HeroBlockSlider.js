@@ -12,14 +12,16 @@ const HeroContainer = styled.div`
 
 HeroContainer.defaultProps = {};
 
-const HeroBlockSlider = ({ children, images, masked }) => (
-  <HeroContainer Tag="section" className="HeroBlock">
-    <BackgroundSlider images={images} duration={10} transition={1.5} />
-    <InnerContainer>{children}</InnerContainer>
+function HeroBlockSlider({ children, images, masked }) {
+  return (
+    <HeroContainer Tag="section" className="HeroBlock">
+      <BackgroundSlider images={images} duration={10} transition={1.5} />
+      <InnerContainer>{children}</InnerContainer>
 
-    {masked && <MaskOverlay />}
-  </HeroContainer>
-);
+      {masked && <MaskOverlay />}
+    </HeroContainer>
+  );
+}
 
 HeroBlockSlider.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,

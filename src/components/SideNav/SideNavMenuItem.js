@@ -9,13 +9,15 @@ const NavLink = styled(Link)`
   padding: 0 1.6rem 0 3.2rem;
 `;
 
-const SideNavMenuItem = ({ children, className, ...rest }) => (
-  <li className={className}>
-    <NavLink {...rest} getProps={detectActive}>
-      <SideNavLinkText>{children}</SideNavLinkText>
-    </NavLink>
-  </li>
-);
+function SideNavMenuItem({ children, className, ...rest }) {
+  return (
+    <li className={className}>
+      <NavLink {...rest} getProps={detectActive}>
+        <SideNavLinkText>{children}</SideNavLinkText>
+      </NavLink>
+    </li>
+  );
+}
 
 SideNavMenuItem.propTypes = {
   /**

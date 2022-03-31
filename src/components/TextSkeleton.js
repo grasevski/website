@@ -26,7 +26,7 @@ const Text = styled.p`
   }
 `;
 
-const TextSkeleton = ({ count }) => {
+function TextSkeleton({ count }) {
   const loaderRows = () => {
     const rows = [];
     for (let index = 0; index < count; index += 1) {
@@ -36,7 +36,7 @@ const TextSkeleton = ({ count }) => {
   };
 
   return <>{loaderRows()}</>;
-};
+}
 
 TextSkeleton.propTypes = {
   count: PropTypes.number,

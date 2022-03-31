@@ -72,7 +72,7 @@ const NotAvailble = styled.div`
   }
 `;
 
-const CameraSlider = ({ images, settings, customSettings }) => {
+function CameraSlider({ images, settings, customSettings }) {
   const [errored, setErrored] = useState(false);
   // Check if we received valid data
   const renderPaginator = (direction) => <PaginatorButton direction={direction} />;
@@ -145,7 +145,7 @@ const CameraSlider = ({ images, settings, customSettings }) => {
       )}
     </Carousel>
   );
-};
+}
 
 CameraSlider.propTypes = {
   images: PropTypes.arrayOf(PropTypes.object),

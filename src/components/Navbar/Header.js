@@ -28,7 +28,7 @@ const Header = styled.header`
   }
 `;
 
-const WebsiteHeader = () => {
+function WebsiteHeader() {
   const { sideNavIsOpen, toggleNavState } = useContext(NavContext);
 
   return (
@@ -43,6 +43,6 @@ const WebsiteHeader = () => {
       <Logo maxHeight="20px" />
     </Header>
   );
-};
+}
 
 export default WebsiteHeader;

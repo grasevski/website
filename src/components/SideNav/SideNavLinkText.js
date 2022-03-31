@@ -13,7 +13,9 @@ const LinkText = styled.span`
   user-select: none;
 `;
 
-const SideNavLinkText = ({ children, ...rest }) => <LinkText {...rest}>{children}</LinkText>;
+function SideNavLinkText({ children, ...rest }) {
+  return <LinkText {...rest}>{children}</LinkText>;
+}
 
 SideNavLinkText.propTypes = {
   /**

@@ -23,7 +23,7 @@ const ItemWrapper = styled.div`
 
 // Displays the battery levels in Volts and graphically using ProgressBars
 // Assumes Batteries.length() == BatteryPercentages.length()
-const PowerMonitor = ({ Batteries, BatteryPercentages }) => {
+function PowerMonitor({ Batteries, BatteryPercentages }) {
   const BatteryBars = Batteries.map((BatteryLevel, index) => (
     <ItemWrapper key={uid(BatteryLevel, index)}>
       <Label>
@@ -34,7 +34,7 @@ const PowerMonitor = ({ Batteries, BatteryPercentages }) => {
   ));
 
   return <MonitorWrapper>{BatteryBars}</MonitorWrapper>;
-};
+}
 
 PowerMonitor.propTypes = {
   Batteries: PropTypes.arrayOf(PropTypes.string),

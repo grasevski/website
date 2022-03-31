@@ -57,14 +57,14 @@ const MenuButton = styled.button`
   ${(props) => props.isActive && ActiveStyle}
 `;
 
-const HeaderMenuButton = ({
+function HeaderMenuButton({
   'aria-label': ariaLabel,
   'aria-labelledby': ariaLabelledBy,
   onClick,
   isActive,
   customIcon,
   ...rest
-}) => {
+}) {
   const accessibilityLabel = {
     'aria-label': ariaLabel,
     'aria-labelledby': ariaLabelledBy,
@@ -92,7 +92,7 @@ const HeaderMenuButton = ({
       )}
     </MenuButton>
   );
-};
+}
 
 HeaderMenuButton.propTypes = {
   /**

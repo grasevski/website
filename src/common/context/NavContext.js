@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useMemo } from 'react';
 
 const NavContext = React.createContext({
   sideNavIsOpen: false,
@@ -15,7 +15,7 @@ const reducer = (state, action) => {
       return { ...state, [action.nav]: !state[action.nav] };
   }
 };
-export const NavContextProvider = ({ children }) => {
+export function NavContextProvider({ children }) {
   const [{ sideNavIsOpen, switcherIsOpen }, dispatch] = useReducer(reducer, {
     sideNavIsOpen: false,
     switcherIsOpen: false,
@@ -25,17 +25,17 @@ export const NavContextProvider = ({ children }) => {
     dispatch({ nav, type });
   };
 
-  return (
-    <NavContext.Provider
-      value={{
-        sideNavIsOpen,
-        switcherIsOpen,
-        toggleNavState,
-      }}
-    >
-      {children}
-    </NavContext.Provider>
+  // Prevent context from taking non-stable values
+  const value = useMemo(
+    () => ({
+      sideNavIsOpen,
+      switcherIsOpen,
+      toggleNavState,
+    }),
+    [sideNavIsOpen, switcherIsOpen]
   );
-};
+
+  return <NavContext.Provider value={value}>{children}</NavContext.Provider>;
+}
 
 export default NavContext;

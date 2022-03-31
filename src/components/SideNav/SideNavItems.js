@@ -10,9 +10,9 @@ const NavItems = styled.ul`
   margin: 0;
 `;
 
-const SideNavItems = ({ className, children }) => (
-  <NavItems className={className}>{children}</NavItems>
-);
+function SideNavItems({ className, children }) {
+  return <NavItems className={className}>{children}</NavItems>;
+}
 
 SideNavItems.propTypes = {
   /**

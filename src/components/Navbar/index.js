@@ -44,7 +44,7 @@ const SocialLinks = styled.div`
   }
 `;
 
-export default () => {
+export default function NavbarWrapper() {
   // Load navbar items from YAML file
   const navItems = useNavItems();
   // Save ref of navbar + sidenav for future reference
@@ -125,4 +125,4 @@ export default () => {
       </SideNavWrapper>
     </div>
   );
-};
+}

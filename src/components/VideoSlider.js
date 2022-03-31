@@ -51,7 +51,7 @@ const Carousel = styled.div`
   }
 `;
 
-const VideoSlider = ({ settings, children }) => {
+function VideoSlider({ settings, children }) {
   // Check if we received valid data
   const renderPaginator = (direction) => (
     <PaginatorButton size="medium" backgroundColor="blue" direction={direction} />
@@ -70,7 +70,7 @@ const VideoSlider = ({ settings, children }) => {
       ) : null}
     </Carousel>
   );
-};
+}
 
 VideoSlider.propTypes = {
   children: PropTypes.node.isRequired,

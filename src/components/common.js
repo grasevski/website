@@ -63,14 +63,12 @@ const LogoBackgroundDiv = styled.div`
   })}
 `;
 
-export const LogoBackgroundWrapper = ({ children, position }) => {
+export function LogoBackgroundWrapper({ children, position }) {
   const data = useStaticQuery(graphql`
     query BackgroundQuery {
       logoImage: file(relativePath: { eq: "images/ocius-logo-transparent.png" }) {
         childImageSharp {
-          fluid(maxWidth: 2000, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
         }
       }
     }
@@ -78,11 +76,14 @@ export const LogoBackgroundWrapper = ({ children, position }) => {
 
   return (
     // Use the styled component here
-    <LogoBackgroundDiv $image={data.logoImage.childImageSharp.fluid.src} $position={position}>
+    <LogoBackgroundDiv
+      $image={data.logoImage.childImageSharp.gatsbyImageData.src}
+      $position={position}
+    >
       {children}
     </LogoBackgroundDiv>
   );
-};
+}
 
 LogoBackgroundWrapper.propTypes = {
   children: PropTypes.node,
@@ -105,13 +106,15 @@ const AccentRowDiv = styled.div`
   }
 `;
 
-export const AccentRowWrapper = ({ children }) => (
-  <AccentRowDiv>
-    <MaskOverlay flipped position="top" />
-    {children}
-    <MaskOverlay flipped />
-  </AccentRowDiv>
-);
+export function AccentRowWrapper({ children }) {
+  return (
+    <AccentRowDiv>
+      <MaskOverlay flipped position="top" />
+      {children}
+      <MaskOverlay flipped />
+    </AccentRowDiv>
+  );
+}
 
 AccentRowWrapper.propTypes = {
   children: PropTypes.node,
@@ -127,12 +130,14 @@ const DarkAccentRowDiv = styled.div`
   padding: 3.2rem 0;
 `;
 
-export const DarkAccentRowWrapper = ({ children }) => (
-  <DarkAccentRowDiv>
-    {children}
-    <MaskOverlay flipped />
-  </DarkAccentRowDiv>
-);
+export function DarkAccentRowWrapper({ children }) {
+  return (
+    <DarkAccentRowDiv>
+      {children}
+      <MaskOverlay flipped />
+    </DarkAccentRowDiv>
+  );
+}
 
 DarkAccentRowWrapper.propTypes = {
   children: PropTypes.node,

@@ -7,7 +7,7 @@ import isExternalURL from '../common/detectExternalURL';
  * and partiallyActive, destructure the prop here and
  * pass it only to GatsbyLink
  */
-const DynamicLink = ({ children, to, activeClassName, partiallyActive, getProps, ...other }) => {
+function DynamicLink({ children, to, activeClassName, partiallyActive, getProps, ...other }) {
   // Use Gatsby Link for internal links, and <a> for others
   if (!isExternalURL(to)) {
     return (
@@ -27,6 +27,6 @@ const DynamicLink = ({ children, to, activeClassName, partiallyActive, getProps,
       {children}
     </a>
   );
-};
+}
 
 export default DynamicLink;

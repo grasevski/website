@@ -256,7 +256,7 @@ const formatVesselStatusData = (data) => {
   return statuses;
 };
 
-const VesselStatus = ({ data }) => {
+function VesselStatus({ data }) {
   const statuses = formatVesselStatusData(data);
   return data ? (
     <>
@@ -276,6 +276,6 @@ const VesselStatus = ({ data }) => {
       />
     </>
   ) : null;
-};
+}
 
 export default VesselStatus;

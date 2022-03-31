@@ -19,16 +19,7 @@ export const getColorVariation = (index) => {
   return colorVariations[boatNumber];
 };
 
-export const Boat = ({
-  index,
-  className,
-  height,
-  width,
-  viewBox,
-  rotation,
-  color,
-  insideColor,
-}) => {
+export function Boat({ index, className, height, width, viewBox, rotation, color, insideColor }) {
   const defaultColors = getColorVariation(index);
   const boatColor = !color ? defaultColors[0] : color;
   const boatInsideColor = !insideColor ? defaultColors[1] : insideColor;
@@ -74,7 +65,7 @@ export const Boat = ({
       </g>
     </svg>
   );
-};
+}
 
 Boat.propTypes = {
   index: PropTypes.number,

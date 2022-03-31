@@ -48,31 +48,35 @@ const Link = styled(GatsbyLink)`
   }
 `;
 
-const MobileNavItem = ({ linkTo, label, children }) => (
-  <Link getProps={detectActive} to={linkTo}>
-    {children}
-    <div>{label}</div>
-  </Link>
-);
+function MobileNavItem({ linkTo, label, children }) {
+  return (
+    <Link getProps={detectActive} to={linkTo}>
+      {children}
+      <div>{label}</div>
+    </Link>
+  );
+}
 
-const MobileNavigation = () => (
-  <Wrapper>
-    <MobileNavItem linkTo="/" label="Home">
-      <Home width="32px" />
-    </MobileNavItem>
-    <MobileNavItem linkTo="/about/" label="About">
-      <Idea width="32px" />
-    </MobileNavItem>
-    <MobileNavItem linkTo="/live/" label="Live">
-      <Globe width="32px" />
-    </MobileNavItem>
-    <MobileNavItem linkTo="/usv/" label="Drones">
-      <Drone width="32px" />
-    </MobileNavItem>
-    <MobileNavItem linkTo="/news/" label="News">
-      <News width="32px" />
-    </MobileNavItem>
-  </Wrapper>
-);
+function MobileNavigation() {
+  return (
+    <Wrapper>
+      <MobileNavItem linkTo="/" label="Home">
+        <Home width="32px" />
+      </MobileNavItem>
+      <MobileNavItem linkTo="/about/" label="About">
+        <Idea width="32px" />
+      </MobileNavItem>
+      <MobileNavItem linkTo="/live/" label="Live">
+        <Globe width="32px" />
+      </MobileNavItem>
+      <MobileNavItem linkTo="/usv/" label="Drones">
+        <Drone width="32px" />
+      </MobileNavItem>
+      <MobileNavItem linkTo="/news/" label="News">
+        <News width="32px" />
+      </MobileNavItem>
+    </Wrapper>
+  );
+}
 
 export default MobileNavigation;

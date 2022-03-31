@@ -100,14 +100,14 @@ const TabsTriggerText = styled.a`
     NavTabs is wrapper for tabs navigation.
 */
 
-const NavTabs = ({
+function NavTabs({
   children,
   iconDescription,
   ariaLabel,
   triggerHref,
   selected,
   onSelectionChange,
-}) => {
+}) {
   const [dropdownHidden, setDropdownHidden] = useState(true);
   const [selectedDropdown, setSelectedDropdown] = useState(selected);
 
@@ -217,7 +217,7 @@ const NavTabs = ({
       </Nav>
     </Wrapper>
   );
-};
+}
 
 NavTabs.propTypes = {
   /**

@@ -3,4 +3,6 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../common/theme';
 import '../css/styles.css';
 
-export default ({ children }) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+export default function EmptyLayout({ children }) {
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+}

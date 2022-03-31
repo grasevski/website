@@ -20,9 +20,9 @@ const NavIcon = styled.div`
   }
 `;
 
-const SideNavIcon = ({ children, className }) => (
-  <NavIcon className={className}>{children}</NavIcon>
-);
+function SideNavIcon({ children, className }) {
+  return <NavIcon className={className}>{children}</NavIcon>;
+}
 
 SideNavIcon.propTypes = {
   /**

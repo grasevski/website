@@ -61,14 +61,16 @@ const EllipsisSpinner = styled.div`
   }
 `;
 
-const Ellipsis = ({ color, size, sizeUnit }) => (
-  <EllipsisSpinner color={color} size={size} sizeUnit={sizeUnit}>
-    <div />
-    <div />
-    <div />
-    <div />
-  </EllipsisSpinner>
-);
+function Ellipsis({ color, size, sizeUnit }) {
+  return (
+    <EllipsisSpinner color={color} size={size} sizeUnit={sizeUnit}>
+      <div />
+      <div />
+      <div />
+      <div />
+    </EllipsisSpinner>
+  );
+}
 
 Ellipsis.defaultProps = {
   size: 64,

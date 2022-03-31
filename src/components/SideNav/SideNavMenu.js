@@ -85,7 +85,7 @@ const NavMenu = styled.ul`
 `;
 
 class SideNavMenu extends React.Component {
-  static getDerivedStateFromProps = (props, state) => {
+  static getDerivedStateFromProps(props, state) {
     let derivedState = null;
 
     if (props.isSideNavExpanded === false && state.isExpanded === true) {
@@ -101,7 +101,7 @@ class SideNavMenu extends React.Component {
     }
 
     return derivedState;
-  };
+  }
 
   constructor(props) {
     super(props);

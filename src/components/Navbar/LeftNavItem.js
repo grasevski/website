@@ -7,7 +7,7 @@ import SideNavLink from '../SideNav/SideNavLink';
 
 import { MenuContext } from '../../common/context/MainNavContext';
 
-const LeftNavItem = ({ menuItems, title, path }) => {
+function LeftNavItem({ menuItems, title, path }) {
   const { toggleMenuMode } = useContext(MenuContext);
 
   const handleClick = () => {
@@ -40,7 +40,7 @@ const LeftNavItem = ({ menuItems, title, path }) => {
       }}
     </Location>
   );
-};
+}
 
 const SubNavItems = ({ items, onClick }) =>
   items.map((item) => {

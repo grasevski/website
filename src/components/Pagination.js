@@ -27,7 +27,7 @@ const Link = styled(GatsbyLink)`
   }
 `;
 
-const Pagination = ({ pageContext }) => {
+function Pagination({ pageContext }) {
   const { previousPagePath, nextPagePath } = pageContext;
 
   return (
@@ -64,6 +64,6 @@ const Pagination = ({ pageContext }) => {
       )}
     </Navigation>
   );
-};
+}
 
 export default Pagination;

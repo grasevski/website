@@ -17,7 +17,7 @@ const mapStyle = {
   width: '100%',
 };
 
-const ContactMap = () => {
+function ContactMap() {
   // Load the Google maps scripts
   const { isLoaded } = useLoadScript({
     // Get Google Maps API key from props
@@ -43,6 +43,6 @@ const ContactMap = () => {
   );
 
   return isLoaded ? renderMap() : null;
-};
+}
 
 export default React.memo(ContactMap);

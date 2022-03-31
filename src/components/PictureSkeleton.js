@@ -25,6 +25,8 @@ const SkeletonWrapper = styled.div`
   }
 `;
 
-const PictureSkeleton = (props) => <SkeletonWrapper {...props} />;
+function PictureSkeleton(props) {
+  return <SkeletonWrapper {...props} />;
+}
 
 export default PictureSkeleton;

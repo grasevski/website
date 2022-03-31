@@ -46,7 +46,7 @@ const CurrentSpeed = styled.p`
   color: #ee230d;
 `;
 
-const WindRose = ({ windDirection, windSpeed, currentDirection, currentSpeed }) => {
+function WindRose({ windDirection, windSpeed, currentDirection, currentSpeed }) {
   /**
    * Convert centidegrees to degrees (1 degree = 100 centidegrees).
    * @param {String|Number} string String to be formatted
@@ -107,7 +107,7 @@ const WindRose = ({ windDirection, windSpeed, currentDirection, currentSpeed }) 
       {formattedCurrentSpeed && <CurrentSpeed>{formattedCurrentSpeed}</CurrentSpeed>}
     </Rose>
   ) : null;
-};
+}
 
 WindRose.propTypes = {
   windDirection: PropTypes.number,

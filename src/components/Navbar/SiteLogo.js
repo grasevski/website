@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link as GatsbyLink, graphql, useStaticQuery } from 'gatsby';
+import { getSrc } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import mq from '../../common/mq';
 
@@ -27,27 +28,28 @@ const LogoImage = styled.img`
   max-height: 100%;
 `;
 
-const SiteLogo = ({ className, href }) => {
+function SiteLogo({ className, href }) {
   const { file } = useStaticQuery(
     graphql`
-      query {
+      {
         file(relativePath: { eq: "images/ocius-logo-header.png" }) {
           childImageSharp {
-            fluid(maxWidth: 200) {
-              src
-            }
+            gatsbyImageData(width: 200, placeholder: BLURRED, layout: CONSTRAINED)
           }
         }
       }
     `
   );
 
+  // Get logo image
+  const logo = getSrc(file);
+
   return (
     <LogoLink className={className} key="brand" to={href}>
-      <LogoImage src={file.childImageSharp.fluid.src} alt="Website logo" width="200" height="32" />
+      <LogoImage src={logo} alt="Website logo" />
     </LogoLink>
   );
-};
+}
 
 SiteLogo.propTypes = {
   className: PropTypes.string,

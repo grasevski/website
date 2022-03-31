@@ -73,14 +73,16 @@ const AssistiveText = styled.span`
  * navigation that is a part of the UI Shell. It is responsible for handling the
  * user interaction to expand or collapse the side navigation.
  */
-const SideNavFooter = ({ assistiveText, className, expanded, onToggle }) => (
-  <NavFooter className={className}>
-    <ButtonToggle type="button" onClick={(evt) => onToggle(evt)} title={assistiveText}>
-      <NavIcon>{expanded ? <Close20 /> : <ChevronRight />}</NavIcon>
-      <AssistiveText>{assistiveText}</AssistiveText>
-    </ButtonToggle>
-  </NavFooter>
-);
+function SideNavFooter({ assistiveText, className, expanded, onToggle }) {
+  return (
+    <NavFooter className={className}>
+      <ButtonToggle type="button" onClick={(evt) => onToggle(evt)} title={assistiveText}>
+        <NavIcon>{expanded ? <Close20 /> : <ChevronRight />}</NavIcon>
+        <AssistiveText>{assistiveText}</AssistiveText>
+      </ButtonToggle>
+    </NavFooter>
+  );
+}
 
 SideNavFooter.propTypes = {
   /**

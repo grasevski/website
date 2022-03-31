@@ -26,7 +26,7 @@ const options = {
   gestureHandling: 'greedy',
 };
 
-const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
+function GMap({ apiKey, currentVessel, setCurrentVessel, droneData }) {
   // Load the Google maps scripts
   const { isLoaded } = useLoadScript({
     // Get Google Maps API key from props
@@ -282,7 +282,7 @@ const GMap = ({ apiKey, currentVessel, setCurrentVessel, droneData }) => {
   );
 
   return isLoaded ? renderMap() : null;
-};
+}
 
 GMap.propTypes = {
   apiKey: PropTypes.string.isRequired,

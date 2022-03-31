@@ -4,6 +4,8 @@ import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import { Grid, Col, Row } from 'react-styled-flexboxgrid/src';
+import { getImage } from 'gatsby-plugin-image';
+import { convertToBgImage } from 'gbimage-bridge';
 import BackgroundImage from 'gatsby-background-image';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import Heading from './Heading';
@@ -75,8 +77,8 @@ const FormGroup = styled.div`
   }
 `;
 
-const NewsletterForm = ({ topMaskBackgroundColor, bottomMaskBackgroundColor }) => {
-  const { register, handleSubmit, errors, reset, formState } = useForm({
+function NewsletterForm({ topMaskBackgroundColor, bottomMaskBackgroundColor }) {
+  const { register, handleSubmit, reset, formState } = useForm({
     mode: 'onBlur',
     defaultValues: {
       email: '',
@@ -85,7 +87,7 @@ const NewsletterForm = ({ topMaskBackgroundColor, bottomMaskBackgroundColor }) =
   });
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [formMessage, setFormMessage] = useState('');
-  const { isSubmitting, isValid } = formState;
+  const { isSubmitting, isValid, errors } = formState;
 
   const handleFormSubmitSuccess = () => {
     setSubmitSuccess(true);
@@ -130,18 +132,27 @@ const NewsletterForm = ({ topMaskBackgroundColor, bottomMaskBackgroundColor }) =
         query {
           NewsletterBackground: file(relativePath: { eq: "images/newsletter-bg.jpg" }) {
             childImageSharp {
-              fluid(quality: 85, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData(
+                width: 1920
+                quality: 85
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
       `}
       render={(data) => {
-        // Set ImageData.
-        const imageData = data.NewsletterBackground.childImageSharp.fluid;
+        // Get ImageData.
+        const imageData = getImage(data.NewsletterBackground);
+        // Convert to bg image
+        const bgImage = convertToBgImage(imageData);
+
         return (
-          <NewsletterContainer Tag="section" fluid={imageData}>
+          <NewsletterContainer
+            Tag="section"
+            {...bgImage} // Spread bgImage into BackgroundImage
+          >
             <MaskOverlay flipped position="top" color={topMaskBackgroundColor} />
             <Grid className="centered">
               <Row>
@@ -165,7 +176,7 @@ const NewsletterForm = ({ topMaskBackgroundColor, bottomMaskBackgroundColor }) =
                     <FormGroup>
                       {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
                       <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
-                        <Field type="text" name="name" tabIndex="-1" ref={register} />
+                        <Field type="text" name="name" tabIndex="-1" {...register('name')} />
                       </div>
 
                       <div className="form-col-8">
@@ -174,7 +185,7 @@ const NewsletterForm = ({ topMaskBackgroundColor, bottomMaskBackgroundColor }) =
                           placeholder="Email address"
                           name="email"
                           type="email"
-                          ref={register({
+                          {...register('email', {
                             required: true,
                             pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                           })}
@@ -206,7 +217,7 @@ const NewsletterForm = ({ topMaskBackgroundColor, bottomMaskBackgroundColor }) =
       }}
     />
   );
-};
+}
 
 NewsletterForm.propTypes = {
   topMaskBackgroundColor: PropTypes.string,
