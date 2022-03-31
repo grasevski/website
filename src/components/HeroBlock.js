@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { Grid } from 'react-styled-flexboxgrid/src';
+import { Grid } from '@r007/react-styled-flexboxgrid';
 import { switchProp } from 'styled-tools';
 import MaskOverlay from './MaskOverlay';
 

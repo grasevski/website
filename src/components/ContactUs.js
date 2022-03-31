@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Col, Row } from 'react-styled-flexboxgrid/src';
+import { Grid, Col, Row } from '@r007/react-styled-flexboxgrid';
 import Heading from './Heading';
 
 function ContactUs() {

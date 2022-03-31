@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import { Grid, Row, Col } from 'react-styled-flexboxgrid/src';
+import { Grid, Row, Col } from '@r007/react-styled-flexboxgrid';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Segmented from './Segmented';
 import Button from './Button';

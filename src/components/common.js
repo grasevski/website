@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Col } from 'react-styled-flexboxgrid/src';
+import { Col } from '@r007/react-styled-flexboxgrid';
 import { graphql, useStaticQuery } from 'gatsby';
 import { switchProp } from 'styled-tools';
 import styled, { css, keyframes } from 'styled-components';

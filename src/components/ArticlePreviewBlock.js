@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import { Row, Col } from 'react-styled-flexboxgrid/src';
+import { Row, Col } from '@r007/react-styled-flexboxgrid';
 import ArticlePreview from './ArticlePreview';
 
 function RecentNews() {

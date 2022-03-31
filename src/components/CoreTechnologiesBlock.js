@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Row, Col } from 'react-styled-flexboxgrid/src';
+import { Grid, Row, Col } from '@r007/react-styled-flexboxgrid';
 import ReadMoreReact from 'read-more-react';
 import Segmented from './Segmented';
 import Heading from './Heading';

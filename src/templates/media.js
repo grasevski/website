@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Grid, Col, Row } from 'react-styled-flexboxgrid/src';
+import { Grid, Col, Row } from '@r007/react-styled-flexboxgrid';
 import styled from 'styled-components';
 import { graphql, withPrefix } from 'gatsby';
 import Heading from '../components/Heading';

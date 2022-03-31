@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Grid, Row, Col } from 'react-styled-flexboxgrid/src';
+import { Grid, Row, Col } from '@r007/react-styled-flexboxgrid';
 import Layout from '../layouts/Layout';
 import HeroBlock from '../components/HeroBlock';
 import Heading from '../components/Heading';

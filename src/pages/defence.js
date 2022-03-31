@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Grid, Row, Col } from 'react-styled-flexboxgrid/src';
+import { Grid, Row, Col } from '@r007/react-styled-flexboxgrid';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO';
 import OciusGlobeAlt from '../components/Icons/OciusGlobeAlt';
