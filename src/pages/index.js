@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Loadable from '@loadable/component';
-import { Grid, Row, Col } from 'react-styled-flexboxgrid/src';
+import { Grid, Row, Col } from '@r007/react-styled-flexboxgrid';
 import styled from 'styled-components';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../layouts/Layout';

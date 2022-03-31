@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Grid } from 'react-styled-flexboxgrid/src';
+import { Grid } from '@r007/react-styled-flexboxgrid';
 import mq from '../../common/mq';
 
 const StyledNavbar = styled.header`
