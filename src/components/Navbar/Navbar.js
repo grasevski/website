@@ -26,11 +26,13 @@ const FlexContainer = styled(Grid)`
   }
 `;
 
-const Navbar = ({ children }) => (
-  <StyledNavbar className="primary">
-    <FlexContainer>{children}</FlexContainer>
-  </StyledNavbar>
-);
+function Navbar({ children }) {
+  return (
+    <StyledNavbar className="primary">
+      <FlexContainer>{children}</FlexContainer>
+    </StyledNavbar>
+  );
+}
 
 Navbar.propTypes = {
   children: PropTypes.node.isRequired,

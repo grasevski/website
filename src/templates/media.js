@@ -16,7 +16,7 @@ const Pagination = styled.nav`
   padding: 6.4rem;
 `;
 
-const MediaPage = ({ data, pageContext }) => {
+function MediaPage({ data, pageContext }) {
   const initialPage = data.allLinksYaml;
   const [latestPage, setLatestPage] = useState(pageContext);
   const [mediaPosts, setMediaPosts] = useState(initialPage.edges);
@@ -83,7 +83,7 @@ const MediaPage = ({ data, pageContext }) => {
       </Segmented>
     </Layout>
   );
-};
+}
 
 export const query = graphql`
   query MediaCoverageQuery($limit: Int!, $skip: Int!) {
@@ -97,16 +97,12 @@ export const query = graphql`
           date(formatString: "DD MMMM, YYYY")
           thumbnail {
             childImageSharp {
-              fluid(maxWidth: 400) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData(width: 400, layout: CONSTRAINED)
             }
           }
           logo {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }

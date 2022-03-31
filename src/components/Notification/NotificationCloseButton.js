@@ -25,22 +25,24 @@ const Button = styled.button`
     background-color 110ms cubic-bezier(0.2, 0, 0.38, 0.9);
 `;
 
-const NotificationCloseButton = ({ ariaLabel, className, iconDescription, type, ...other }) => (
-  <Button
-    {...other}
-    type="button"
-    aria-label={iconDescription}
-    title={iconDescription}
-    className={className}
-  >
-    <Close20
-      style={{
-        height: 20,
-        width: 20,
-      }}
-    />
-  </Button>
-);
+function NotificationCloseButton({ ariaLabel, className, iconDescription, type, ...other }) {
+  return (
+    <Button
+      {...other}
+      type="button"
+      aria-label={iconDescription}
+      title={iconDescription}
+      className={className}
+    >
+      <Close20
+        style={{
+          height: 20,
+          width: 20,
+        }}
+      />
+    </Button>
+  );
+}
 
 NotificationCloseButton.propTypes = {
   /**

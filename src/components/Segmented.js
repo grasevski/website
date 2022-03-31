@@ -21,16 +21,18 @@ const SegmentedContainer = styled.div`
   }
 `;
 
-const Segmented = ({ children, borderBottom, multiplier, ...rest }) => (
-  <SegmentedContainer
-    className="Segmented"
-    multiplier={multiplier}
-    borderBottom={borderBottom}
-    {...rest}
-  >
-    {children}
-  </SegmentedContainer>
-);
+function Segmented({ children, borderBottom, multiplier, ...rest }) {
+  return (
+    <SegmentedContainer
+      className="Segmented"
+      multiplier={multiplier}
+      borderBottom={borderBottom}
+      {...rest}
+    >
+      {children}
+    </SegmentedContainer>
+  );
+}
 
 Segmented.propTypes = {
   children: PropTypes.node.isRequired,

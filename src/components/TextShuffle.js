@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Heading from './Heading';
 
-const TextShuffle = ({ items, interval }) => {
+function TextShuffle({ items, interval }) {
   const [currentCount, setCount] = useState(1);
   const timer = () => setCount(currentCount + 1);
 
@@ -19,7 +19,7 @@ const TextShuffle = ({ items, interval }) => {
       {currentText}
     </Heading>
   );
-};
+}
 
 TextShuffle.propTypes = {
   items: PropTypes.arrayOf(PropTypes.string).isRequired,

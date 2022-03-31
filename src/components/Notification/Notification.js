@@ -46,7 +46,7 @@ const NotificationIcon = styled(Info)`
   margin-right: 1.6rem;
 `;
 
-const Notification = ({
+function Notification({
   role,
   onCloseButtonClick,
   iconDescription,
@@ -56,7 +56,7 @@ const Notification = ({
   hideCloseButton,
   children,
   ...other
-}) => {
+}) {
   const [open, setOpen] = useState(true);
 
   const handleCloseButtonClick = (evt) => {
@@ -89,7 +89,7 @@ const Notification = ({
       )}
     </NotificationWrapper>
   );
-};
+}
 
 Notification.propTypes = {
   /**

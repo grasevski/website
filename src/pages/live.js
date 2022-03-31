@@ -39,7 +39,7 @@ const MapNotification = styled(Notification)`
 /** Google Maps key */
 const apiKey = process.env.GATSBY_GOOGLE_MAPS_API_KEY;
 
-const LivePage = () => {
+function LivePage() {
   // Save ref of navbar + sidenav for future reference
   const node = useRef();
   // Add state handlers
@@ -178,6 +178,6 @@ const LivePage = () => {
       />
     </EmptyLayout>
   );
-};
+}
 
 export default LivePage;

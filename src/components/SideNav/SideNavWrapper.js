@@ -31,11 +31,13 @@ const NavWrapper = styled.div`
     `}
 `;
 
-const SideNavWrapper = ({ expanded, direction, children }) => (
-  <NavWrapper $expanded={expanded} $direction={direction}>
-    {children}
-  </NavWrapper>
-);
+function SideNavWrapper({ expanded, direction, children }) {
+  return (
+    <NavWrapper $expanded={expanded} $direction={direction}>
+      {children}
+    </NavWrapper>
+  );
+}
 
 SideNavWrapper.propTypes = {
   /**

@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 export const MenuContext = createContext({
@@ -6,17 +6,24 @@ export const MenuContext = createContext({
   toggleMenu: () => {},
 });
 
-const NavState = ({ children }) => {
+function NavState({ children }) {
   const [isMenuOpen, toggleMenu] = useState(false);
 
   function toggleMenuMode() {
     toggleMenu(!isMenuOpen);
   }
 
-  return (
-    <MenuContext.Provider value={{ isMenuOpen, toggleMenuMode }}>{children}</MenuContext.Provider>
+  // Prevent context from taking non-stable values
+  const value = useMemo(
+    () => ({
+      isMenuOpen,
+      toggleMenuMode,
+    }),
+    [isMenuOpen]
   );
-};
+
+  return <MenuContext.Provider value={value}>{children}</MenuContext.Provider>;
+}
 
 NavState.propTypes = {
   children: PropTypes.node.isRequired,

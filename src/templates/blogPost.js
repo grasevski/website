@@ -9,7 +9,7 @@ import SocialShare from '../components/SocialShare';
 import Heading from '../components/Heading';
 import { Spacing } from '../components/common';
 
-const BlogPage = ({ data }) => {
+function BlogPage({ data }) {
   const post = data.markdownRemark;
   const { title, date, author } = post.frontmatter;
   return (
@@ -51,10 +51,10 @@ const BlogPage = ({ data }) => {
       </section>
     </Layout>
   );
-};
+}
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

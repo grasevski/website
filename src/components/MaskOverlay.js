@@ -21,7 +21,7 @@ const Curve = styled.svg`
   }
 `;
 
-const MaskOverlay = ({ color, flipped, position }) => {
+function MaskOverlay({ color, flipped, position }) {
   if (position === 'top') {
     // Return vertically flipped version of the SVG
     return (
@@ -44,7 +44,7 @@ const MaskOverlay = ({ color, flipped, position }) => {
       )}
     </Curve>
   );
-};
+}
 
 MaskOverlay.propTypes = {
   color: PropTypes.string,

@@ -8,9 +8,9 @@ const NavItem = styled.li`
   overflow: hidden;
 `;
 
-const SideNavItem = ({ className, children }) => (
-  <NavItem className={className}>{children}</NavItem>
-);
+function SideNavItem({ className, children }) {
+  return <NavItem className={className}>{children}</NavItem>;
+}
 
 SideNavItem.propTypes = {
   /**

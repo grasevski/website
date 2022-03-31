@@ -7,8 +7,8 @@ import Heading from '../Heading';
 import Button from '../Button';
 import { Spacing } from '../common';
 
-const TechnicalSpecificationForm = () => {
-  const { register, handleSubmit, errors, reset, formState } = useForm({
+function TechnicalSpecificationForm() {
+  const { register, handleSubmit, reset, formState } = useForm({
     mode: 'onBlur',
     defaultValues: {
       fullName: '',
@@ -21,7 +21,7 @@ const TechnicalSpecificationForm = () => {
   });
   const [formSuccess, setFormSuccess] = useState(false);
   const [formMessage, setFormMessage] = useState(null);
-  const { isSubmitting, isValid } = formState;
+  const { isSubmitting, isValid, errors } = formState;
 
   const handleFormSubmitError = (error) => {
     setFormSuccess(false);
@@ -87,7 +87,7 @@ const TechnicalSpecificationForm = () => {
                 name="fullName"
                 className={`form-control ${errors.fullName && 'is-invalid'}`}
                 placeholder="Full Name (required)"
-                ref={register({ required: true })}
+                {...register('fullName', { required: true })}
               />
               {/* show an error when name field is empty */}
               {errors.fullName && <Feedback position="center">Please enter your name</Feedback>}
@@ -100,7 +100,7 @@ const TechnicalSpecificationForm = () => {
                 id="company"
                 name="company"
                 placeholder="Company or Company Website"
-                ref={register}
+                {...register('company')}
               />
             </FieldWrapper>
 
@@ -111,7 +111,7 @@ const TechnicalSpecificationForm = () => {
                 id="position"
                 name="position"
                 placeholder="Position"
-                ref={register}
+                {...register('position')}
               />
             </FieldWrapper>
 
@@ -123,7 +123,7 @@ const TechnicalSpecificationForm = () => {
                 name="email"
                 className={`form-control ${errors.email && 'is-invalid'}`}
                 placeholder="Email (required)"
-                ref={register({
+                {...register('email', {
                   required: true,
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                 })}
@@ -134,7 +134,13 @@ const TechnicalSpecificationForm = () => {
 
             <FieldWrapper>
               <FormLabel htmlFor="phone">Phone:</FormLabel>
-              <FormField type="tel" id="phone" name="phone" placeholder="Phone" ref={register} />
+              <FormField
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Phone"
+                {...register('phone')}
+              />
             </FieldWrapper>
 
             <FieldWrapper>
@@ -147,7 +153,7 @@ const TechnicalSpecificationForm = () => {
                 cols={40}
                 rows={10}
                 placeholder="Reason for interest (required)"
-                ref={register({ required: true })}
+                {...register('interest', { required: true })}
               />
               {/* show an error when interest field is empty */}
               {errors.interest && (
@@ -169,7 +175,7 @@ const TechnicalSpecificationForm = () => {
       </Row>
     </>
   );
-};
+}
 
 TechnicalSpecificationForm.propTypes = {};
 TechnicalSpecificationForm.defaultProps = {};

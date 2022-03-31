@@ -1,4 +1,3 @@
-const path = require('path');
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -37,7 +36,7 @@ module.exports = {
           },
 
           {
-            resolve: 'gatsby-remark-images-grid',
+            resolve: 'gatsby-remark-images-grid-v4',
             options: {
               gridGap: '0',
               margin: '20px auto',
@@ -93,6 +92,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-optimize-svgs`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
   ],
 };

@@ -37,7 +37,7 @@ const iconNames = {
   twitter: 'Twitter',
 };
 
-const SocialLink = ({ network, href, ...rest }) => {
+function SocialLink({ network, href, ...rest }) {
   const label = `"Follow us on ${iconNames[network]}`;
 
   return (
@@ -51,7 +51,7 @@ const SocialLink = ({ network, href, ...rest }) => {
       }
     </Link>
   );
-};
+}
 
 SocialLink.propTypes = {
   network: PropTypes.oneOf(['facebook', 'reddit', 'twitter']).isRequired,

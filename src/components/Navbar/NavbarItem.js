@@ -131,38 +131,40 @@ const Menu = styled.ul`
   }
 `;
 
-const NavbarItem = ({ path, title, menuItems }) => (
-  <Item className="list">
-    <NavbarLink className="link" to={path} getProps={detectActive}>
-      {title}
-      {menuItems && <Caret />}
-    </NavbarLink>
+function NavbarItem({ path, title, menuItems }) {
+  return (
+    <Item className="list">
+      <NavbarLink className="link" to={path} getProps={detectActive}>
+        {title}
+        {menuItems && <Caret />}
+      </NavbarLink>
 
-    {menuItems && (
-      <Menu>
-        {menuItems.map((item) => {
-          if (isExternalURL(item.path)) {
+      {menuItems && (
+        <Menu>
+          {menuItems.map((item) => {
+            if (isExternalURL(item.path)) {
+              return (
+                <li key={menuItems.indexOf(item)}>
+                  <DropdownOutboundLink key={item.title} href={item.path}>
+                    {item.title}
+                  </DropdownOutboundLink>
+                </li>
+              );
+            }
+
             return (
               <li key={menuItems.indexOf(item)}>
-                <DropdownOutboundLink key={item.title} href={item.path}>
+                <DropdownLink key={item.title} to={item.path} getProps={detectActive}>
                   {item.title}
-                </DropdownOutboundLink>
+                </DropdownLink>
               </li>
             );
-          }
-
-          return (
-            <li key={menuItems.indexOf(item)}>
-              <DropdownLink key={item.title} to={item.path} getProps={detectActive}>
-                {item.title}
-              </DropdownLink>
-            </li>
-          );
-        })}
-      </Menu>
-    )}
-  </Item>
-);
+          })}
+        </Menu>
+      )}
+    </Item>
+  );
+}
 
 NavbarItem.propTypes = {
   path: PropTypes.string.isRequired,

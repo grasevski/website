@@ -33,23 +33,23 @@ const StyledIframeContainer = styled.div`
  * 3:2	66.66%
  * 8:5	62.5% */
 
-const ResponsiveIframe = ({ src, id, className, style, ...rest }) => (
-  <StyledIframeContainer id={id} className={className} style={style}>
-    <StyledIframe src={src} {...rest} />
-  </StyledIframeContainer>
-);
+function ResponsiveIframe({ src, id, className, ...rest }) {
+  return (
+    <StyledIframeContainer id={id} className={className}>
+      <StyledIframe src={src} {...rest} />
+    </StyledIframeContainer>
+  );
+}
 
 ResponsiveIframe.propTypes = {
   src: PropTypes.string.isRequired,
   id: PropTypes.string,
   className: PropTypes.string,
-  style: PropTypes.objectOf(PropTypes.object),
 };
 
 ResponsiveIframe.defaultProps = {
   id: '',
   className: '',
-  style: {},
 };
 
 export default ResponsiveIframe;

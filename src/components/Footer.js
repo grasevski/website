@@ -75,12 +75,14 @@ const FooterLink = styled(Link)`
   ${LinkStyles}
 `;
 
-const Footer = ({ children, footerStyle }) => (
-  <StyledFooter className="footer" style={footerStyle}>
-    <MaskOverlay position="top" />
-    {children}
-  </StyledFooter>
-);
+function Footer({ children, footerStyle }) {
+  return (
+    <StyledFooter className="footer" style={footerStyle}>
+      <MaskOverlay position="top" />
+      {children}
+    </StyledFooter>
+  );
+}
 
 Footer.propTypes = {
   footerStyle: PropTypes.objectOf(PropTypes.object),

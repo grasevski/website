@@ -23,7 +23,7 @@ const Scale = styled.div`
   }
 `;
 
-const MapScale = ({ zoom }) => {
+function MapScale({ zoom }) {
   /**
    * Add units (m or km) at the end.
    * @param {Number} range LookAt range
@@ -70,7 +70,7 @@ const MapScale = ({ zoom }) => {
   };
 
   return <Scale $padding={getScalePadding(zoom)}>{getGEZoom(zoom)}</Scale>;
-};
+}
 
 MapScale.propTypes = {
   zoom: PropTypes.number.isRequired,

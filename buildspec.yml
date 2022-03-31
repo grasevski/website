@@ -1,15 +1,20 @@
 version: 0.1
 phases:
-  install:
+  pre_build:
     commands:
-      - "npm install"
-      - "npm install -g gatsby"
-      - "apt update"
-      - "gatsby build"
+      - nvm install lts/*
+      - nvm use lts/*
+      - npm ci
   build:
     commands:
-      - 'aws s3 sync "public/" "s3://ocius-static-website" --delete'
-      - 'aws cloudfront create-invalidation --distribution-id E3DSYTEJZITXF6 --paths "/*"'
+      - nvm install lts/*
+      - nvm use lts/*
+      - node -v
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 sync "public/" "s3://ocius-static-website" --delete
+      - aws cloudfront create-invalidation --distribution-id E3DSYTEJZITXF6 --paths "/*"
 artifacts:
   base-directory: public
   files:

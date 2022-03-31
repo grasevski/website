@@ -17,7 +17,7 @@ export const ContainerStyle = css`
 const HeroContainer = styled.section`
   ${ContainerStyle}
   background-color: ${(props) => (props.fallbackColor ? props.fallbackColor : 'rgb(0, 99, 131)')};
-  background-image: url(${(props) => (props.fluid ? props.fluid.src : '')});
+  background-image: url(${(props) => (props.image ? props.image.src : '')});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,20 +63,22 @@ const ScrimOverlay = styled.div`
 
 HeroContainer.defaultProps = {};
 
-const HeroBlock = ({ children, image, fallbackColor, constrained, scrim, masked }) => (
-  <HeroContainer
-    className="HeroBlock"
-    fluid={image}
-    constrained={constrained || undefined}
-    fallbackColor={fallbackColor}
-    masked={masked || undefined}
-  >
-    <InnerContainer>{children}</InnerContainer>
+function HeroBlock({ children, image, fallbackColor, constrained, scrim, masked }) {
+  return (
+    <HeroContainer
+      className="HeroBlock"
+      image={image}
+      constrained={constrained || undefined}
+      fallbackColor={fallbackColor}
+      masked={masked || undefined}
+    >
+      <InnerContainer>{children}</InnerContainer>
 
-    {scrim && <ScrimOverlay $color={scrim} />}
-    {masked && <MaskOverlay />}
-  </HeroContainer>
-);
+      {scrim && <ScrimOverlay $color={scrim} />}
+      {masked && <MaskOverlay />}
+    </HeroContainer>
+  );
+}
 
 HeroBlock.propTypes = {
   image: PropTypes.objectOf(PropTypes.any).isRequired,

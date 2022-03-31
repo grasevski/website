@@ -51,32 +51,34 @@ const IconButton = styled.a`
   }
 `;
 
-const SocialIconButton = ({ network, href, onClick, iconSize, id, className }) => (
-  <IconButton
-    $backgroundColor={backgroundColors[network]}
-    $iconSize={iconSize}
-    className={className}
-    id={id}
-    href={href}
-    onClick={onClick}
-    data-network={network}
-  >
-    {
+function SocialIconButton({ network, href, onClick, iconSize, id, className }) {
+  return (
+    <IconButton
+      $backgroundColor={backgroundColors[network]}
+      $iconSize={iconSize}
+      className={className}
+      id={id}
+      href={href}
+      onClick={onClick}
+      data-network={network}
+    >
       {
-        email: <Email />,
-        facebook: <Facebook />,
-        facebookMessenger: <FacebookMessenger />,
-        pinterest: <Pinterest />,
-        instagram: <Instagram />,
-        reddit: <Reddit />,
-        twitter: <Twitter />,
-        whatsapp: <Whatsapp />,
-        wechat: <WeChat />,
-        linkedIn: <LinkedIn />,
-      }[network]
-    }
-  </IconButton>
-);
+        {
+          email: <Email />,
+          facebook: <Facebook />,
+          facebookMessenger: <FacebookMessenger />,
+          pinterest: <Pinterest />,
+          instagram: <Instagram />,
+          reddit: <Reddit />,
+          twitter: <Twitter />,
+          whatsapp: <Whatsapp />,
+          wechat: <WeChat />,
+          linkedIn: <LinkedIn />,
+        }[network]
+      }
+    </IconButton>
+  );
+}
 
 SocialIconButton.propTypes = {
   network: PropTypes.oneOf([

@@ -24,13 +24,15 @@ const NotificationSubtitle = styled.div`
   word-break: break-word;
 `;
 
-const NotificationTextDetails = ({ title, subtitle, caption, children, ...other }) => (
-  <TextWrapper {...other}>
-    <NotificationTitle>{title}</NotificationTitle>
-    <NotificationSubtitle>{subtitle}</NotificationSubtitle>
-    {children}
-  </TextWrapper>
-);
+function NotificationTextDetails({ title, subtitle, caption, children, ...other }) {
+  return (
+    <TextWrapper {...other}>
+      <NotificationTitle>{title}</NotificationTitle>
+      <NotificationSubtitle>{subtitle}</NotificationSubtitle>
+      {children}
+    </TextWrapper>
+  );
+}
 
 NotificationTextDetails.propTypes = {
   /**

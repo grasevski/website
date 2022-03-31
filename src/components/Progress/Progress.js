@@ -11,7 +11,7 @@ const ProgressWrapper = styled.div`
   width: 100%;
 `;
 
-const Progress = ({ percent, theme, style, className }) => {
+function Progress({ percent, theme, style, className }) {
   let progressStatus = null;
 
   if (percent <= 25) {
@@ -38,7 +38,7 @@ const Progress = ({ percent, theme, style, className }) => {
       />
     </ProgressWrapper>
   );
-};
+}
 
 Progress.propTypes = {
   percent: PropTypes.number,
