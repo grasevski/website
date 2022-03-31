@@ -1,6 +1,16 @@
-# Ocius Website v.2 🚀
+# Ocius Website v.3 🚀
 
 This is improved, redesigned version of Ocius website (https://ocius.com.au). Ocius Technology Ltd (formerly Solar Sailor) is an Australian public unlisted company with Research and Development facilities at the University of NSW. The company is widely recognized in the international marine transportation industry.
+
+## What's changed since v.2? 🔍
+
+The website gets old, many dependencies are either outdated or not supported anymore. The new release updates all the dependencies to latest version.
+
+- Gatsby was upgraded from v2 to v4.
+- The `plugin gatsby-image` replaced with `gatsby-plugin-image`.
+- Airbnb ESLint configs updated, as well as project code itself.
+- Husky was updated from v5 to v7. Move hooks to individual `.husky` directory.
+- Remove deprecated dependencies: node-sass, sharp and babel-eslint.
 
 ## What's changed since v.1? 🔍
 
