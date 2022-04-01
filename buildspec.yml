@@ -1,15 +1,15 @@
-version: 0.1
+version: 0.2
 phases:
   install:
     commands:
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
       - export NVM_DIR="$HOME/.nvm"
-      - . "$NVM_DIR/nvm.sh"
-      - nvm install lts/*
-      - nvm use lts/*
-      - node -v
+      - '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+      - '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
   pre_build:
     commands:
+      - . "$NVM_DIR/nvm.sh" && nvm install lts/*
+      - node -v
       - npm ci
   build:
     commands:
