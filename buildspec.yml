@@ -2,14 +2,22 @@ version: 0.1
 phases:
   install:
     commands:
-      - "apt update"
-      - "npm install"
-      - "npm install -g gatsby"
-      - "gatsby build"
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  pre_build:
+    commands:
+      - nvm install lts/*
+      - nvm use lts/*
+      - npm ci
   build:
     commands:
-      - 'aws s3 sync "public/" "s3://ocius-static-website" --delete'
-      - 'aws cloudfront create-invalidation --distribution-id E3DSYTEJZITXF6 --paths "/*"'
+      - nvm install lts/*
+      - nvm use lts/*
+      - node -v
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 sync "public/" "s3://ocius-static-website" --delete
+      - aws cloudfront create-invalidation --distribution-id E3DSYTEJZITXF6 --paths "/*"
 artifacts:
   base-directory: public
   files:
