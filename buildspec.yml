@@ -3,16 +3,15 @@ phases:
   install:
     commands:
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-  pre_build:
-    commands:
-      - nvm install lts/*
-      - nvm use lts/*
-      - npm ci
-  build:
-    commands:
+      - . ~/.nvm/nvm.sh
       - nvm install lts/*
       - nvm use lts/*
       - node -v
+  pre_build:
+    commands:
+      - npm ci
+  build:
+    commands:
       - npm run build
   post_build:
     commands:
