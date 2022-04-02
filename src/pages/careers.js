@@ -281,13 +281,13 @@ function CareersPage() {
               <Col xs={12} md={8} lg={8}>
                 <Heading level={3} size="medium" weight="thick">
                   Unmanned Surface Vessel – <br />
-                  Part Time Ground Control Operator
+                  Full Time Ground Control Operator
                 </Heading>
 
-                <p>Position: Part Time Ground Control Operator </p>
+                <p>Position: Full Time Ground Control Operator </p>
                 <p>Reporting to: Operations Supervisor </p>
                 <p>Location: Randwick, Sydney </p>
-                <p>Hours: 30+ per week</p>
+                <p>Hours: 40 per week</p>
 
                 <Heading level={4} size="small" weight="thick" color="#4ab4e6">
                   Background
