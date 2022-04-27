@@ -7,7 +7,7 @@ This is improved, redesigned version of Ocius website (https://ocius.com.au). Oc
 The website gets old, many dependencies are either outdated or not supported anymore. The new release updates all the dependencies to latest version.
 
 - Gatsby was upgraded from v2 to v4.
-- The `plugin gatsby-image` replaced with `gatsby-plugin-image`.
+- The plugin `gatsby-image` replaced with `gatsby-plugin-image`.
 - Airbnb ESLint configs updated, as well as project code itself.
 - Husky was updated from v5 to v7. Move hooks to individual `.husky` directory.
 - Remove deprecated dependencies: node-sass, sharp and babel-eslint.

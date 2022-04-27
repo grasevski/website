@@ -631,6 +631,44 @@ function Partners({ data }) {
                 Visit website
               </Button>
             </Col>
+            <Col xs={12} md={4} lg={4}>
+              {data.ASTGroup && (
+                <div className="centered">
+                  <GatsbyImage
+                    image={data.ASTGroup.childImageSharp.gatsbyImageData}
+                    style={{ maxWidth: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt="The AST Group"
+                  />
+                </div>
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                AST
+              </Heading>
+              <p>
+                With over 30 years of experience in delivering satellite communications services,
+                AST is a trusted global satellite communications equipment supplier of end-to-end
+                remote communication solutions. Our company provides a comprehensive range of
+                terminals and devices, high-quality voice and data connectivity. Our unique enabling
+                services such as INTEGRA, IRIS, iRAMS and My AST Portal empower our customers to
+                optimise their operations, make informed decisions quicker and reduce their costs.
+              </p>
+              <p>
+                AST Australia is an Australian owned and operated company that is part of the
+                privately owned AST Group of companies who have been established in 1992 and are
+                head quartered in the UK with offices in Singapore, Africa, USA and Australia.
+              </p>
+              <SubHeading>www.theastgroup.com</SubHeading>
+              <Button
+                type="outbound"
+                href="http://www.theastgroup.com/"
+                size="small"
+                color="blue"
+                customStyles={{ maxWidth: '100%' }}
+              >
+                Visit website
+              </Button>
+            </Col>
           </Row>
         </Grid>
       </Segmented>
@@ -1303,6 +1341,10 @@ export const query = graphql`
       ...imageSharpLogotype
     }
     Spitfire: file(relativePath: { eq: "pages/about/images/Spitfire-Assoc-Logo.jpg" }) {
+      ...imageSharpLogotype
+    }
+
+    ASTGroup: file(relativePath: { eq: "pages/about/images/AST-Group-Logo.png" }) {
       ...imageSharpLogotype
     }
   }
