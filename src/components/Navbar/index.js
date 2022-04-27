@@ -18,6 +18,19 @@ import useNavItems from '../../common/hooks/useNavItems';
 import useOnClickOutside from '../../common/hooks/useOnClickOutside';
 import { MenuContext } from '../../common/context/MainNavContext';
 
+/* Add padding to body to compensate navbar height */
+const Wrapper = styled.div`
+  padding-top: 145px;
+
+  @media (min-width: ${mq.min[768]}) and (max-width: ${mq.max[1200]}) {
+    padding-top: 130px;
+  }
+
+  @media (max-width: ${mq.max[768]}) {
+    padding-top: 50px;
+  }
+`;
+
 const NavbarContainer = styled.section`
   display: flex;
   flex-direction: row;
@@ -72,7 +85,7 @@ export default function NavbarWrapper() {
   }, [windowSize, isMenuOpen]);
 
   return (
-    <div ref={node}>
+    <Wrapper ref={node}>
       <Navbar>
         <SiteLogo />
         <NavbarContainer>
@@ -123,6 +136,6 @@ export default function NavbarWrapper() {
           </SideNavItems>
         </SideNav>
       </SideNavWrapper>
-    </div>
+    </Wrapper>
   );
 }
