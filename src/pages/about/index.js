@@ -669,6 +669,79 @@ function Partners({ data }) {
                 Visit website
               </Button>
             </Col>
+            <Col xs={12} md={4} lg={4}>
+              {data.AMC && (
+                <div className="centered">
+                  <GatsbyImage
+                    image={data.AMC.childImageSharp.gatsbyImageData}
+                    style={{ maxWidth: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt="The Australian Maritime College"
+                  />
+                </div>
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                The Australian Maritime College
+              </Heading>
+              <p>
+                AMC (The Australian Maritime College) at the University of Tasmania is the
+                Australian national institute for maritime education, training and research. The AMC
+                is presently ranked number one in the world by the International Association of
+                Maritime Universities.
+              </p>
+              <p>
+                AMC has established a specialist Autonomous Maritime Systems (AMS) test and
+                evaluation centre (AMS-TEC). OCIUS are leveraging this and have a contract with AMC
+                for services supporting Autonomous Maritime Systems (AMS) development. Specifically
+                development work on autonomous vehicle Launch and Recovery Systems (LARS).
+              </p>
+              <SubHeading>www.amcsearch.com.au</SubHeading>
+              <Button
+                type="outbound"
+                href="https://www.amcsearch.com.au/"
+                size="small"
+                color="blue"
+                customStyles={{ maxWidth: '100%' }}
+              >
+                Visit website
+              </Button>
+            </Col>
+            <Col xs={12} md={4} lg={4}>
+              {data.TAS && (
+                <div className="centered">
+                  <GatsbyImage
+                    image={data.TAS.childImageSharp.gatsbyImageData}
+                    style={{ maxWidth: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt="Trusted Autonomous Systems"
+                  />
+                </div>
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                Trusted Autonomous Systems
+              </Heading>
+              <p>
+                Trusted Autonomous Systems (TAS) is Australia’s first Defence Cooperative Research
+                Centre, and is uniquely equipped to deliver world-leading autonomous and robotic
+                technologies to enable trusted and effective cooperation between humans and
+                machines. The TAS aim is to improve the competitiveness, productivity, and
+                sustainability of Australian industry. The TAS vision is ‘smart, small &amp; many’.
+                Ocius Technology is a participant with{' '}
+                <OutboundLink href="https://tasdcrc.com.au/idrogue-royal-australian-navy-capability-autonomous-systems/">
+                  TAS on projects including iDrogue.
+                </OutboundLink>
+              </p>
+              <SubHeading>tasdcrc.com.au</SubHeading>
+              <Button
+                type="outbound"
+                href="https://tasdcrc.com.au/"
+                size="small"
+                color="blue"
+                customStyles={{ maxWidth: '100%' }}
+              >
+                Visit website
+              </Button>
+            </Col>
           </Row>
         </Grid>
       </Segmented>
@@ -1348,8 +1421,13 @@ export const query = graphql`
     Spitfire: file(relativePath: { eq: "pages/about/images/Spitfire-Assoc-Logo.jpg" }) {
       ...imageSharpLogotype
     }
-
     ASTGroup: file(relativePath: { eq: "pages/about/images/AST-Group-Logo.png" }) {
+      ...imageSharpLogotype
+    }
+    AMC: file(relativePath: { eq: "pages/about/images/AMC-logo.jpg" }) {
+      ...imageSharpLogotype
+    }
+    TAS: file(relativePath: { eq: "pages/about/images/TAS-logo.png" }) {
       ...imageSharpLogotype
     }
   }
