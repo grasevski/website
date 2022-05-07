@@ -1466,7 +1466,7 @@ export const query = graphql`
     TAS: file(relativePath: { eq: "pages/about/images/TAS-logo.png" }) {
       ...imageSharpLogotype
     }
-    EcoBoats: file(relativePath: { eq: "pages/about/images/EcoBoats-logo.jpg" }) {
+    EcoBoats: file(relativePath: { eq: "pages/about/images/EcoBoat-logo.jpg" }) {
       ...imageSharpLogotype
     }
   }
