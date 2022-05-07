@@ -706,6 +706,8 @@ function Partners({ data }) {
                 Visit website
               </Button>
             </Col>
+          </Row>
+          <Row className="primary-content">
             <Col xs={12} md={4} lg={4}>
               {data.TAS && (
                 <div className="centered">
@@ -735,6 +737,40 @@ function Partners({ data }) {
               <Button
                 type="outbound"
                 href="https://tasdcrc.com.au/"
+                size="small"
+                color="blue"
+                customStyles={{ maxWidth: '100%' }}
+              >
+                Visit website
+              </Button>
+            </Col>
+            <Col xs={12} md={4} lg={4}>
+              {data.EcoBoats && (
+                <div className="centered">
+                  <GatsbyImage
+                    image={data.EcoBoats.childImageSharp.gatsbyImageData}
+                    style={{ maxWidth: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt="Eco Boats"
+                  />
+                </div>
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                Eco Boats
+              </Heading>
+              <p>
+                Eco Boats supply a large range of electric boat motors, batteries and solar panels
+                and have been supplying the electric Pod motors, Lithium batteries and semi-flexible
+                solar panels for the OCIUS Bluebottles since 2015. The OCIUS project is a great
+                example of how cutting-edge electric propulsion and solar solutions can reduce the
+                footprint of ocean-based operations since OCIUS’ Bluebottles can partially fulfill
+                missions for which otherwise large, crewed vessels running on fossil fuels would
+                have to be used.
+              </p>
+              <SubHeading>www.ecoboats.com.au</SubHeading>
+              <Button
+                type="outbound"
+                href="http://www.ecoboats.com.au/"
                 size="small"
                 color="blue"
                 customStyles={{ maxWidth: '100%' }}
@@ -1428,6 +1464,9 @@ export const query = graphql`
       ...imageSharpLogotype
     }
     TAS: file(relativePath: { eq: "pages/about/images/TAS-logo.png" }) {
+      ...imageSharpLogotype
+    }
+    EcoBoats: file(relativePath: { eq: "pages/about/images/EcoBoats-logo.jpg" }) {
       ...imageSharpLogotype
     }
   }
