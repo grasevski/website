@@ -706,6 +706,8 @@ function Partners({ data }) {
                 Visit website
               </Button>
             </Col>
+          </Row>
+          <Row className="primary-content">
             <Col xs={12} md={4} lg={4}>
               {data.TAS && (
                 <div className="centered">
@@ -742,6 +744,40 @@ function Partners({ data }) {
                 Visit website
               </Button>
             </Col>
+            <Col xs={12} md={4} lg={4}>
+              {data.EcoBoats && (
+                <div className="centered">
+                  <GatsbyImage
+                    image={data.EcoBoats.childImageSharp.gatsbyImageData}
+                    style={{ maxWidth: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt="Eco Boats"
+                  />
+                </div>
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                Eco Boats
+              </Heading>
+              <p>
+                Eco Boats supply a large range of electric boat motors, batteries and solar panels
+                and have been supplying the electric Pod motors, Lithium batteries and semi-flexible
+                solar panels for the OCIUS Bluebottles since 2015. The OCIUS project is a great
+                example of how cutting-edge electric propulsion and solar solutions can reduce the
+                footprint of ocean-based operations since OCIUS’ Bluebottles can partially fulfill
+                missions for which otherwise large, crewed vessels running on fossil fuels would
+                have to be used.
+              </p>
+              <SubHeading>www.ecoboats.com.au</SubHeading>
+              <Button
+                type="outbound"
+                href="http://www.ecoboats.com.au/"
+                size="small"
+                color="blue"
+                customStyles={{ maxWidth: '100%' }}
+              >
+                Visit website
+              </Button>
+            </Col>
           </Row>
         </Grid>
       </Segmented>
@@ -769,19 +805,13 @@ function OurStory({ data }) {
             </Heading>
             <p>
               Ocius Technology Ltd (formerly Solar Sailor Holdings Ltd) is an Australian public
-              unlisted company with Research and Development facilities at the University of NSW.
+              unlisted company with Construction and Research and Development facilities at the
+              University of NSW.
             </p>
 
             <p>
-              In 1997, Solar Sailor won the Advanced Technology Boat Race in Canberra, beating the
-              next solar boat by 5 laps of 6km (30km) using a new patented &apos;solar sail&apos; -
-              a simple device which harnesses both solar and wind energy in a seaworthy manner.
-            </p>
-
-            <p>
-              Since then, the company has proven a solid track record of conceiving, funding, and
-              delivering difficult, innovative, high-tech, award-winning projects on time and on
-              budget.
+              The company has proven a solid track record of conceiving, funding, and delivering
+              difficult, innovative, high-tech, award-winning projects on time and on budget.
             </p>
 
             <p>
@@ -870,7 +900,11 @@ function OurStory({ data }) {
               OCIUS built multiple scale models for tank and lake testing, culminating in the
               building of the first 10’ prototype called ‘Nemo’ (Latin for ‘no one’ i.e. uncrewed)
               which provided significant proof of concept of a solar, wind and wave powered USV
-              carrying a significant payload.
+              carrying a significant payload. Nemo is now on display at the{' '}
+              <OutboundLink href="https://www.sea.museum/one-ocean">
+                Australian Maritime Museum
+              </OutboundLink>
+              .
             </p>
 
             <p>
@@ -900,12 +934,19 @@ function OurStory({ data }) {
             </p>
 
             <p>
-              In 2020 Ocius was awarded a $5.5M contract to build 5 next generation Bluebottles
-              doing 3 different applications in 3 different areas of operations off WA and NT over
-              the next 2 years. Ocius is continuing its work with Thales, testing new Thales thin
-              line arrays deployed from the Bluebottle keel winch to significant and varying depths.
-              Ocius is also working with UNSW and the NSW Government Defence Innovation Network and
-              Charles Darwin University on various areas of Research and Development.
+              In 2020, Ocius was awarded a $5.5M contract to build 5 next generation Bluebottles
+              demonstrating different applications over the next 2 years. This was successfully
+              completed in March 2022.
+            </p>
+
+            <p>
+              Ocius is currently working with Thales, testing new Thales thin line arrays deployed
+              from the Bluebottle keel winch to significant and varying depths.
+            </p>
+
+            <p>
+              Ocius is now under contract with Trusted Autonomous Systems Defence CRC, UNSW,
+              Australian Maritime College and Australian Border Force on various projects TBA.
             </p>
           </Col>
         </Row>
@@ -1423,6 +1464,9 @@ export const query = graphql`
       ...imageSharpLogotype
     }
     TAS: file(relativePath: { eq: "pages/about/images/TAS-logo.png" }) {
+      ...imageSharpLogotype
+    }
+    EcoBoats: file(relativePath: { eq: "pages/about/images/EcoBoats-logo.jpg" }) {
       ...imageSharpLogotype
     }
   }
