@@ -174,7 +174,7 @@ function LivePage() {
       <MapNotification
         role="alert"
         title="Notification"
-        subtitle="Zoom in to see Bluebottle's historic 'snail trail' of last 24 hours. Click on the boats to see camera views. This live feed is being delayed and boats not shown for security reasons."
+        subtitle="Zoom in to see Bluebottle's historic 'snail trail' of last 24 hours. Click on the boats to see camera views. This live feed may be delayed and boats not shown for security reasons."
       />
     </EmptyLayout>
   );
