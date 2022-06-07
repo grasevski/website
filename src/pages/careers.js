@@ -368,6 +368,99 @@ function CareersPage() {
               <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
             </Heading>
           </Segmented>
+
+          <Segmented borderBottom>
+            <Row>
+              <Col xs={12} md={8} lg={8}>
+                <Heading level={3} size="medium" weight="thick">
+                  Unmanned Surface Vessel – <br />
+                  Marine Support Crew
+                </Heading>
+
+                <p>Position: Marine Support Crew (MSC)</p>
+                <p>Reporting to: Operations Manager</p>
+                <p>Location: Randwick, NSW. Travel will be frequent and required.</p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Background
+                </Heading>
+
+                <p>
+                  Ocius is an Australian company that builds autonomous Unmanned Surface Vessels
+                  (USVs). These USVs use the energy of the weather – sun wind and waves – to act as
+                  persistent monitoring and communications platforms. We are embarking on an
+                  ambitious program of operating the fleet of USVs offshore 24/7.
+                </p>
+                <p>
+                  A key part of this program is to deploy and operate the USVs in different
+                  locations domestically and internationally. We are therefore looking for
+                  interested people to join our operations team on a Full-Time contract.
+                </p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Duties and Responsibilities
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Travel to remote locations to support the USVs as MSC.</li>
+                  <li>Launch and recovery of USVs.</li>
+                  <li>
+                    Inspection, cleaning and maintanence of USVs, workshop and trailers where
+                    required.
+                  </li>
+                  <li>
+                    Following instructions from engineers to assist in upgrading/repairing
+                    electronic or mechanical systems.
+                  </li>
+                  <li>
+                    Assist with planning, organization, and execution of any USV operations as
+                    required.
+                  </li>
+                  <li>
+                    Opportunities to be involved in piloting the boats remotley during operation.
+                  </li>
+                </ul>
+                <p>On occasion this role may involve:</p>
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Assiting with implementing, maintaining, managing and updating all standard
+                    operating procedures and processes appropriate to the role.
+                  </li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Requirements
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Happy to be a vagabond and move to and expolore new places.</li>
+                  <li>Ability to adhere to operating proceudures.</li>
+                  <li>
+                    Enthusiastic, positive and proactive nature with a keen attention to detail.
+                  </li>
+                  <li>Willingness to work outside normal hours.</li>
+                  <li>Ability to learn about complex electronic and mechanical systems.</li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Desirable
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Boat Licence/Relevant Certificate of Competency as issued by AMSA.</li>
+                  <li>Sailing/Maritime experience.</li>
+                  <li>Keen interest in autonomous systems.</li>
+                  <li>
+                    Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
+                  </li>
+                </ul>
+              </Col>
+            </Row>
+            <Heading className="centered" level={3} size="small" weight="thick" color="#4ab4e6">
+              For further details please contact{' '}
+              <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
+            </Heading>
+          </Segmented>
         </Grid>
 
         <Segmented>
