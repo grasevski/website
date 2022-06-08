@@ -368,6 +368,323 @@ function CareersPage() {
               <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
             </Heading>
           </Segmented>
+
+          <Segmented borderBottom>
+            <Row>
+              <Col xs={12} md={8} lg={8}>
+                <Heading level={3} size="medium" weight="thick">
+                  Unmanned Surface Vessel – <br />
+                  Marine Support Crew
+                </Heading>
+
+                <p>Position: Marine Support Crew (MSC)</p>
+                <p>Reporting to: Operations Manager</p>
+                <p>Location: Randwick, NSW. Travel will be frequent and required.</p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Background
+                </Heading>
+
+                <p>
+                  Ocius is an Australian company that builds autonomous Unmanned Surface Vessels
+                  (USVs). These USVs use the energy of the weather – sun wind and waves – to act as
+                  persistent monitoring and communications platforms. We are embarking on an
+                  ambitious program of operating the fleet of USVs offshore 24/7.
+                </p>
+                <p>
+                  A key part of this program is to deploy and operate the USVs in different
+                  locations domestically and internationally. We are therefore looking for
+                  interested people to join our operations team on a Full-Time contract.
+                </p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Duties and Responsibilities
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Travel to remote locations to support the USVs as MSC.</li>
+                  <li>Launch and recovery of USVs.</li>
+                  <li>
+                    Inspection, cleaning and maintanence of USVs, workshop and trailers where
+                    required.
+                  </li>
+                  <li>
+                    Following instructions from engineers to assist in upgrading/repairing
+                    electronic or mechanical systems.
+                  </li>
+                  <li>
+                    Assist with planning, organization, and execution of any USV operations as
+                    required.
+                  </li>
+                  <li>
+                    Opportunities to be involved in piloting the boats remotley during operation.
+                  </li>
+                </ul>
+                <p>On occasion this role may involve:</p>
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Assiting with implementing, maintaining, managing and updating all standard
+                    operating procedures and processes appropriate to the role.
+                  </li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Requirements
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Happy to be a vagabond and move to and expolore new places.</li>
+                  <li>Ability to adhere to operating proceudures.</li>
+                  <li>
+                    Enthusiastic, positive and proactive nature with a keen attention to detail.
+                  </li>
+                  <li>Willingness to work outside normal hours.</li>
+                  <li>Ability to learn about complex electronic and mechanical systems.</li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Desirable
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Boat Licence/Relevant Certificate of Competency as issued by AMSA.</li>
+                  <li>Sailing/Maritime experience.</li>
+                  <li>Keen interest in autonomous systems.</li>
+                  <li>
+                    Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
+                  </li>
+                </ul>
+              </Col>
+            </Row>
+            <Heading className="centered" level={3} size="small" weight="thick" color="#4ab4e6">
+              For further details please contact{' '}
+              <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
+            </Heading>
+          </Segmented>
+
+          <Segmented borderBottom>
+            <Row>
+              <Col xs={12} md={8} lg={8}>
+                <Heading level={3} size="medium" weight="thick">
+                  Unmanned Surface Vessel – <br />
+                  Electrical Technician
+                </Heading>
+
+                <p>Position: Electrical Technician</p>
+                <p>Reporting to: Chief Engineer</p>
+                <p>Location: Randwick, NSW. Travel will be frequent and expected.</p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Background
+                </Heading>
+
+                <p>
+                  Ocius is an Australian company that builds autonomous Unmanned Surface Vessels
+                  (USVs). These USVs use the energy of the weather - sun, wind and waves - to act as
+                  persistent monitoring and communications platforms. We are embarking on an
+                  ambitious program of building and deploying multiple USVs for operations around
+                  the Australia.
+                </p>
+                <p>
+                  This program has created the need for an Electrical Technician responsible for
+                  creation, maintenance and repair of all USV electronic components and equipment
+                  used in our vessels.
+                </p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Duties and Responsibilities
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Electrical design (Power and Communications).</li>
+                  <li>Installation of electrical components.</li>
+                  <li>Conduct electrical maintenance on USVs.</li>
+                  <li>Fault finding in mechanical and electrical systems.</li>
+                  <li>Research &amp; Development support on new USV technology.</li>
+                  <li>Traveling with the fleet to remote locations to support operations.</li>
+                  <li>Accompanying USV offshore on support boat during testing.</li>
+                  <li>On occasion particpate in remote watchkeeping of the USVs when at sea.</li>
+                  <li>
+                    Assisting in the launch and recovery as well as other hands-on operational tasks
+                    required when travelling with the fleet.
+                  </li>
+                  <li>
+                    Implementing, maintaining, managing and updating all standard operating
+                    procedures and processes appropriate to the role.
+                  </li>
+                </ul>
+                <p>On occasion this role may involve:</p>
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Assiting with implementing, maintaining, managing and updating all standard
+                    operating procedures and processes appropriate to the role.
+                  </li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Requirements
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Fully Qualified Electrical/Electronics technician.</li>
+                  <li>Experience in Industrial/Control system wiring.</li>
+                  <li>Current drivers licence.</li>
+                  <li>Mechanical aptitude.</li>
+                  <li>
+                    Excellent practical hands-on skills needed to operate in the field, often with
+                    limited resources.
+                  </li>
+                  <li>Strong computer literacy skills.</li>
+                  <li>Ability to adhere to strict health and safety guidelines.</li>
+                  <li>
+                    Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
+                  </li>
+                  <li>
+                    Enthusiastic, positive and proactive nature with a keen attention to detail.
+                  </li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Desirable
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Maritime maintenance experience - industry/defence/hobby would be acceptable.
+                  </li>
+                  <li>Sailing experience.</li>
+                  <li>Keen interest in autonomous systems.</li>
+                </ul>
+              </Col>
+            </Row>
+            <Heading className="centered" level={3} size="small" weight="thick" color="#4ab4e6">
+              For further details please contact{' '}
+              <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
+            </Heading>
+          </Segmented>
+
+          <Segmented borderBottom>
+            <Row>
+              <Col xs={12} md={8} lg={8}>
+                <Heading level={3} size="medium" weight="thick">
+                  Unmanned Surface Vessel – <br />
+                  Field Engineer
+                </Heading>
+
+                <p>Position: Field Engineer</p>
+                <p>Reporting to: Operations Manager</p>
+                <p>Location: Randwick, NSW. Travel will be frequent and expected.</p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Background
+                </Heading>
+
+                <p>
+                  Ocius is an Australian company that builds autonomous Uncrewed Surface Vessels
+                  (USVs). These USVs use the energy of the weather – sun wind and waves – to act as
+                  persistent monitoring and communications platforms. We are embarking on an
+                  ambitious program of building and deploying multiple USVs for operations around
+                  Australia.
+                </p>
+                <p>
+                  Ocius is seeking a Field Engineer to join our team for the sustainment of
+                  operations and continuous development of our USVs.
+                </p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Duties and Responsibilities
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Troubleshoot, diagnose, and fix software, hardware, and networking issues on
+                    USVs.
+                  </li>
+                  <li>
+                    Obtain a deep understanding of the platform and systems to maintain and upgrade
+                    the USVs.
+                  </li>
+                  <li>
+                    Propose and implement new ideas and methods for documentation, procedures, and
+                    engineering processes. Particularly in your role as field engineer.
+                  </li>
+                  <li>
+                    Assist in the launch and recovery as well as other hands-on operational tasks
+                    required when travelling with the fleet.
+                  </li>
+                  <li>
+                    Assist with planning, organization, and execution of any USV operations as
+                    required.
+                  </li>
+                  <li>Travel to remote locations to support the USVs as a field engineer.</li>
+                </ul>
+                <p>
+                  You will also get the opportunity to help in the engineering team which would
+                  involve:
+                </p>
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Design and implementation of the on-board electrical, mechanical and computer
+                    systems for Uncrewed Surface Vessels;
+                  </li>
+                  <li>
+                    Software design, development, integration and validation for autonomous vehicle
+                    control, device management, navigation, communications and related applications;
+                  </li>
+                  <li>Control systems characterisation, design and implemenation;</li>
+                  <li>
+                    Collect and interpret results of field trials and prepare technical reports for
+                    use by others;
+                  </li>
+                  <li>
+                    Interact with product management to obtain and understand requirements and
+                    deliverables, and develop test plans;
+                  </li>
+                  <li>Interface with vehicle operations and engineering team members.</li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Requirements
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Bachelor’s degree in Engineering.</li>
+                  <li>Experience with autonomous vehicles;</li>
+                  <li>Ability to develop on Linux and embedded systems;</li>
+                  <li>
+                    Willing and able to travel domestically and internationally as well as work
+                    extended hours when necessary.
+                  </li>
+                  <li>
+                    Excellent practical hands-on skills needed to operate in the field, often with
+                    limited resources.
+                  </li>
+                  <li>
+                    Ability to work well in a fast-paced and dynamic environment where initiative is
+                    required for success;
+                  </li>
+                  <li>
+                    Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
+                  </li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Desirable
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Experience with Ardupilot and supporting tools;</li>
+                  <li>Creo;</li>
+                  <li>Oceanography and hydrography instruments;</li>
+                  <li>Sailing/maritime experience.</li>
+                </ul>
+              </Col>
+            </Row>
+            <Heading className="centered" level={3} size="small" weight="thick" color="#4ab4e6">
+              For further details please contact{' '}
+              <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
+            </Heading>
+          </Segmented>
         </Grid>
 
         <Segmented>
