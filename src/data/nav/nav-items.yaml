@@ -25,6 +25,8 @@
   pages:
     - title: USV
       path: /usv/
+    - title: iDrogue
+      path: /idrogue/
     - title: BlueBottle
       path: /usv/#overview
     - title: Tech Specs
