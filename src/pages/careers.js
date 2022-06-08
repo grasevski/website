@@ -562,6 +562,129 @@ function CareersPage() {
               <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
             </Heading>
           </Segmented>
+
+          <Segmented borderBottom>
+            <Row>
+              <Col xs={12} md={8} lg={8}>
+                <Heading level={3} size="medium" weight="thick">
+                  Unmanned Surface Vessel – <br />
+                  Field Engineer
+                </Heading>
+
+                <p>Position: Field Engineer</p>
+                <p>Reporting to: Operations Manager</p>
+                <p>Location: Randwick, NSW. Travel will be frequent and expected.</p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Background
+                </Heading>
+
+                <p>
+                  Ocius is an Australian company that builds autonomous Uncrewed Surface Vessels
+                  (USVs). These USVs use the energy of the weather – sun wind and waves – to act as
+                  persistent monitoring and communications platforms. We are embarking on an
+                  ambitious program of building and deploying multiple USVs for operations around
+                  Australia.
+                </p>
+                <p>
+                  Ocius is seeking a Field Engineer to join our team for the sustainment of
+                  operations and continuous development of our USVs.
+                </p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Duties and Responsibilities
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Troubleshoot, diagnose, and fix software, hardware, and networking issues on
+                    USVs.
+                  </li>
+                  <li>
+                    Obtain a deep understanding of the platform and systems to maintain and upgrade
+                    the USVs.
+                  </li>
+                  <li>
+                    Propose and implement new ideas and methods for documentation, procedures, and
+                    engineering processes. Particularly in your role as field engineer.
+                  </li>
+                  <li>
+                    Assist in the launch and recovery as well as other hands-on operational tasks
+                    required when travelling with the fleet.
+                  </li>
+                  <li>
+                    Assist with planning, organization, and execution of any USV operations as
+                    required.
+                  </li>
+                  <li>Travel to remote locations to support the USVs as a field engineer.</li>
+                </ul>
+                <p>
+                  You will also get the opportunity to help in the engineering team which would
+                  involve:
+                </p>
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Design and implementation of the on-board electrical, mechanical and computer
+                    systems for Uncrewed Surface Vessels;
+                  </li>
+                  <li>
+                    Software design, development, integration and validation for autonomous vehicle
+                    control, device management, navigation, communications and related applications;
+                  </li>
+                  <li>Control systems characterisation, design and implemenation;</li>
+                  <li>
+                    Collect and interpret results of field trials and prepare technical reports for
+                    use by others;
+                  </li>
+                  <li>
+                    Interact with product management to obtain and understand requirements and
+                    deliverables, and develop test plans;
+                  </li>
+                  <li>Interface with vehicle operations and engineering team members.</li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Requirements
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Bachelor’s degree in Engineering.</li>
+                  <li>Experience with autonomous vehicles;</li>
+                  <li>Ability to develop on Linux and embedded systems;</li>
+                  <li>
+                    Willing and able to travel domestically and internationally as well as work
+                    extended hours when necessary.
+                  </li>
+                  <li>
+                    Excellent practical hands-on skills needed to operate in the field, often with
+                    limited resources.
+                  </li>
+                  <li>
+                    Ability to work well in a fast-paced and dynamic environment where initiative is
+                    required for success;
+                  </li>
+                  <li>
+                    Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
+                  </li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Desirable
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Experience with Ardupilot and supporting tools;</li>
+                  <li>Creo;</li>
+                  <li>Oceanography and hydrography instruments;</li>
+                  <li>Sailing/maritime experience.</li>
+                </ul>
+              </Col>
+            </Row>
+            <Heading className="centered" level={3} size="small" weight="thick" color="#4ab4e6">
+              For further details please contact{' '}
+              <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
+            </Heading>
+          </Segmented>
         </Grid>
 
         <Segmented>
