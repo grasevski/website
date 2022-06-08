@@ -461,6 +461,107 @@ function CareersPage() {
               <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
             </Heading>
           </Segmented>
+
+          <Segmented borderBottom>
+            <Row>
+              <Col xs={12} md={8} lg={8}>
+                <Heading level={3} size="medium" weight="thick">
+                  Unmanned Surface Vessel – <br />
+                  Electrical Technician
+                </Heading>
+
+                <p>Position: Electrical Technician</p>
+                <p>Reporting to: Chief Engineer</p>
+                <p>Location: Randwick, NSW. Travel will be frequent and expected.</p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Background
+                </Heading>
+
+                <p>
+                  Ocius is an Australian company that builds autonomous Unmanned Surface Vessels
+                  (USVs). These USVs use the energy of the weather - sun, wind and waves - to act as
+                  persistent monitoring and communications platforms. We are embarking on an
+                  ambitious program of building and deploying multiple USVs for operations around
+                  the Australia.
+                </p>
+                <p>
+                  This program has created the need for an Electrical Technician responsible for
+                  creation, maintenance and repair of all USV electronic components and equipment
+                  used in our vessels.
+                </p>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Duties and Responsibilities
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Electrical design (Power and Communications).</li>
+                  <li>Installation of electrical components.</li>
+                  <li>Conduct electrical maintenance on USVs.</li>
+                  <li>Fault finding in mechanical and electrical systems.</li>
+                  <li>Research &amp; Development support on new USV technology.</li>
+                  <li>Traveling with the fleet to remote locations to support operations.</li>
+                  <li>Accompanying USV offshore on support boat during testing.</li>
+                  <li>On occasion particpate in remote watchkeeping of the USVs when at sea.</li>
+                  <li>
+                    Assisting in the launch and recovery as well as other hands-on operational tasks
+                    required when travelling with the fleet.
+                  </li>
+                  <li>
+                    Implementing, maintaining, managing and updating all standard operating
+                    procedures and processes appropriate to the role.
+                  </li>
+                </ul>
+                <p>On occasion this role may involve:</p>
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Assiting with implementing, maintaining, managing and updating all standard
+                    operating procedures and processes appropriate to the role.
+                  </li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Requirements
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>Fully Qualified Electrical/Electronics technician.</li>
+                  <li>Experience in Industrial/Control system wiring.</li>
+                  <li>Current drivers licence.</li>
+                  <li>Mechanical aptitude.</li>
+                  <li>
+                    Excellent practical hands-on skills needed to operate in the field, often with
+                    limited resources.
+                  </li>
+                  <li>Strong computer literacy skills.</li>
+                  <li>Ability to adhere to strict health and safety guidelines.</li>
+                  <li>
+                    Ability to obtain and maintain a minimum of Defence Security Clearance–Baseline.
+                  </li>
+                  <li>
+                    Enthusiastic, positive and proactive nature with a keen attention to detail.
+                  </li>
+                </ul>
+
+                <Heading level={4} size="small" weight="thick" color="#4ab4e6">
+                  Desirable
+                </Heading>
+
+                <ul style={{ marginTop: 0 }}>
+                  <li>
+                    Maritime maintenance experience - industry/defence/hobby would be acceptable.
+                  </li>
+                  <li>Sailing experience.</li>
+                  <li>Keen interest in autonomous systems.</li>
+                </ul>
+              </Col>
+            </Row>
+            <Heading className="centered" level={3} size="small" weight="thick" color="#4ab4e6">
+              For further details please contact{' '}
+              <a href="mailto:admin@ocius.com.au">admin@ocius.com.au</a>.
+            </Heading>
+          </Segmented>
         </Grid>
 
         <Segmented>
