@@ -97,7 +97,7 @@ function iDroguePage({ data }) {
           </Row>
           <Segmented>
             <Row style={{ alignItems: 'center' }}>
-              <Col xs={12} md={6} lg={3}>
+              <Col xs={6} md={6} lg={3}>
                 {data.RoyalAustralianNavy && (
                   <GatsbyImage
                     image={data.RoyalAustralianNavy.childImageSharp.gatsbyImageData}
@@ -105,7 +105,7 @@ function iDroguePage({ data }) {
                   />
                 )}
               </Col>
-              <Col xs={12} md={6} lg={3}>
+              <Col xs={6} md={6} lg={3}>
                 {data.TAS && (
                   <GatsbyImage
                     image={data.TAS.childImageSharp.gatsbyImageData}
@@ -113,7 +113,7 @@ function iDroguePage({ data }) {
                   />
                 )}
               </Col>
-              <Col xs={12} md={6} lg={3}>
+              <Col xs={6} md={6} lg={3}>
                 {data.AMC && (
                   <GatsbyImage
                     image={data.AMC.childImageSharp.gatsbyImageData}
@@ -121,7 +121,7 @@ function iDroguePage({ data }) {
                   />
                 )}
               </Col>
-              <Col xs={12} md={6} lg={3}>
+              <Col xs={6} md={6} lg={3}>
                 {data.UNSW && (
                   <GatsbyImage
                     image={data.UNSW.childImageSharp.gatsbyImageData}
@@ -170,17 +170,25 @@ export const query = graphql`
       }
     }
 
-    RoyalAustralianNavy: file(relativePath: { eq: "pages/about/images/navy.jpeg" }) {
-      ...constrainedLogotype
+    RoyalAustralianNavy: file(relativePath: { eq: "pages/about/images/navy-transparent.png" }) {
+      childImageSharp {
+        gatsbyImageData(quality: 85, height: 150, placeholder: BLURRED, layout: CONSTRAINED)
+      }
     }
-    UNSW: file(relativePath: { eq: "pages/about/images/UNSW.jpg" }) {
-      ...constrainedLogotype
+    UNSW: file(relativePath: { eq: "pages/about/images/unsw-logo-transparent.png" }) {
+      childImageSharp {
+        gatsbyImageData(quality: 85, width: 180, placeholder: BLURRED, layout: CONSTRAINED)
+      }
     }
-    AMC: file(relativePath: { eq: "pages/about/images/AMC-logo.jpg" }) {
-      ...constrainedLogotype
+    AMC: file(relativePath: { eq: "pages/about/images/Australian_Maritime_College_Logo.png" }) {
+      childImageSharp {
+        gatsbyImageData(quality: 85, width: 140, placeholder: BLURRED, layout: CONSTRAINED)
+      }
     }
     TAS: file(relativePath: { eq: "pages/about/images/TAS-logo.png" }) {
-      ...constrainedLogotype
+      childImageSharp {
+        gatsbyImageData(quality: 85, width: 200, placeholder: BLURRED, layout: CONSTRAINED)
+      }
     }
   }
 
