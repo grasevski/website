@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import FadeIn from 'react-fade-in';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import { fontSizeHeading5 } from '../common/typography';
 import Ellipsis from './EllipsisLoader';
 import TextShuffle from './TextShuffle';
@@ -33,21 +33,22 @@ const Overlay = styled.div`
 `;
 
 function SplashScreen({ isLoading, text }) {
+  const [inProp, setInProp] = useState(!isLoading);
+
+  // Update inProp once isLoading changes
+  useEffect(() => {
+    setInProp(!isLoading);
+  }, [isLoading]);
+
   return (
-    <ReactCSSTransitionGroup
-      transitionName="fade"
-      transitionEnterTimeout={500}
-      transitionLeaveTimeout={300}
-    >
-      {isLoading && (
-        <Overlay>
-          <FadeIn>
-            <TextShuffle items={text} />
-            <Ellipsis color="#125192" />
-          </FadeIn>
-        </Overlay>
-      )}
-    </ReactCSSTransitionGroup>
+    <CSSTransition in={!inProp} classNames="fade" unmountOnExit timeout={{ enter: 500, exit: 300 }}>
+      <Overlay>
+        <FadeIn>
+          <TextShuffle items={text} />
+          <Ellipsis color="#125192" />
+        </FadeIn>
+      </Overlay>
+    </CSSTransition>
   );
 }
 

@@ -372,11 +372,11 @@ ul.menu-secondary li:before {
   transition: opacity 500ms ease-in;
 }
 
-.fade-leave {
+.fade-exit {
   opacity: 1;
 }
 
-.fade-leave.fade-leave-active {
+.fade-exit.fade-exit-active {
   animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
 }
 
