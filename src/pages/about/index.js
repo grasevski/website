@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, Link as GatsbyLink } from 'gatsby';
-import { Router } from '@reach/router';
+import { Router } from '@gatsbyjs/reach-router';
 import { Grid, Col, Row } from '@r007/react-styled-flexboxgrid';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';

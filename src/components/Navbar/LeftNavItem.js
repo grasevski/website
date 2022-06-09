@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Location } from '@reach/router';
+import { Location } from '@gatsbyjs/reach-router';
 
 import SideNavMenu from '../SideNav/SideNavMenu';
 import SideNavMenuItem from '../SideNav/SideNavMenuItem';
