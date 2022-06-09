@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import FadeIn from 'react-fade-in';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import { fontSizeHeading5 } from '../common/typography';
 import Ellipsis from './EllipsisLoader';
 import TextShuffle from './TextShuffle';
@@ -34,11 +34,7 @@ const Overlay = styled.div`
 
 function SplashScreen({ isLoading, text }) {
   return (
-    <ReactCSSTransitionGroup
-      transitionName="fade"
-      transitionEnterTimeout={500}
-      transitionLeaveTimeout={300}
-    >
+    <CSSTransition classNames="fade" timeout={{ enter: 500, exit: 300 }}>
       {isLoading && (
         <Overlay>
           <FadeIn>
@@ -47,7 +43,7 @@ function SplashScreen({ isLoading, text }) {
           </FadeIn>
         </Overlay>
       )}
-    </ReactCSSTransitionGroup>
+    </CSSTransition>
   );
 }
 
