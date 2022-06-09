@@ -324,31 +324,34 @@ function Partners({ data }) {
                 </Button>
               </Col>
               <Col xs={12} md={4} lg={4}>
-                {data.UNSW && (
+                {data.TAS && (
                   <div className="centered">
                     <GatsbyImage
-                      image={data.UNSW.childImageSharp.gatsbyImageData}
+                      image={data.TAS.childImageSharp.gatsbyImageData}
                       style={{ maxWidth: '100%' }}
                       imgStyle={{ objectFit: 'contain' }}
-                      alt="The University of New South Wales"
+                      alt="Trusted Autonomous Systems"
                     />
                   </div>
                 )}
                 <Heading level={3} size="medium" weight="thick">
-                  The University of New South Wales
+                  Trusted Autonomous Systems
                 </Heading>
                 <p>
-                  UNSW Australia (The University of New South Wales) is one of Australia’s leading
-                  research and teaching universities. OCIUS have a contract for research into
-                  intelligent networks and machine learning with the University of New South Wales.
-                  UNSW provide OCIUS with a Research &amp; Development facility in UNSW’s Randwick
-                  Campus. Additionally, OCIUS hires multiple computer science and mechatronics
-                  engineers from UNSW, and students from UNSW under intern programs.
+                  Trusted Autonomous Systems (TAS) is Australia’s first Defence Cooperative Research
+                  Centre, and is uniquely equipped to deliver world-leading autonomous and robotic
+                  technologies to enable trusted and effective cooperation between humans and
+                  machines. The TAS aim is to improve the competitiveness, productivity, and
+                  sustainability of Australian industry. The TAS vision is ‘smart, small &amp;
+                  many’. Ocius Technology is a participant with{' '}
+                  <OutboundLink href="https://tasdcrc.com.au/idrogue-royal-australian-navy-capability-autonomous-systems/">
+                    TAS on projects including iDrogue.
+                  </OutboundLink>
                 </p>
-                <SubHeading>www.unsw.edu.au</SubHeading>
+                <SubHeading>tasdcrc.com.au</SubHeading>
                 <Button
                   type="outbound"
-                  href="https://www.unsw.edu.au"
+                  href="https://tasdcrc.com.au/"
                   size="small"
                   color="blue"
                   customStyles={{ maxWidth: '100%' }}
@@ -392,45 +395,31 @@ function Partners({ data }) {
                 </Button>
               </Col>
               <Col xs={12} md={4} lg={4}>
-                {data.VanMunsterBoats && (
+                {data.UNSW && (
                   <div className="centered">
                     <GatsbyImage
-                      image={data.VanMunsterBoats.childImageSharp.gatsbyImageData}
+                      image={data.UNSW.childImageSharp.gatsbyImageData}
                       style={{ maxWidth: '100%' }}
                       imgStyle={{ objectFit: 'contain' }}
-                      alt="Thales"
+                      alt="The University of New South Wales"
                     />
                   </div>
                 )}
                 <Heading level={3} size="medium" weight="thick">
-                  Van Munster Boats
+                  The University of New South Wales
                 </Heading>
                 <p>
-                  Van Munster Boats is a second-generation family-run business at the forefront of
-                  building carbon fibre hulls and structures for race yachts
+                  UNSW Australia (The University of New South Wales) is one of Australia’s leading
+                  research and teaching universities. OCIUS have a contract for research into
+                  intelligent networks and machine learning with the University of New South Wales.
+                  UNSW provide OCIUS with a Research &amp; Development facility in UNSW’s Randwick
+                  Campus. Additionally, OCIUS hires multiple computer science and mechatronics
+                  engineers from UNSW, and students from UNSW under intern programs.
                 </p>
-                <p>
-                  VMB work with the best composite engineers and industry&apos;s leading naval
-                  architect’s to turn original conception into reality.
-                </p>
-                <p>
-                  They deliver products that meet the highest standards and their processes and
-                  applied technologies are continually refined and developed to deliver “state of
-                  the art” solutions.
-                </p>
-                <p>
-                  Van Munster Boats composite production facility is based in Morisset NSW Australia
-                  and features an oven for high-temperature cure of pre-preg composites and
-                  post-curing laminates, a climate-controlled laminating area that ensures that
-                  components are of of the highest quality and consistency and a CNC machine so
-                  composite components can be custom manufactured quickly and to the highest
-                  standard.
-                </p>
-                <p>The team at Van Munster Boats turn Ocius&apos; vision into a reality.</p>
-                <SubHeading>www.vanmunsterboats.com</SubHeading>
+                <SubHeading>www.unsw.edu.au</SubHeading>
                 <Button
                   type="outbound"
-                  href="https://www.vanmunsterboats.com"
+                  href="https://www.unsw.edu.au"
                   size="small"
                   color="blue"
                   customStyles={{ maxWidth: '100%' }}
@@ -439,36 +428,36 @@ function Partners({ data }) {
                 </Button>
               </Col>
               <Col xs={12} md={4} lg={4}>
-                {data.SteberInternational && (
+                {data.AMC && (
                   <div className="centered">
                     <GatsbyImage
-                      image={data.SteberInternational.childImageSharp.gatsbyImageData}
+                      image={data.AMC.childImageSharp.gatsbyImageData}
                       style={{ maxWidth: '100%' }}
                       imgStyle={{ objectFit: 'contain' }}
-                      alt="Steber International"
+                      alt="The Australian Maritime College"
                     />
                   </div>
                 )}
                 <Heading level={3} size="medium" weight="thick">
-                  Stebercraft International
+                  The Australian Maritime College
                 </Heading>
                 <p>
-                  Stebercraft International is a leader in Australian boat manufacturing and
-                  industrial composite technology since 1947. Steber manufactures high-quality boats
-                  for fishing, charter, patrol, sea rescue, medical support, surveillance and
-                  general boating use. All Steber boats are individually designed and built to suit
-                  their purpose, with a quality of manufacture that ensures a long service life and
-                  the capability to put to sea when many other vessels need to return to port.
-                  Steber&apos;s core business of composite component manufacture is all undertaken
-                  in their climate controlled factory ensuring all laminating is carried out within
-                  humidity and temperature parameters allowing 24-hour production when required.
-                  Stebercraft is an Australian owned and operated family company with a firm
-                  commitment to provide a high-quality product with excellent customer service.
+                  AMC (The Australian Maritime College) at the University of Tasmania is the
+                  Australian national institute for maritime education, training and research. The
+                  AMC is presently ranked number one in the world by the International Association
+                  of Maritime Universities.
                 </p>
-                <SubHeading>www.steber.com.au</SubHeading>
+                <p>
+                  AMC has established a specialist Autonomous Maritime Systems (AMS) test and
+                  evaluation centre (AMS-TEC). OCIUS are leveraging this and have a contract with
+                  AMC for services supporting Autonomous Maritime Systems (AMS) development.
+                  Specifically development work on autonomous vehicle Launch and Recovery Systems
+                  (LARS).
+                </p>
+                <SubHeading>www.amcsearch.com.au</SubHeading>
                 <Button
                   type="outbound"
-                  href="https://www.steber.com.au"
+                  href="https://www.amcsearch.com.au/"
                   size="small"
                   color="blue"
                   customStyles={{ maxWidth: '100%' }}
@@ -514,6 +503,92 @@ function Partners({ data }) {
                 Visit website
               </Button>
             </Col>
+            <Col xs={12} md={4} lg={4}>
+              {data.VanMunsterBoats && (
+                <div className="centered">
+                  <GatsbyImage
+                    image={data.VanMunsterBoats.childImageSharp.gatsbyImageData}
+                    style={{ maxWidth: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt="Thales"
+                  />
+                </div>
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                Van Munster Boats
+              </Heading>
+              <p>
+                Van Munster Boats is a second-generation family-run business at the forefront of
+                building carbon fibre hulls and structures for race yachts
+              </p>
+              <p>
+                VMB work with the best composite engineers and industry&apos;s leading naval
+                architect’s to turn original conception into reality.
+              </p>
+              <p>
+                They deliver products that meet the highest standards and their processes and
+                applied technologies are continually refined and developed to deliver “state of the
+                art” solutions.
+              </p>
+              <p>
+                Van Munster Boats composite production facility is based in Morisset NSW Australia
+                and features an oven for high-temperature cure of pre-preg composites and
+                post-curing laminates, a climate-controlled laminating area that ensures that
+                components are of of the highest quality and consistency and a CNC machine so
+                composite components can be custom manufactured quickly and to the highest standard.
+              </p>
+              <p>The team at Van Munster Boats turn Ocius&apos; vision into a reality.</p>
+              <SubHeading>www.vanmunsterboats.com</SubHeading>
+              <Button
+                type="outbound"
+                href="https://www.vanmunsterboats.com"
+                size="small"
+                color="blue"
+                customStyles={{ maxWidth: '100%' }}
+              >
+                Visit website
+              </Button>
+            </Col>
+            <Col xs={12} md={4} lg={4}>
+              {data.SteberInternational && (
+                <div className="centered">
+                  <GatsbyImage
+                    image={data.SteberInternational.childImageSharp.gatsbyImageData}
+                    style={{ maxWidth: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt="Steber International"
+                  />
+                </div>
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                Stebercraft International
+              </Heading>
+              <p>
+                Stebercraft International is a leader in Australian boat manufacturing and
+                industrial composite technology since 1947. Steber manufactures high-quality boats
+                for fishing, charter, patrol, sea rescue, medical support, surveillance and general
+                boating use. All Steber boats are individually designed and built to suit their
+                purpose, with a quality of manufacture that ensures a long service life and the
+                capability to put to sea when many other vessels need to return to port.
+                Steber&apos;s core business of composite component manufacture is all undertaken in
+                their climate controlled factory ensuring all laminating is carried out within
+                humidity and temperature parameters allowing 24-hour production when required.
+                Stebercraft is an Australian owned and operated family company with a firm
+                commitment to provide a high-quality product with excellent customer service.
+              </p>
+              <SubHeading>www.steber.com.au</SubHeading>
+              <Button
+                type="outbound"
+                href="https://www.steber.com.au"
+                size="small"
+                color="blue"
+                customStyles={{ maxWidth: '100%' }}
+              >
+                Visit website
+              </Button>
+            </Col>
+          </Row>
+          <Row className="primary-content">
             <Col xs={12} md={4} lg={4}>
               {data.Ullandulla && (
                 <div className="centered">
@@ -585,8 +660,6 @@ function Partners({ data }) {
                 Visit website
               </Button>
             </Col>
-          </Row>
-          <Row className="primary-content">
             <Col xs={12} md={4} lg={4}>
               {data.Spitfire && (
                 <div className="centered">
@@ -632,6 +705,80 @@ function Partners({ data }) {
               </Button>
             </Col>
           </Row>
+          <Row className="primary-content">
+            <Col xs={12} md={4} lg={4}>
+              {data.ASTGroup && (
+                <div className="centered">
+                  <GatsbyImage
+                    image={data.ASTGroup.childImageSharp.gatsbyImageData}
+                    style={{ maxWidth: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt="The AST Group"
+                  />
+                </div>
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                AST
+              </Heading>
+              <p>
+                With over 30 years of experience in delivering satellite communications services,
+                AST is a trusted global satellite communications equipment supplier of end-to-end
+                remote communication solutions. Our company provides a comprehensive range of
+                terminals and devices, high-quality voice and data connectivity. Our unique enabling
+                services such as INTEGRA, IRIS, iRAMS and My AST Portal empower our customers to
+                optimise their operations, make informed decisions quicker and reduce their costs.
+              </p>
+              <p>
+                AST Australia is an Australian owned and operated company that is part of the
+                privately owned AST Group of companies who have been established in 1992 and are
+                head quartered in the UK with offices in Singapore, Africa, USA and Australia.
+              </p>
+              <SubHeading>www.theastgroup.com</SubHeading>
+              <Button
+                type="outbound"
+                href="http://www.theastgroup.com/"
+                size="small"
+                color="blue"
+                customStyles={{ maxWidth: '100%' }}
+              >
+                Visit website
+              </Button>
+            </Col>
+            <Col xs={12} md={4} lg={4}>
+              {data.EcoBoats && (
+                <div className="centered">
+                  <GatsbyImage
+                    image={data.EcoBoats.childImageSharp.gatsbyImageData}
+                    style={{ maxWidth: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt="Eco Boats"
+                  />
+                </div>
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                Eco Boats
+              </Heading>
+              <p>
+                Eco Boats supply a large range of electric boat motors, batteries and solar panels
+                and have been supplying the electric Pod motors, Lithium batteries and semi-flexible
+                solar panels for the OCIUS Bluebottles since 2015. The OCIUS project is a great
+                example of how cutting-edge electric propulsion and solar solutions can reduce the
+                footprint of ocean-based operations since OCIUS’ Bluebottles can partially fulfill
+                missions for which otherwise large, crewed vessels running on fossil fuels would
+                have to be used.
+              </p>
+              <SubHeading>www.ecoboats.com.au</SubHeading>
+              <Button
+                type="outbound"
+                href="http://www.ecoboats.com.au/"
+                size="small"
+                color="blue"
+                customStyles={{ maxWidth: '100%' }}
+              >
+                Visit website
+              </Button>
+            </Col>
+          </Row>
         </Grid>
       </Segmented>
       <Segmented>
@@ -658,19 +805,13 @@ function OurStory({ data }) {
             </Heading>
             <p>
               Ocius Technology Ltd (formerly Solar Sailor Holdings Ltd) is an Australian public
-              unlisted company with Research and Development facilities at the University of NSW.
+              unlisted company with Construction and Research and Development facilities at the
+              University of NSW.
             </p>
 
             <p>
-              In 1997, Solar Sailor won the Advanced Technology Boat Race in Canberra, beating the
-              next solar boat by 5 laps of 6km (30km) using a new patented &apos;solar sail&apos; -
-              a simple device which harnesses both solar and wind energy in a seaworthy manner.
-            </p>
-
-            <p>
-              Since then, the company has proven a solid track record of conceiving, funding, and
-              delivering difficult, innovative, high-tech, award-winning projects on time and on
-              budget.
+              The company has proven a solid track record of conceiving, funding, and delivering
+              difficult, innovative, high-tech, award-winning projects on time and on budget.
             </p>
 
             <p>
@@ -759,7 +900,11 @@ function OurStory({ data }) {
               OCIUS built multiple scale models for tank and lake testing, culminating in the
               building of the first 10’ prototype called ‘Nemo’ (Latin for ‘no one’ i.e. uncrewed)
               which provided significant proof of concept of a solar, wind and wave powered USV
-              carrying a significant payload.
+              carrying a significant payload. Nemo is now on display at the{' '}
+              <OutboundLink href="https://www.sea.museum/one-ocean">
+                Australian Maritime Museum
+              </OutboundLink>
+              .
             </p>
 
             <p>
@@ -789,12 +934,19 @@ function OurStory({ data }) {
             </p>
 
             <p>
-              In 2020 Ocius was awarded a $5.5M contract to build 5 next generation Bluebottles
-              doing 3 different applications in 3 different areas of operations off WA and NT over
-              the next 2 years. Ocius is continuing its work with Thales, testing new Thales thin
-              line arrays deployed from the Bluebottle keel winch to significant and varying depths.
-              Ocius is also working with UNSW and the NSW Government Defence Innovation Network and
-              Charles Darwin University on various areas of Research and Development.
+              In 2020, Ocius was awarded a $5.5M contract to build 5 next generation Bluebottles
+              demonstrating different applications over the next 2 years. This was successfully
+              completed in March 2022.
+            </p>
+
+            <p>
+              Ocius is currently working with Thales, testing new Thales thin line arrays deployed
+              from the Bluebottle keel winch to significant and varying depths.
+            </p>
+
+            <p>
+              Ocius is now under contract with Trusted Autonomous Systems Defence CRC, UNSW,
+              Australian Maritime College and Australian Border Force on various projects TBA.
             </p>
           </Col>
         </Row>
@@ -1303,6 +1455,18 @@ export const query = graphql`
       ...imageSharpLogotype
     }
     Spitfire: file(relativePath: { eq: "pages/about/images/Spitfire-Assoc-Logo.jpg" }) {
+      ...imageSharpLogotype
+    }
+    ASTGroup: file(relativePath: { eq: "pages/about/images/AST-Group-Logo.png" }) {
+      ...imageSharpLogotype
+    }
+    AMC: file(relativePath: { eq: "pages/about/images/AMC-logo.jpg" }) {
+      ...imageSharpLogotype
+    }
+    TAS: file(relativePath: { eq: "pages/about/images/TAS-logo.png" }) {
+      ...imageSharpLogotype
+    }
+    EcoBoats: file(relativePath: { eq: "pages/about/images/EcoBoat-logo.jpg" }) {
       ...imageSharpLogotype
     }
   }
