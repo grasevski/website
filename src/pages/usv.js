@@ -74,17 +74,12 @@ function USVPage({ data }) {
               <Spacing $value="180px" />
               <VideoSlider>
                 <ResponsiveIframe
-                  src="https://www.youtube.com/embed/SaFYbzoSV7g?rel=0"
+                  src="https://drive.google.com/file/d/1IxyBiUKSCgdSedTaueHNx3LcyO2g9_r5/preview"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 />
                 <ResponsiveIframe
-                  src="https://www.youtube.com/embed/7vhvKcc-UPk?rel=0"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                />
-                <ResponsiveIframe
-                  src="https://www.youtube.com/embed/py3V7Vrxk24?rel=0"
+                  src="https://www.youtube.com/embed/e7XCR0PLt3s"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 />
