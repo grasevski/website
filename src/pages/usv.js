@@ -290,12 +290,17 @@ function USVPage({ data }) {
           <Segmented>
             <Row>
               <Col className="centered" xs={12} md={6} lg={6}>
-                <GatsbyImage
-                  image={
-                    data.BluebottleImage ? data.BluebottleImage.childImageSharp.gatsbyImageData : ''
-                  }
-                  alt="Bluebottle USV"
-                />
+                <figure>
+                  <GatsbyImage
+                    image={data.ABFCThaiyak ? data.ABFCThaiyak.childImageSharp.gatsbyImageData : ''}
+                    alt="Bluebottle USV with ABFC Thaiyak off Ashmore Reef"
+                  />
+                  <figcaption>
+                    Bluebottle USV with ABFC Thaiyak off Ashmore Reef
+                    <br />
+                    UAV Photo taken courtesy ABFC Thaiyak Crew
+                  </figcaption>
+                </figure>
                 <Spacing $value="0px" />
               </Col>
               <Col xs={12} md={6} lg={6}>
@@ -425,7 +430,7 @@ export const query = graphql`
         gatsbyImageData(quality: 83, layout: FULL_WIDTH)
       }
     }
-    BluebottleImage: file(relativePath: { eq: "images/bluebottle-bridge.jpg" }) {
+    ABFCThaiyak: file(relativePath: { eq: "images/ABFC-Thaiyak-and-Bonnie.jpg" }) {
       childImageSharp {
         gatsbyImageData(quality: 80, width: 768, layout: CONSTRAINED)
       }
