@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import HeroBlock from '../components/HeroBlock';
 import Heading from '../components/Heading';
 import Segmented from '../components/Segmented';
+import ResponsiveIframe from '../components/ResponsiveIframe';
 import ArticlePreviewBlock from '../components/ArticlePreviewBlock';
 import NewsletterForm from '../components/NewsletterForm';
 import ContactUs from '../components/ContactUs';
@@ -133,6 +134,36 @@ function iDroguePage({ data }) {
           </Segmented>
         </Grid>
       </AccentRowWrapper>
+
+      <Grid class="page-content">
+        <Row className="centered">
+          <Col xs={12} md={8} lg={8} mdOffset={2}>
+            <Spacing $value="80px" />
+            <Heading level={2} size="large" weight="thick" underline="center">
+              iDrogue Development
+            </Heading>
+            <Spacing $value="40px" />
+          </Col>
+        </Row>
+        <Segmented>
+          <Row>
+            <Col xs={12} md={6} lg={6}>
+              <ResponsiveIframe
+                src="https://www.youtube.com/embed/VC08YMhyud0?rel=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+              />
+            </Col>
+            <Col xs={12} md={6} lg={6}>
+              <ResponsiveIframe
+                src="https://www.youtube.com/embed/B8LysXqq-98?rel=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+              />
+            </Col>
+          </Row>
+        </Segmented>
+      </Grid>
 
       <Segmented>
         <Grid>
