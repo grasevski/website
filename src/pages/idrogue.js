@@ -135,17 +135,17 @@ function iDroguePage({ data }) {
         </Grid>
       </AccentRowWrapper>
 
-      <Grid class="page-content">
-        <Row className="centered">
-          <Col xs={12} md={8} lg={8} mdOffset={2}>
-            <Spacing $value="80px" />
-            <Heading level={2} size="large" weight="thick" underline="center">
-              iDrogue Development
-            </Heading>
-            <Spacing $value="40px" />
-          </Col>
-        </Row>
-        <Segmented>
+      <Segmented>
+        <Grid className="page-content">
+          <Row className="centered">
+            <Col xs={12} md={8} lg={8} mdOffset={2}>
+              <Spacing $value="80px" />
+              <Heading level={2} size="large" weight="thick" underline="center">
+                iDrogue Development
+              </Heading>
+              <Spacing $value="40px" />
+            </Col>
+          </Row>
           <Row>
             <Col xs={12} md={6} lg={6}>
               <ResponsiveIframe
@@ -162,8 +162,8 @@ function iDroguePage({ data }) {
               />
             </Col>
           </Row>
-        </Segmented>
-      </Grid>
+        </Grid>
+      </Segmented>
 
       <Segmented>
         <Grid>
