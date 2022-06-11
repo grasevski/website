@@ -25,12 +25,12 @@
   pages:
     - title: USV
       path: /usv/
-    - title: iDrogue
-      path: /idrogue/
     - title: BlueBottle
       path: /usv/#overview
     - title: Tech Specs
       path: /usv/#technical
+    - title: iDrogue
+      path: /idrogue/
 
 - title: News
   path: /news/
