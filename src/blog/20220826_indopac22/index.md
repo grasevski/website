@@ -1,6 +1,6 @@
 ---
 title: "Ocius Showcases at Indo-Pacific 2022"
-date: "2022-08026"
+date: "2022-08-26"
 author: "Matthew McGill"
 featuredImage: image01.jpg
 ---
