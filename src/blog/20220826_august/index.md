@@ -2,7 +2,7 @@
 title: "August Update"
 date: "2022-08-26"
 author: "Matthew McGill"
-featuredImage: image01.jpg
+featuredImage: image16.jpg
 ---
 
 Successful completion of $5.5M Defence Innovation Hub Ph4 Contract
