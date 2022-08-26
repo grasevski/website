@@ -1,14 +1,77 @@
 ---
-title: "Ocius Showcases at Indo-Pacific 2022"
+title: "August Update"
 date: "2022-08-26"
 author: "Matthew McGill"
 featuredImage: image01.jpg
 ---
 
-In May 2022, Ocius was at the Sydney International Convention Centre, taking part in the Indo-Pacific 2022 exposition, exhibiting on the convention floor as well as presenting at the associated conferences.  During the event Ocius managed to find time to sign an exclusivity agreement with Thales Australia with regard to ASW USVs.
+Successful completion of $5.5M Defence Innovation Hub Ph4 Contract
 
-![Mark Bethwaite AM (Chairmain Ocius) and Robert Dane (CEO Ocius), Chris Jenkins (CEO Thales Australia), Gwendoline Blandin (Vice President Thales Underwater Systems) and Troy Stephens (Vice President Thales Australia Underwater Systems) in front of Bluebottle USV BEACON](image01.jpg)
+Contract for further trials in other areas of the EEZ
 
-Along with BEACON and our Ocius stand, the iDrogue team presented as the TAS CRC stand, showcasing their developments in recovering AUVs.
+Exclusive agreement with Thales Success at Autonomous Warrior 2022
 
-![iDrogue team at IP22](image02.png)
+Demonstrated Communications Gate Way with both L3 Australia and DSTG
+
+Outperformed competitors in offshore operations
+
+Signed contract with a Japanese oceanographic organisation
+
+Expanded another 250m component assembly and office area at UNSW Randwick Campus
+
+2022 Annual General Meeting 4pm Thursday 24 November
+
+Slideshow
+---------
+
+!(image02.jpg)
+
+!(image03.jpg)
+
+!(image04.jpg)
+
+!(image05.jpg)
+
+!(image06.jpg)
+
+!(image07.jpg)
+
+!(image08.jpg)
+
+!(image09.jpg)
+
+!(image10.jpg)
+
+!(image11.jpg)
+
+!(image12.jpg)
+
+!(image13.jpg)
+
+!(image14.jpg)
+
+!(image15.jpg)
+
+!(image16.jpg)
+
+
+Videos
+------
+
+[Filling the Gap Between a Crewed Ship and Nothing](https://youtu.be/LUdWvd2uMyQ)
+
+[Can Bluebottles navigate in strong currents?](https://youtu.be/e7XCR0PLt3s)
+
+[Drawing AW22](https://youtu.be/ZEMml0MPsHI)
+
+[iDrogue Development Early 2022](https://youtu.be/VC08YMhyud0)
+
+[iDrogue Concepts of Operations](https://youtu.be/B8LysXqq-98)
+
+[Exercise Autonomous Warrior wraps up](https://www.youtube.com/watch?v=rYwMKviAZK8)
+
+[ASPI launch of defence budget report](https://youtu.be/6z7igiPI4_U?t=1665)
+
+
+
+
