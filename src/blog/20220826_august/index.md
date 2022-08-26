@@ -58,19 +58,19 @@ Slideshow
 Videos
 ------
 
-[Filling the Gap Between a Crewed Ship and Nothing](https://youtu.be/LUdWvd2uMyQ)
+<iframe width="560" height="315" src="https://youtu.be/LUdWvd2uMyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[Can Bluebottles navigate in strong currents?](https://youtu.be/e7XCR0PLt3s)
+<iframe width="560" height="315" src="https://youtu.be/e7XCR0PLt3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[Drawing AW22](https://youtu.be/ZEMml0MPsHI)
+<iframe width="560" height="315" src="https://youtu.be/ZEMml0MPsHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[iDrogue Development Early 2022](https://youtu.be/VC08YMhyud0)
+<iframe width="560" height="315" src="https://youtu.be/VC08YMhyud0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[iDrogue Concepts of Operations](https://youtu.be/B8LysXqq-98)
+<iframe width="560" height="315" src="https://youtu.be/B8LysXqq-98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[Exercise Autonomous Warrior wraps up](https://www.youtube.com/watch?v=rYwMKviAZK8)
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=rYwMKviAZK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[ASPI launch of defence budget report](https://youtu.be/6z7igiPI4_U?t=1665)
+<iframe width="560" height="315" src="https://youtu.be/6z7igiPI4_U?t=1665" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
