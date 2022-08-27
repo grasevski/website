@@ -1,7 +1,7 @@
 ---
 title: "August Update"
 date: "2022-08-26"
-author: "Matthew McGill"
+author: "Robert Dane"
 featuredImage: image16.jpg
 ---
 
