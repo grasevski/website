@@ -9,7 +9,9 @@ Successful completion of $5.5M Defence Innovation Hub Ph4 Contract
 
 Contract for further trials in other areas of the EEZ
 
-Exclusive agreement with Thales Success at Autonomous Warrior 2022
+Exclusive agreement with Thales
+
+Success at Autonomous Warrior 2022
 
 Demonstrated Communications Gate Way with both L3 Australia and DSTG
 
