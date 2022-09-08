@@ -222,7 +222,7 @@ function CareersPage() {
                 <ul style={{ marginTop: 0 }}>
                   <li>Launch and recovery of USVs.</li>
                   <li>
-                    Inspection, cleaning and maintanence of USVs, workshop and trailers where
+                    Inspection, cleaning and maintenance of USVs, workshop and trailers where
                     required.
                   </li>
                   <li>
@@ -405,7 +405,7 @@ function CareersPage() {
                   <li>Travel to remote locations to support the USVs as MSC.</li>
                   <li>Launch and recovery of USVs.</li>
                   <li>
-                    Inspection, cleaning and maintanence of USVs, workshop and trailers where
+                    Inspection, cleaning and maintenance of USVs, workshop and trailers where
                     required.
                   </li>
                   <li>
