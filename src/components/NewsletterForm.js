@@ -171,7 +171,7 @@ function NewsletterForm({ topMaskBackgroundColor, bottomMaskBackgroundColor }) {
                     </Heading>
                     <p>
                       By submitting your email address below, you agree to receive email updates on
-                      Ocius Technologies and their latest projects.
+                      Ocius Technologies and its latest projects.
                     </p>
                     <FormGroup>
                       {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}

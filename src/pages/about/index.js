@@ -449,7 +449,7 @@ function Partners({ data }) {
                 </p>
                 <p>
                   AMC has established a specialist Autonomous Maritime Systems (AMS) test and
-                  evaluation centre (AMS-TEC). OCIUS are leveraging this and have a contract with
+                  evaluation centre (AMS-TEC). OCIUS is leveraging this and have a contract with
                   AMC for services supporting Autonomous Maritime Systems (AMS) development.
                   Specifically development work on autonomous vehicle Launch and Recovery Systems
                   (LARS).

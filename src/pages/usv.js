@@ -317,15 +317,10 @@ function USVPage({ data }) {
                 <p>
                   Applications for USVs are myriad and measured in the billions of dollars. Major
                   entities in offshore energy, defence and science are investing heavily in uncrewed
-                  systems for “dull, dirty or dangerous” operations. Independent industry research
-                  estimates the USV market for defence alone to be a staggering{' '}
-                  <a href="http://marketinfogroup.com/unmanned-surface-vehicles-for-defense-and-security-markets-technologies/">
-                    US$3.8Bn by 2020
-                  </a>
-                  .
+                  systems for “dull, dirty or dangerous” operations.
                 </p>
                 <p>
-                  The team at Ocius are focusing all of our experience, networks and love of the sea
+                  The team at Ocius is focusing all of our experience, networks and love of the sea
                   to create a revolutionary Australian technology for the world’s oceans.
                 </p>
               </Col>
