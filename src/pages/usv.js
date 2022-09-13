@@ -79,7 +79,7 @@ function USVPage({ data }) {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 />
                 <ResponsiveIframe
-                  src="https://www.youtube.com/embed/e7XCR0PLt3s"
+                  src="https://www.youtube.com/embed/dyFuy6n-zDY"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 />
