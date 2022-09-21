@@ -74,7 +74,7 @@ function USVPage({ data }) {
               <Spacing $value="180px" />
               <VideoSlider>
                 <ResponsiveIframe
-                  src="https://drive.google.com/file/d/1IxyBiUKSCgdSedTaueHNx3LcyO2g9_r5/preview"
+                  src="https://www.youtube.com/embed/7VSYNKC7uI0"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 />
