@@ -61,8 +61,8 @@ function AGMPage({ data }) {
           <Row>
             <SecondColumnMobile className="primary-content" xs={12} md={6} lg={5}>
               <p style={{ marginBottom: 40 }}>
-                Ocius Pty Ltd will hold its 2022 AGm on November 24 2022, at 4:00pm at its offices in R14, on
-                the UNSW Randwick Campus at 22 King St, Randwick.
+                Ocius Pty Ltd will hold its 2022 AGM at 4:00pm on 24 November 2022,
+                at its offices in R14, on the UNSW Randwick Campus at 22 King St, Randwick.
               </p>
 
               <header>
@@ -72,8 +72,7 @@ function AGMPage({ data }) {
               </header>
 
               <p style={{ marginBottom: 40 }}>
-                Ocius Pty Ltd will hold its 2022 AGm on November 24 2022, at 4:00pm at its offices in R14, on
-                the UNSW Randwick Campus at 22 King St, Randwick.
+                4:00pm, November 24th 2022
               </p>
 
               <header>
@@ -123,12 +122,12 @@ function AGMPage({ data }) {
 
 export const query = graphql`
   {
-    HeroBackground: file(relativePath: { eq: "images/usv-bg" }) {
+    HeroBackground: file(relativePath: { eq: "images/usv-bg.jpg" }) {
       childImageSharp {
         gatsbyImageData(quality: 100, layout: FULL_WIDTH)
       }
     }
-    AGMImage: file(relativePath: { eq: "pages/about/images/mark-bethwaite.png" }) {
+    AGMImage: file(relativePath: { eq: "images/agm2021_recording_still.png" }) {
       childImageSharp {
         gatsbyImageData(quality: 80, width: 768, layout: CONSTRAINED)
       }
