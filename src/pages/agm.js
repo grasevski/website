@@ -63,6 +63,7 @@ function AGMPage({ data }) {
               <p style={{ marginBottom: 40 }}>
                 Ocius Pty Ltd will hold its 2022 AGM at 4:00pm on 24 November 2022,
                 at its offices in R14, on the UNSW Randwick Campus at 22 King St, Randwick.
+                If attending in person please arrive by 3:30pm, so that we may start on time.
               </p>
 
               <header>
@@ -86,7 +87,7 @@ function AGMPage({ data }) {
               </p>
             </SecondColumnMobile>
             <FirstColumnMobile xs={12} md={6} lg={6} lgOffset={1}>
-              {data.iDrogueImage && (
+              {data.AGMImage && (
                 <GatsbyImage
                   image={data.AGMImage.childImageSharp.gatsbyImageData}
                   alt="2021 AGM"
