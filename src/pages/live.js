@@ -22,7 +22,7 @@ import mq from '../common/mq';
 import SplashScreen from '../components/SplashScreen';
 import Notification from '../components/Notification';
 import WindRose from '../components/WindRose';
-import Odometer from 'react-odometerjs';
+import Odometer from '../components/Odometer';
 
 const MapNotification = styled(Notification)`
   position: absolute;
