@@ -51,6 +51,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.31.3",
     "react-medium-image-zoom": "^4.4.3",
+    "react-odometerjs": "^2.1.2",
     "react-slick": "^0.29.0",
     "react-transition-group": "^4.4.2",
     "react-uid": "^2.3.2",
