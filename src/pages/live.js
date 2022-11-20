@@ -22,6 +22,7 @@ import mq from '../common/mq';
 import SplashScreen from '../components/SplashScreen';
 import Notification from '../components/Notification';
 import WindRose from '../components/WindRose';
+import Odometer from '../components/Odometer';
 
 const MapNotification = styled(Notification)`
   position: absolute;
@@ -171,6 +172,7 @@ function LivePage() {
         currentDirection={parseFloat(orderedDrones[currentVessel]?.Props?.Current_direction)}
         currentSpeed={parseFloat(orderedDrones[currentVessel]?.Props?.Current_speed)}
       />
+      <Odometer value={20520.6} format="(,ddd).d" />
       <MapNotification
         role="alert"
         title="Notification"
