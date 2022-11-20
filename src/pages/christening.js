@@ -36,10 +36,10 @@ function ChristeningPage({ data }) {
             <Col xs={12} md={6} lg={6}>
               <Spacing $value="400px" />
               <Heading level={1} color="white" size="huge" weight="thick" underline="left">
-                Ocius AGM
+                Christening
               </Heading>
               <Heading level={2} color="white" size="medium" weight="normal" as="p">
-                Ocius Pty Ltd Annual General Meeting - 2022
+                Christening of Barra and Bombora
               </Heading>
               <Spacing $value="80px" />
             </Col>
