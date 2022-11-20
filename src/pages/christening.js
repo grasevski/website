@@ -23,7 +23,7 @@ function ChristeningPage({ data }) {
     <Layout>
       <SEO
         title="Christening"
-        description="Christening of Barra and Bomborra"
+        description="Christening of Barra and Bombora"
       />
 
       {data.HeroBackground && (
