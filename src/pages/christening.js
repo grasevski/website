@@ -61,7 +61,7 @@ function ChristeningPage({ data }) {
           <Row>
             <SecondColumnMobile className="primary-content" xs={12} md={6} lg={5}>
               <p style={{ marginBottom: 40 }}>
-                Ocius Pty Ltd will be christening its newest vessels Barra and Bombora at 5:30pm on 24 November 2022,
+                Ocius Pty Ltd will be christening its newest vessels BARRA and BOMBORA at 5:30pm on 24 November 2022,
                 at its workshop in R13, on the UNSW Randwick Campus at 22 King St, Randwick.
                 If attending in person please arrive by 5:00pm, so that we may start on time.
               </p>
