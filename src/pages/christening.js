@@ -104,12 +104,11 @@ function ChristeningPage({ data }) {
               <Spacing $value="40px" />
             </Col>
           </Row>
-          <Row>
-            <p style={{ marginBottom: 40 }}>
+          <Row className="centered">
+            <!--p style={{ marginBottom: 40 }}>
               As we get closer to the event, a link to the LiveStream on YouTube will appear here.
-            </p>
+            </p -->
             <iframe width="560" height="315" src="https://www.youtube.com/embed/EGM_hyAnOHY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <br/>https://youtu.be/EGM_hyAnOHY
           </Row>
         </Segmented>
       </Grid>
