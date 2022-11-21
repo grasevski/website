@@ -95,6 +95,17 @@ function ChristeningPage({ data }) {
               )}
             </FirstColumnMobile>
           </Row>
+          <Row>
+            <header>
+              <Heading level={2} size="medium" weight="thick" underline="left">
+                Live Stream
+              </Heading>
+            </header>
+
+            <p style={{ marginBottom: 40 }}>
+              As we get closer to the event, a link to the LiveStream on YouTube will appear here.
+            </p>
+          </Row>
         </Segmented>
       </Grid>
 
