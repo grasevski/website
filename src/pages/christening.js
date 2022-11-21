@@ -105,12 +105,16 @@ function ChristeningPage({ data }) {
             </Col>
           </Row>
           <Row className="centered">
+            <Col xs={12} md={8} lg={8} mdOffset={2}>
             <p style={{ marginBottom: 40 }}>
               As we get closer to the event, a link to the LiveStream on YouTube will appear here.
             </p>
+            </Col>
           </Row>
           <Row className="centered">
+            <Col xs={12} md={8} lg={8} mdOffset={2}>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/EGM_hyAnOHY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </Col>
           </Row>
         </Segmented>
       </Grid>
