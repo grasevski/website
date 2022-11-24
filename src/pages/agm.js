@@ -48,21 +48,12 @@ function AGMPage({ data }) {
       )}
 
       <Grid className="page-content">
-        <Row className="centered">
-          <Col xs={12} md={8} lg={8} mdOffset={2}>
-            <Spacing $value="80px" />
-            <Heading level={2} size="large" weight="thick" underline="center">
-              2022 Annual General Meeting
-            </Heading>
-            <Spacing $value="40px" />
-          </Col>
-        </Row>
         <Segmented>
           <Row className="centered">
             <Col xs={12} md={8} lg={8} mdOffset={2}>
               <Spacing $value="80px" />
               <Heading level={2} size="large" weight="thick" underline="center">
-                Virtual Meeting Link
+                2022 Ocius AGM Virtual Meeting
               </Heading>
               <Spacing $value="40px" />
             </Col>
@@ -85,6 +76,15 @@ function AGMPage({ data }) {
             </p>
             </Col>
           </Row>
+        <Row className="centered">
+          <Col xs={12} md={8} lg={8} mdOffset={2}>
+            <Spacing $value="80px" />
+            <Heading level={2} size="large" weight="thick" underline="center">
+              2022 Annual General Meeting
+            </Heading>
+            <Spacing $value="40px" />
+          </Col>
+        </Row>
           <Row>
             <SecondColumnMobile className="primary-content" xs={12} md={6} lg={5}>
               <p style={{ marginBottom: 40 }}>
