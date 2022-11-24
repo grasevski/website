@@ -95,6 +95,22 @@ function ChristeningPage({ data }) {
               )}
             </FirstColumnMobile>
           </Row>
+          <Row className="centered">
+            <Col xs={12} md={8} lg={8} mdOffset={2}>
+              <Spacing $value="80px" />
+              <Heading level={2} size="large" weight="thick" underline="center">
+                Live Stream
+              </Heading>
+              <Spacing $value="40px" />
+            </Col>
+          </Row>
+          <Row className="centered">
+            <Col xs={12} md={8} lg={8} mdOffset={2}>
+            <p style={{ marginBottom: 40 }}>
+              As we get closer to the event, a link to the LiveStream on YouTube will appear here.
+            </p>
+            </Col>
+          </Row>
         </Segmented>
       </Grid>
 
