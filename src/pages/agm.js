@@ -68,7 +68,7 @@ function AGMPage({ data }) {
             </Col>
           </Row>
           <Row className="centered" >
-	    <FirstColumnMobile xs={12} md={6} lg={6} lgOffset={1} className="centered">
+	    <Col xs={12} md={6} lg={6} lgOffset={1} className="centered">
             <p><a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzY0ZGNiNmQtNTNkNC00NDk4LThjMGItMWIxYzc4OTg5YzVl%40thread.v2/0?context=%7b%22Tid%22%3a%22b75e2711-f5c7-4f6c-a2c2-a1b25937d7f0%22%2c%22Oid%22%3a%221d38c4da-71d1-4d65-9f44-40e7f4a892a4%22%7d">
             {data.TeamsIcon && (
                 <GatsbyImage
@@ -83,7 +83,7 @@ function AGMPage({ data }) {
             <p style={{ marginBottom: 40 }}>
               To join the AGM click the link above, and when prompted enter your name, then click the button to join. One of our moderators will then verify you and allow you into the meeting.
             </p>
-            </<FirstColumnMobile>
+            </<Col>
           </Row>
           <Row>
             <SecondColumnMobile className="primary-content" xs={12} md={6} lg={5}>
