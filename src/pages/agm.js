@@ -70,12 +70,13 @@ function AGMPage({ data }) {
           <Row className="centered">
             [Ocius AGM Meeting](https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzY0ZGNiNmQtNTNkNC00NDk4LThjMGItMWIxYzc4OTg5YzVl%40thread.v2/0?context=%7b%22Tid%22%3a%22b75e2711-f5c7-4f6c-a2c2-a1b25937d7f0%22%2c%22Oid%22%3a%221d38c4da-71d1-4d65-9f44-40e7f4a892a4%22%7d)
             <br/>
-            [![{data.TeamsIcon && (
+            {data.TeamsIcon && (
                 <GatsbyImage
                   image={data.TeamsIcon.childImageSharp.gatsbyImageData}
                   alt="2022 AGM"
+                  link="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzY0ZGNiNmQtNTNkNC00NDk4LThjMGItMWIxYzc4OTg5YzVl%40thread.v2/0?context=%7b%22Tid%22%3a%22b75e2711-f5c7-4f6c-a2c2-a1b25937d7f0%22%2c%22Oid%22%3a%221d38c4da-71d1-4d65-9f44-40e7f4a892a4%22%7d"
                 />
-              )}](https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzY0ZGNiNmQtNTNkNC00NDk4LThjMGItMWIxYzc4OTg5YzVl%40thread.v2/0?context=%7b%22Tid%22%3a%22b75e2711-f5c7-4f6c-a2c2-a1b25937d7f0%22%2c%22Oid%22%3a%221d38c4da-71d1-4d65-9f44-40e7f4a892a4%22%7d)
+              )}
             <br/>
             <p style={{ marginBottom: 40 }}>
               To join the AGM click the link above, and when prompted enter your name, then click the button to join. One of our moderators will then verify you and allow you into the meeting.
