@@ -1189,6 +1189,27 @@ function People({ data }) {
         <Grid className="page-content">
           <Row className="primary-content">
             <Col xs={12} md={6} lg={4}>
+              {data.MichaelGalvin && (
+                <GatsbyImage
+                  image={data.MichaelGalvin.childImageSharp.gatsbyImageData}
+                  alt="Michael Galvin"
+                />
+              )}
+              <Heading level={3} size="medium" weight="thick">
+                Michael Galvin
+              </Heading>
+              <SubHeading>Chief Operating Officer</SubHeading>
+              <div className="left-align">
+                <p>
+                  Mike recently joined us after two successful careers; firstly in the RAN and subsequently in Qantas Airways. Mike was a Naval helicopter pilot and jet instructor pilot prior to joining Qantas as a pilot. He became a B767 Captain in 2002 after which he joined the Flight Operations management team where he was appointed the Head of B767 Operations and in 2013 was promoted to become the Head of Flying Operations and B747 Captain. He was responsible for the airlines flying standards and safety of all International and Domestic operations. Mike is an experienced Operations and People Manger who will lead Ocius to the next level of development.
+                </p>
+              </div>
+              <SocialIconButton
+                network="linkedIn"
+                href="https://www.linkedin.com/in/michael-galvin-163a1a1b1/"
+              />
+            </Col>
+            <Col xs={12} md={6} lg={4}>
               {data.LloydBreckenridge && (
                 <GatsbyImage
                   image={data.LloydBreckenridge.childImageSharp.gatsbyImageData}
@@ -1402,6 +1423,9 @@ export const query = graphql`
     }
     Robert: file(relativePath: { eq: "pages/about/images/robert.png" }) {
       ...fluidImages
+    }
+    MichaelGalvin: file(relativePath: { eq: "pages/about/images/mike-galvin.png" }) {
+      ...imageSharpAvatar
     }
     Nemo: file(relativePath: { eq: "pages/about/images/nemo.jpg" }) {
       ...fluidImages
