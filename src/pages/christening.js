@@ -48,15 +48,6 @@ function ChristeningPage({ data }) {
       )}
 
       <Grid className="page-content">
-        <Row className="centered">
-          <Col xs={12} md={8} lg={8} mdOffset={2}>
-            <Spacing $value="80px" />
-            <Heading level={2} size="large" weight="thick" underline="center">
-              Christening
-            </Heading>
-            <Spacing $value="40px" />
-          </Col>
-        </Row>
         <Segmented>
           <Row className="centered">
             <Col xs={12} md={8} lg={8} mdOffset={2}>
@@ -72,6 +63,15 @@ function ChristeningPage({ data }) {
               <iframe width="560" height="315" src="https://www.youtube.com/embed/XtV1ySVTIEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Col>
           </Row>
+        <Row className="centered">
+          <Col xs={12} md={8} lg={8} mdOffset={2}>
+            <Spacing $value="80px" />
+            <Heading level={2} size="large" weight="thick" underline="center">
+              Christening
+            </Heading>
+            <Spacing $value="40px" />
+          </Col>
+        </Row>
           <Row>
             <SecondColumnMobile className="primary-content" xs={12} md={6} lg={5}>
               <p style={{ marginBottom: 40 }}>
