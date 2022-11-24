@@ -50,7 +50,7 @@ function AGMPage({ data }) {
       <Grid className="page-content">
         <Segmented>
           <Row className="centered">
-            <Col xs={12} md={8} lg={8} mdOffset={2}>
+            <Col xs={12} md={12} lg={12} >
               <Spacing $value="80px" />
               <Heading level={2} size="large" weight="thick" underline="center">
                 2022 Ocius AGM Virtual Meeting
@@ -59,7 +59,7 @@ function AGMPage({ data }) {
             </Col>
           </Row>
           <Row className="centered" >
-	    <Col xs={12} md={6} lg={6} lgOffset={1} className="centered">
+	    <Col xs={12} md={6} lg={6} className="centered">
             <p><a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzY0ZGNiNmQtNTNkNC00NDk4LThjMGItMWIxYzc4OTg5YzVl%40thread.v2/0?context=%7b%22Tid%22%3a%22b75e2711-f5c7-4f6c-a2c2-a1b25937d7f0%22%2c%22Oid%22%3a%221d38c4da-71d1-4d65-9f44-40e7f4a892a4%22%7d">
             {data.TeamsIcon && (
                 <GatsbyImage
