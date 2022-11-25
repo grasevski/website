@@ -6,26 +6,23 @@ import loadable from '@loadable/component';
 import 'odometer/themes/odometer-theme-car.css';
 
 const Container = styled.div`
-  width: 200px;
-  height: 120px;
   position: absolute;
   top: 60px;
   left: 300px;
-  padding: 20px;
-
-  @media (max-width: ${mq.max[768]}) {
-    width: 100px;
-    height; 100px;
-    top: 40px;
-    right: 0;
-  }
+  background: #000;
+  color: #eee0d3;
+  padding: 0.15em;
+  display: inline-block;
+  border-radius: 0.34em;
+  font-family: "Arimo", monospace;
 `;
 
-function ReactOdometer() {
+function ReactOdometer({valueMeters}) {
   const Odometer = loadable(() => import('react-odometerjs'));
-  return <Container><Odometer value={20520.7} format="(,ddd).d" />NM</Container>;
+  const valueNauticalMiles = 0.000539957 * valueMeters;
+  return <Container><Odometer value={valueNauticalMiles} format="(,ddd).d" />NM</Container>;
 }
 
-ReactOdometer.propTypes = {};
-ReactOdometer.defaultProps = {};
+ReactOdometer.propTypes = {valueMeters: PropTypes.number};
+ReactOdometer.defaultProps = {valueMeters: 0};
 export default ReactOdometer;
