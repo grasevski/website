@@ -18,9 +18,15 @@ const Container = styled.div`
 `;
 
 const Odometer = loadable(() => import('react-odometerjs'));
+let prev = 0;
 
 function ReactOdometer({valueMeters}) {
-  const valueNauticalMiles = 0.000539957 * valueMeters;
+  if (!prev) {
+    prev = valueMeters;
+  } else if (prev < valueMeters) {
+    prev += 10;
+  }
+  const valueNauticalMiles = 0.000539957 * prev;
   return <Container><Odometer value={valueNauticalMiles} />NM</Container>;
 }
 
