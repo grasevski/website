@@ -17,10 +17,11 @@ const Container = styled.div`
   font-family: "Arimo", monospace;
 `;
 
+const Odometer = loadable(() => import('react-odometerjs'));
+
 function ReactOdometer({valueMeters}) {
-  const Odometer = loadable(() => import('react-odometerjs'));
   const valueNauticalMiles = 0.000539957 * valueMeters;
-  return <Container><Odometer value={valueNauticalMiles} format="(,ddd).d" />NM</Container>;
+  return <Container><Odometer value={valueNauticalMiles} />NM</Container>;
 }
 
 ReactOdometer.propTypes = {valueMeters: PropTypes.number};
