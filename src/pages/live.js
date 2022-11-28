@@ -109,7 +109,7 @@ function LivePage() {
     return loc.Lat != 0 && loc.Lon != 0;
   });
   const droneNames = objectWalker(droneNamesAndIdsRetriever, orderedDrones);
-  const distanceTravelledMeters = fetchedData.map(({Props}) => Props ? +Props.DistanceTravelledMeters : 0).reduce((acc, a) => acc + a, 19115000);
+  const distanceTravelledMeters = fetchedData.map(({Props}) => Props ? +Props.DistanceTravelledMeters : 0).reduce((acc, a) => acc + a, 0);
 
   // Hide left nav when user clicks outside of container
   useOnClickOutside(node, () => {
