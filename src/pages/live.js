@@ -104,8 +104,12 @@ function LivePage() {
 
   // Fetch data periodically
   const [isLoading, fetchedData] = useHttp(configuration.DRONE_COLLECTION_URL, 2000);
-  const orderedDrones = addIdsToFetchedData(fetchedData);
+  const orderedDrones = addIdsToFetchedData(fetchedData).filter(({Props}) => {
+    const loc = Props.Location.Coordinates;
+    return loc.Lat != 0 && loc.Lon != 0;
+  });
   const droneNames = objectWalker(droneNamesAndIdsRetriever, orderedDrones);
+  const distanceTravelledMeters = fetchedData.map(({Props}) => Props ? +Props.DistanceTravelledMeters : 0).reduce((acc, a) => acc + a, 0);
 
   // Hide left nav when user clicks outside of container
   useOnClickOutside(node, () => {
@@ -172,7 +176,7 @@ function LivePage() {
         currentDirection={parseFloat(orderedDrones[currentVessel]?.Props?.Current_direction)}
         currentSpeed={parseFloat(orderedDrones[currentVessel]?.Props?.Current_speed)}
       />
-      <Odometer value={20520.6} format="(,ddd).d" />
+      <Odometer valueMeters={distanceTravelledMeters} />
       <MapNotification
         role="alert"
         title="Notification"
