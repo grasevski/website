@@ -106,7 +106,7 @@ function LivePage() {
   const [isLoading, fetchedData] = useHttp(configuration.DRONE_COLLECTION_URL, 2000);
   const orderedDrones = addIdsToFetchedData(fetchedData);
   const droneNames = objectWalker(droneNamesAndIdsRetriever, orderedDrones);
-  const distanceTravelledMeters = orderedDrones.map(({Props}) => Props ? +Props.DistanceTravelledMeters : 0).reduce((acc, a) => acc + a, 19115000);
+  const distanceTravelledMeters = fetchedData.map(({Props}) => Props ? +Props.DistanceTravelledMeters : 0).reduce((acc, a) => acc + a, 0);
 
   // Hide left nav when user clicks outside of container
   useOnClickOutside(node, () => {
