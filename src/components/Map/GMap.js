@@ -81,7 +81,11 @@ function GMap({ apiKey, currentVessel, setCurrentVessel, droneData }) {
     return lookup;
   };
 
-  const trailCoordinates = makeTrailCoordinates(trailData);
+  const trailCoordinates = makeTrailCoordinates(trailData.filter(({Props}) => {
+    if (!Props) return false;
+    const loc = Props.Location.Coordinates;
+    return loc.Lat != 0 || loc.Lon != 0;
+  }));
 
   /**
    * Iterate fetched data to size, center, and zoom map to contain all markers
