@@ -1,35 +1,37 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import mq from '../common/mq';
-import loadable from '@loadable/component';
-import 'odometer/themes/odometer-theme-car.css';
+import Odometer from 'tm-odometer';
 
-const Container = styled.div`
-  position: absolute;
-  top: 60px;
-  left: 300px;
-  background: #000;
-  color: #eee0d3;
-  padding: 0.15em;
-  display: inline-block;
-  border-radius: 0.34em;
-  font-family: "Arimo", monospace;
-`;
+export default class ReactOdometer extends PureComponent {
+  static propTypes = {valueMeters: PropTypes.number.isRequired};
 
-const Odometer = loadable(() => import('react-odometerjs'));
-let prev = 0;
-
-function ReactOdometer({valueMeters}) {
-  if (!prev) {
-    prev = valueMeters;
-  } else if (prev < valueMeters) {
-    prev += 10;
+  constructor(props) {
+    super(props);
+    this.node = React.createRef();
+    this.prev = 0;
   }
-  const valueNauticalMiles = 0.000539957 * prev;
-  return <Container><Odometer value={valueNauticalMiles} />NM</Container>;
-}
 
-ReactOdometer.propTypes = {valueMeters: PropTypes.number};
-ReactOdometer.defaultProps = {valueMeters: 0};
-export default ReactOdometer;
+  componentDidMount() {
+    const value = this.getValue(), el = this.node.current;
+    this.odometer = new Odometer({el, value});
+  }
+
+  componentDidUpdate() {
+    this.odometer.update(this.getValue());
+  }
+
+  render() {
+    return React.createElement('div', {
+      ref: this.node,
+    });
+  }
+
+  getValue() {
+    if (!this.prev) {
+      this.prev = this.props.valueMeters;
+    } else if (this.prev < this.props.valueMeters) {
+      this.prev += 10;
+    }
+    return 0.000539957 * this.prev;
+  }
+}

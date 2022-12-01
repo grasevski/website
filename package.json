@@ -51,13 +51,13 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.31.3",
     "react-medium-image-zoom": "^4.4.3",
-    "react-odometerjs": "^2.1.2",
     "react-slick": "^0.29.0",
     "react-transition-group": "^4.4.2",
     "react-uid": "^2.3.2",
     "read-more-react": "^1.0.10",
     "styled-components": "^5.3.5",
-    "styled-tools": "^1.7.2"
+    "styled-tools": "^1.7.2",
+    "tm-odometer": "^1.0.6"
   },
   "repository": {
     "type": "git",

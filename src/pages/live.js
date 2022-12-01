@@ -22,7 +22,21 @@ import mq from '../common/mq';
 import SplashScreen from '../components/SplashScreen';
 import Notification from '../components/Notification';
 import WindRose from '../components/WindRose';
-import Odometer from '../components/Odometer';
+import 'tm-odometer/themes/odometer-theme-car.css';
+import loadable from '@loadable/component';
+const Odometer = loadable(() => import('../components/Odometer'));
+
+const OdometerDiv = styled.div`
+  position: absolute;
+  top: 60px;
+  left: 300px;
+  background: #000;
+  color: #eee0d3;
+  padding: 0.15em;
+  display: inline-block;
+  border-radius: 0.34em;
+  font-family: "Arimo", monospace;
+`;
 
 const MapNotification = styled(Notification)`
   position: absolute;
@@ -177,7 +191,7 @@ function LivePage() {
         currentDirection={parseFloat(orderedDrones[currentVessel]?.Props?.Current_direction)}
         currentSpeed={parseFloat(orderedDrones[currentVessel]?.Props?.Current_speed)}
       />
-      <Odometer valueMeters={distanceTravelledMeters} />
+      <OdometerDiv><Odometer valueMeters={distanceTravelledMeters} />NM</OdometerDiv>
       <MapNotification
         role="alert"
         title="Notification"
